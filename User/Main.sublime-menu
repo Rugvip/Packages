@@ -1,0 +1,42 @@
+[
+    {
+        "caption": "File",
+        "id": "file"
+    },
+    {
+        "caption": "Edit",
+        "id": "edit"
+    },
+    {
+        "caption": "Selection",
+        "id": "selection"
+    },
+    {
+        "caption": "Find",
+        "id": "find"
+    },
+    {
+        "caption": "View",
+        "id": "view"
+    },
+    {
+        "caption": "Goto",
+        "id": "goto"
+    },
+    {
+        "caption": "Tool",
+        "id": "tools"
+    },
+    {
+        "caption": "Proj",
+        "id": "project"
+    },
+    {
+        "caption": "Prefs",
+        "id": "preferences"
+    },
+    {
+        "caption": "Help",
+        "id": "help"
+    }
+]

@@ -1,0 +1,361 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>comment</key>
+	<string>
+		A mix of the Obsidian and Nexus themes.
+		I created this from another theme, "Grandson of Obsidian".
+	</string>
+	<key>name</key>
+	<string>Obsidian Nexus</string>
+	<key>settings</key>
+	<array>
+		<dict>
+			<key>settings</key>
+			<dict>
+				<key>background</key>
+				<string>#202224</string>
+				<key>caret</key>
+				<string>#fff</string>
+				<key>foreground</key>
+				<string>#F1F2F3</string>
+				<key>invisibles</key>
+				<string>#4B4E55</string>
+				<key>lineHighlight</key>
+				<string>#2a2c2e</string>
+				<key>selection</key>
+				<string>#4a4c4e</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Comment</string>
+			<key>scope</key>
+			<string>comment</string>
+			<key>settings</key>
+			<dict>
+				<key>foreground</key>
+				<string>#66747B</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Arguments</string>
+			<key>scope</key>
+			<string>variable.parameter</string>
+			<key>settings</key>
+			<dict>
+				<key>fontStyle</key>
+				<string></string>
+				<key>foreground</key>
+				<string>#B285FF</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Unknown</string>
+			<key>scope</key>
+			<string>source.php.embedded.line, declaration.tag</string>
+			<key>settings</key>
+			<dict>
+				<key>background</key>
+				<string>#FF0000</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Unknown</string>
+			<key>scope</key>
+			<string>constant.other</string>
+			<key>settings</key>
+			<dict>
+				<key>foreground</key>
+				<string>#4c6</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Foreground</string>
+			<key>scope</key>
+			<string>keyword.operator.js, source.php.embedded.line, meta.tag</string>
+			<key>settings</key>
+			<dict>
+				<key>fontStyle</key>
+				<string></string>
+				<key>foreground</key>
+				<string>#F1F2F3</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Function</string>
+			<key>scope</key>
+			<string>entity.name.tag, meta.function.js, meta.function.json.js, entity.name.function.c</string>
+			<key>settings</key>
+			<dict>
+				<key>fontStyle</key>
+				<string></string>
+				<key>foreground</key>
+				<string>#6BFFD4</string>
+			</dict>
+		</dict>
+ 		<dict>
+			<key>name</key>
+			<string>Variable, String Link, Tag Name, FileName</string>
+			<key>scope</key>
+			<string>variable, support.other.variable, string.other.link, entity.name.tag, entity.name.filename.find-in-files</string>
+			<key>settings</key>
+			<dict>
+				<key>foreground</key>
+				<string>#f88</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Regular Expression, Links</string>
+			<key>scope</key>
+			<string>string.regexp, meta.link</string>
+			<key>settings</key>
+			<dict>
+				<key>foreground</key>
+				<string>#81A2BE</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Number, Constant, Function Argument, Tag Attribute, Embedded, Escaped Characters</string>
+			<key>scope</key>
+			<string>constant.numeric, support.constant, punctuation.section.embedded, keyword.other.unit, constant.character.escape, meta.diff.range</string>
+			<key>settings</key>
+			<dict>
+				<key>fontStyle</key>
+				<string></string>
+				<key>foreground</key>
+				<string>#FFCD22</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Class, Support</string>
+			<key>scope</key>
+			<string>entity.name.class, entity.name.type.class, support.type, support.class.js</string>
+			<key>settings</key>
+			<dict>
+				<key>fontStyle</key>
+				<string></string>
+				<key>foreground</key>
+				<string>#F1F2F3</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>C function call</string>
+			<key>scope</key>
+			<string>support.function.any-method.c</string>
+			<key>settings</key>
+			<dict>
+				<key>fontStyle</key>
+				<string></string>
+				<key>foreground</key>
+				<string>#7AD</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>String, Symbols, Inherited Class, Markup Heading</string>
+			<key>scope</key>
+			<string>string, constant.other.symbol, constant.character, entity.other.inherited-class, markup.heading, constant.numeric.line-number.match.find-in-files, meta.diff.header.from-file, markup.deleted.diff</string>
+			<key>settings</key>
+			<dict>
+				<key>fontStyle</key>
+				<string></string>
+				<key>foreground</key>
+				<string>#EC7600</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>variable</string>
+			<key>scope</key>
+			<string>entity.name.tag.localname, entity.name.type.class</string>
+			<key>settings</key>
+			<dict>
+				<key>fontStyle</key>
+				<string></string>
+				<key>foreground</key>
+				<string>#81A2BE</string>
+			</dict>
+		</dict>
+
+		<dict>
+			<key>name</key>
+			<string>Keyword</string>
+			<key>scope</key>
+			<string>variable.language.js, keyword, storage, entity.name.tag.css, keyword.operator, meta.diff.header.to-file, markup.inserted.diff</string>
+			<key>settings</key>
+			<dict>
+				<key>fontStyle</key>
+				<string></string>
+				<key>foreground</key>
+				<string>#93C763</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Language Constant</string>
+			<key>scope</key>
+			<string>constant.language</string>
+			<key>settings</key>
+			<dict>
+				<key>fontStyle</key>
+				<string></string>
+				<key>foreground</key>
+				<string>#D572DF</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Dot-access operator</string>
+			<key>scope</key>
+			<string>punctuation.operator.dot-access.c</string>
+			<key>settings</key>
+			<dict>
+				<key>foreground</key>
+				<string>#f22</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Invalid</string>
+			<key>scope</key>
+			<string>invalid</string>
+			<key>settings</key>
+			<dict>
+				<key>background</key>
+				<string>#f00</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Separator</string>
+			<key>scope</key>
+			<string>meta.separator</string>
+			<key>settings</key>
+			<dict>
+				<key>background</key>
+				<string>#82A3BF</string>
+				<key>foreground</key>
+				<string>#ffffff</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Deprecated</string>
+			<key>scope</key>
+			<string>invalid.deprecated</string>
+			<key>settings</key>
+			<dict>
+				<key>background</key>
+				<string>#a082bd</string>
+				<key>fontStyle</key>
+				<string></string>
+				<key>foreground</key>
+				<string>#ffffff</string>
+			</dict>
+		</dict>
+
+
+	<!-- Submlime linter styles -->
+		<dict>
+		    <key>name</key>
+		    <string>SublimeLinter Annotations</string>
+		    <key>scope</key>
+		    <string>sublimelinter.annotations</string>
+		    <key>settings</key>
+		    <dict>
+		        <key>background</key>
+		        <string>#020</string>
+				<key>fontStyle</key>
+				<string>bold</string>
+		        <key>foreground</key>
+		        <string>#0f0</string>
+		    </dict>
+		</dict>
+		<dict>
+		    <key>name</key>
+		    <string>SublimeLinter Error Outline</string>
+		    <key>scope</key>
+		    <string>sublimelinter.outline.illegal</string>
+		    <key>settings</key>
+		    <dict>
+		        <key>background</key>
+		        <string>#FF4A52</string>
+		        <key>foreground</key>
+		        <string>#FFFFFF</string>
+		    </dict>
+		</dict>
+		<dict>
+		    <key>name</key>
+		    <string>SublimeLinter Error Underline</string>
+		    <key>scope</key>
+		    <string>sublimelinter.underline.illegal</string>
+		    <key>settings</key>
+		    <dict>
+		        <key>background</key>
+		        <string>#f00</string>
+		    </dict>
+		</dict>
+		<dict>
+		    <key>name</key>
+		    <string>SublimeLinter Warning Outline</string>
+		    <key>scope</key>
+		    <string>sublimelinter.outline.warning</string>
+		    <key>settings</key>
+		    <dict>
+		        <key>background</key>
+		        <string>#DF9400</string>
+		        <key>foreground</key>
+		        <string>#FFFFFF</string>
+		    </dict>
+		</dict>
+		<dict>
+		    <key>name</key>
+		    <string>SublimeLinter Warning Underline</string>
+		    <key>scope</key>
+		    <string>sublimelinter.underline.warning</string>
+		    <key>settings</key>
+		    <dict>
+		        <key>background</key>
+		        <string>#f80</string>
+		    </dict>
+		</dict>
+		<dict>
+		    <key>name</key>
+		    <string>SublimeLinter Violation Outline</string>
+		    <key>scope</key>
+		    <string>sublimelinter.outline.violation</string>
+		    <key>settings</key>
+		    <dict>
+		        <key>background</key>
+		        <string>#ffffff33</string>
+		        <key>foreground</key>
+		        <string>#FFFFFF</string>
+		    </dict>
+		</dict>
+		<dict>
+		    <key>name</key>
+		    <string>SublimeLinter Violation Underline</string>
+		    <key>scope</key>
+		    <string>sublimelinter.underline.violation</string>
+		    <key>settings</key>
+		    <dict>
+		        <key>background</key>
+		        <string>#ff0</string>
+		    </dict>
+		</dict>
+	</array>
+	<key>uuid</key>
+	<string>787570E0-E0D3-11E2-A28F-0800200C9A66</string>
+</dict>
+</plist>

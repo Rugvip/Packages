@@ -1,0 +1,7 @@
+*.cache
+*.last-run
+Theme - soda
+!Theme - soda/Soda Dark 3.sublime-theme
+*.pyc
+PlainTasks
+SublimeREPL

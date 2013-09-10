@@ -1,0 +1,26 @@
+[
+	{
+		"button": "button4",
+		"press_command": "drag_select",
+		"press_args": {"by": "columns"}
+	},
+	// Switch files by holding down button 2, and using the scroll wheel
+	{ "button": "scroll_down", "modifiers": ["button2"], "command": "next_view" },
+	{ "button": "scroll_up", "modifiers": ["button2"], "command": "prev_view" },
+	{ "button": "scroll_up", "modifiers": ["button3"], "command": "move_to_next_group" },
+
+	// Change font size with ctrl+scroll wheel
+	{ "button": "scroll_down", "modifiers": ["super"], "command": "decrease_font_size" },
+	{ "button": "scroll_up", "modifiers": ["super"], "command": "increase_font_size" },
+
+	{ "button": "button2", "modifiers": [], "command": "context_menu" },
+
+	{ "button": "scroll_down", "modifiers": ["alt"], "command": "move_selection_inwards" },
+	{ "button": "scroll_up", "modifiers": ["alt"], "command": "move_selection_outwards" },
+	{ "button": "scroll_down", "modifiers": ["super", "alt"], "command": "delete_inwards" },
+	{ "button": "scroll_up", "modifiers": ["super", "alt"], "command": "delete_outwards" },
+	{
+		"button": "button1", "modifiers": ["shift", "super"],
+		"press_command": "copy_to_selections"
+	}
+]
