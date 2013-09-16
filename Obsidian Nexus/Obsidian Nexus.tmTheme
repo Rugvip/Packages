@@ -15,7 +15,7 @@
 			<key>settings</key>
 			<dict>
 				<key>background</key>
-				<string>#202224</string>
+				<string>#303234</string>
 				<key>caret</key>
 				<string>#fff</string>
 				<key>foreground</key>
@@ -65,13 +65,13 @@
 		</dict>
 		<dict>
 			<key>name</key>
-			<string>Unknown</string>
+			<string>Storage Modifier Java</string>
 			<key>scope</key>
-			<string>constant.other</string>
+			<string>storage.modifier.java</string>
 			<key>settings</key>
 			<dict>
 				<key>foreground</key>
-				<string>#4c6</string>
+				<string>#a73</string>
 			</dict>
 		</dict>
 		<dict>
@@ -126,7 +126,7 @@
 			<key>name</key>
 			<string>Number, Constant, Function Argument, Tag Attribute, Embedded, Escaped Characters</string>
 			<key>scope</key>
-			<string>constant.numeric, support.constant, punctuation.section.embedded, keyword.other.unit, constant.character.escape, meta.diff.range</string>
+			<string>constant.numeric, support.constant, punctuation.section.embedded, keyword.other.unit, constant.character.escape, meta.diff.range, constant.other</string>
 			<key>settings</key>
 			<dict>
 				<key>fontStyle</key>
@@ -192,7 +192,7 @@
 			<key>name</key>
 			<string>Keyword</string>
 			<key>scope</key>
-			<string>variable.language.js, keyword, storage, entity.name.tag.css, keyword.operator, meta.diff.header.to-file, markup.inserted.diff</string>
+			<string>variable.language.js, keyword, storage - storage.modifier.import - storage.modifier.package, entity.name.tag.css, keyword.operator, meta.diff.header.to-file, markup.inserted.diff</string>
 			<key>settings</key>
 			<dict>
 				<key>fontStyle</key>
@@ -218,7 +218,7 @@
 			<key>name</key>
 			<string>Dot-access operator</string>
 			<key>scope</key>
-			<string>punctuation.operator.dot-access.c</string>
+			<string>punctuation.operator.dot-access.c, keyword.operator.dereference</string>
 			<key>settings</key>
 			<dict>
 				<key>foreground</key>
