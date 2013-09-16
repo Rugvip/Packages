@@ -22,7 +22,8 @@
     { "keys" : ["ctrl+y"], "command": "expand_selection", "args": {"to": "indentation"} },
     { "keys" : ["ctrl+shift+r"], "command": "redo_or_repeat" },
     { "keys" : ["ctrl+g"], "command": "show_overlay", "args": {"overlay": "goto"} },
-    { "keys": ["ctrl+space", "ctrl+g"], "command": "show_overlay", "args": {"overlay": "goto", "text": "@"} },
+    { "keys" : ["ctrl+shift+g"], "command": "goto_symbol_in_project" },
+    { "keys" : ["ctrl+space", "ctrl+g"], "command": "show_overlay", "args": {"overlay": "goto", "text": "@"} },
     { "keys" : ["ctrl+d"], "command": "run_macro_file", "args": {"file": "Packages/Default/Delete Line.sublime-macro"} },
     { "keys" : ["ctrl+f1"], "command": "set_layout", "args": {
             "cols": [0.0, 0.5, 1.0],
@@ -189,10 +190,10 @@
     { "keys": ["alt+n"], "command": "insert", "args": { "characters": "\\n" } },
     { "keys": ["ctrl+alt+shift+p"], "command": "show_scope_name" },
     { "keys": ["ctrl+space", "ctrl+n"], "command": "clone_file" },
-    { "keys": ["ctrl+shift+g"], "command": "run_emmet_action", "args": { "action": "increment_number_by_1" }},
-    { "keys": ["ctrl+shift+b"], "command": "run_emmet_action", "args": { "action": "decrement_number_by_1" }},
-    { "keys": ["ctrl+shift+h"], "command": "run_emmet_action", "args": { "action": "increment_number_by_01" }},
-    { "keys": ["ctrl+shift+n"], "command": "run_emmet_action", "args": { "action": "decrement_number_by_01" }},
+    { "keys": ["ctrl+shift+1"], "command": "run_emmet_action", "args": { "action": "increment_number_by_1" }},
+    { "keys": ["ctrl+shift+2"], "command": "run_emmet_action", "args": { "action": "decrement_number_by_1" }},
+    { "keys": ["ctrl+shift+3"], "command": "run_emmet_action", "args": { "action": "increment_number_by_01" }},
+    { "keys": ["ctrl+shift+4"], "command": "run_emmet_action", "args": { "action": "decrement_number_by_01" }},
     { "keys": [""], "command": "insert", "args": {"characters": "->"} },
     { "keys": ["ctrl+shift+space", "ctrl+shift+r"], "command": "refactor" },
     { "keys": ["ctrl+shift+r"], "command": "refactor_scope" }
