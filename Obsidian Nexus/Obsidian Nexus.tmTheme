@@ -152,7 +152,7 @@
 			<key>name</key>
 			<string>C function call</string>
 			<key>scope</key>
-			<string>support.function.any-method.c</string>
+			<string>support.function</string>
 			<key>settings</key>
 			<dict>
 				<key>fontStyle</key>
