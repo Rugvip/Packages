@@ -65,9 +65,9 @@
 		</dict>
 		<dict>
 			<key>name</key>
-			<string>Storage Modifier Java</string>
+			<string>Storage Modifier</string>
 			<key>scope</key>
-			<string>storage.modifier.java</string>
+			<string>storage.modifier - storage.modifier.import - storage.modifier.package</string>
 			<key>settings</key>
 			<dict>
 				<key>foreground</key>
