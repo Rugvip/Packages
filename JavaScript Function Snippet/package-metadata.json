@@ -1,0 +1,5 @@
+{
+		"url": "about:blank",
+		"version": "0.0.1",
+		"description": "Inserts a function snippet and a semi colon after the } or any following )."
+}
