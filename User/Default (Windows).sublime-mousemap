@@ -132,5 +132,9 @@
 	{
 		"button": "button1", "modifiers": ["shift", "ctrl"],
 		"press_command": "copy_to_selections"
-	}
+	},
+	{ "button": "scroll_up", "modifiers": ["ctrl", "alt"], "command": "run_emmet_action", "args": { "action": "increment_number_by_1" }},
+	{ "button": "scroll_down", "modifiers": ["ctrl", "alt"], "command": "run_emmet_action", "args": { "action": "decrement_number_by_1" }},
+	{ "button": "scroll_up", "modifiers": ["ctrl", "alt", "shift"], "command": "run_emmet_action", "args": { "action": "increment_number_by_01" }},
+	{ "button": "scroll_down", "modifiers": ["ctrl", "alt", "shift"], "command": "run_emmet_action", "args": { "action": "decrement_number_by_01" }}
 ]
