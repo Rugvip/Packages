@@ -1,9 +1,11 @@
 {
 	"installed_packages":
 	[
+		"ASCII Decorator",
 		"Clipboard Manager",
 		"Emmet",
 		"Jade",
+		"JavaScript Function Snippet",
 		"PlainTasks",
 		"SideBarEnhancements",
 		"SublimeREPL",

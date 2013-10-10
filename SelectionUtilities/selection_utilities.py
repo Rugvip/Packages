@@ -418,7 +418,7 @@ class RefactorScope(sublime_plugin.TextCommand):
         sel = view.sel()[0]
 
         subs = view.substr(sel)
-        if (len(subs) < 3):
+        if (len(subs) < 1):
             return
 
         end_position = self.view.size()

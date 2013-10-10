@@ -154,6 +154,7 @@
     { "keys": ["ctrl+space", "ctrl+w"], "command": "transpose" },
     { "keys": ["ctrl+space", "ctrl+u"], "command": "upper_case" },
     { "keys": ["ctrl+space", "ctrl+l"], "command": "lower_case" },
+    { "keys": ["ctrl+shift+space", "ctrl+shift+u"], "command": "convert_camel_case" },
     { "keys": ["ctrl+space", "ctrl+a"], "command": "move_to", "args": {"to": "bol", "extend": false} },
     { "keys": ["ctrl+space", "ctrl+d"], "command": "move_to", "args": {"to": "eol", "extend": false} },
     { "keys": ["ctrl+space", "d"], "command": "run_macro_file", "args": {"file": "Packages/Default/Delete to Hard EOL.sublime-macro"} },
