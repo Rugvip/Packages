@@ -518,3 +518,70 @@ class AutoSemiColonForceCommand(sublime_plugin.TextCommand):
                 # Move the cursor
                 self.view.sel().clear()
                 self.view.sel().add(sublime.Region(last, last))
+
+
+class RemoveArgumentCommand(sublime_plugin.TextCommand):
+    def run(self, edit):
+        view = self.view
+        sels = [r for r in view.sel()]
+        sels.reverse()
+        end_position = self.view.size()
+        for sel in sels:
+            begin = sel.a - 1
+            end = sel.b
+            beginPar = 0
+            endPar = 0
+            beginComma = False
+            while (True):
+                if (self.view.score_selector(begin, "string") > 0):
+                    begin -= 1
+                    continue
+                if begin <= 0:
+                    break
+                char = self.view.substr(begin)
+                if (char in ["\n", "\r"]):
+                    break
+                if (char in [";"] and beginPar <= 0):
+                    break
+                if (char in [","] and beginPar <= 0):
+                    beginComma = True
+                    begin -= 1
+                    break
+                if (char in ["(", "{", "["]):
+                    if (beginPar <= 0):
+                        break
+                    else:
+                        beginPar -= 1
+                if (char in [")", "}", "]"]):
+                    beginPar += 1
+                begin -= 1
+            while (True):
+                if (self.view.score_selector(end, "string") > 0):
+                    end += 1
+                    continue
+                char = self.view.substr(end)
+                if end >= end_position:
+                    break
+                # if (char in ["\n", "\r"]):
+                #     break
+                if (char in [";"] and endPar <= 0):
+                    break
+                if (char in [","] and endPar <= 0):
+                    if not beginComma:
+                        end += 1
+                    break
+                if (char in [")", "}", "]"]):
+                    if (endPar <= 0):
+                        break
+                    else:
+                        endPar -= 1
+                if (char in ["(", "{", "["]):
+                    endPar += 1
+                end += 1
+            if begin < end:
+                begin += 1
+                while (self.view.substr(begin) in [" ", "\t"]):
+                    begin += 1
+                while (self.view.substr(end) in [" ", "\t"]):
+                    end += 1
+            self.view.erase(edit, sublime.Region(begin, end))
