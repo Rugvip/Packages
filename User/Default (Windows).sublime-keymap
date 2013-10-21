@@ -192,5 +192,6 @@
     { "keys": ["ctrl+space", "ctrl+n"], "command": "clone_file" },
     { "keys": [""], "command": "insert", "args": {"characters": "->"} },
     { "keys": ["ctrl+shift+space", "ctrl+shift+r"], "command": "refactor" },
-    { "keys": ["ctrl+shift+r"], "command": "refactor_scope" }
+    { "keys": ["ctrl+shift+r"], "command": "refactor_scope" },
+    { "keys": ["ctrl+shift+n"], "command": "nullify" }
 ]

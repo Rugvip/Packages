@@ -585,3 +585,15 @@ class RemoveArgumentCommand(sublime_plugin.TextCommand):
                 while (self.view.substr(end) in [" ", "\t"]):
                     end += 1
             self.view.erase(edit, sublime.Region(begin, end))
+
+
+class NullifyCommand(sublime_plugin.TextCommand):
+    def run(self, edit):
+        view = self.view
+        sels = [r for r in view.sel()]
+        sels.reverse()
+        for sel in sels:
+            str = view.substr(sel)
+            line = view.full_line(sel);
+            whitespace = re.match(r"\s*", view.substr(line)).group()
+            view.insert(edit, line.end(), whitespace + str + " = NULL;\n")
