@@ -24,6 +24,7 @@
 	"mouse_wheel_switches_tabs": false,
 	"open_files_in_new_window": false,
 	"scroll_speed": 1.0,
+    "scroll_past_end": true,
 	"show_tab_close_buttons": false,
 	"soda_folder_icons": true,
 	"theme": "Soda Dark 3.sublime-theme",

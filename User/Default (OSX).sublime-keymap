@@ -25,6 +25,7 @@
 	{ "keys" : ["super+shift+r"], "command": "redo_or_repeat" },
 	{ "keys" : ["super+g"], "command": "show_overlay", "args": {"overlay": "goto"} },
 	{ "keys" : ["super+space", "super+g"], "command": "show_overlay", "args": {"overlay": "goto", "text": "@"} },
+	{ "keys" : ["super+shift+g"], "command": "goto_symbol_in_project" },
 	{ "keys" : ["super+d"], "command": "run_macro_file", "args": {"file": "Packages/Default/Delete Line.sublime-macro"} },
 	{ "keys": ["super+f1"], "command": "set_layout", "args": {
 			"cols": [0.0, 0.5, 1.0],
@@ -168,6 +169,7 @@
 	{ "keys": ["super+space", "super+r"], "command": "select_to_delims", "args": {"delims": ["'", "\""]} },
 	{ "keys": ["super+space", "super+t"], "command": "select_to_delims", "args": {"delims": [" ", "\t", "\r", "\n"]} },
 	{ "keys": ["super+space", "super+s"], "command": "select_argument" },
+	{ "keys": ["super+shift+space", "super+shift+s"], "command": "remove_argument" },
 	{ "keys": ["super+space", "super+w"], "command": "transpose" },
 	{ "keys": ["super+space", "super+u"], "command": "upper_case" },
 	{ "keys": ["super+space", "super+l"], "command": "lower_case" },
@@ -194,8 +196,6 @@
 	{ "keys": ["super+shift+space", "super+shift+space"], "command": "move_selection_outwards" },
 	{ "keys": ["super+shift+space", "super+shift+a"], "command": "move_to", "args": {"to": "bol", "extend": true} },
 	{ "keys": ["super+shift+space", "super+shift+d"], "command": "move_to", "args": {"to": "eol", "extend": true} },
-	{ "keys": ["super+shift+space", "super+shift+w"], "command": "move_to", "args": {"to": "bof", "extend": true} },
-	{ "keys": ["super+shift+space", "super+shift+s"], "command": "move_to", "args": {"to": "eof", "extend": true} },
 	{ "keys": ["super+shift+space", "super+shift+t"], "command": "transpose_line_by_line" },
 	{ "keys": ["é"], "command": "toggle_char_at_end", "args": { "char": ";" } },
 	{ "keys": ["É"], "command": "toggle_char_at_end", "args": { "char": "," } },
@@ -207,12 +207,9 @@
 	{ "keys": ["super+space", "super+6"], "command": "insert_numbers", "args": { "offset": "1" } },
 	{ "keys": ["alt+n"], "command": "insert", "args": {"characters": "\\n"} },
 	{ "keys": ["super+alt+shift+p"], "command": "show_scope_name" },
-    { "keys": ["super+space", "super+n"], "command": "clone_file" },
-    { "keys": ["super+shift+g"], "command": "run_emmet_action", "args": { "action": "increment_number_by_1" }},
-    { "keys": ["super+shift+b"], "command": "run_emmet_action", "args": { "action": "decrement_number_by_1" }},
-    { "keys": ["super+shift+h"], "command": "run_emmet_action", "args": { "action": "increment_number_by_01" }},
-    { "keys": ["super+shift+n"], "command": "run_emmet_action", "args": { "action": "decrement_number_by_01" }},
+	{ "keys": ["super+space", "super+n"], "command": "clone_file" },
     { "keys": ["super+<"], "command": "insert", "args": {"characters": "->"} },
     { "keys": ["super+shift+space", "super+shift+r"], "command": "refactor" },
-    { "keys": ["super+shift+r"], "command": "refactor_scope" }
+    { "keys": ["super+shift+r"], "command": "refactor_scope" },
+    { "keys": ["super+shift+n"], "command": "nullify" }
 ]
