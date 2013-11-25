@@ -22,5 +22,39 @@
 	{
 		"button": "button1", "modifiers": ["shift", "super"],
 		"press_command": "copy_to_selections"
+	},
+	{
+		"button": "button1",
+		"count": 1,
+		"modifiers": ["shift", "super"],
+		"press_command": "drag_select",
+		"command": "goto_definition"
+	},
+	{
+		"button": "scroll_up",
+		"modifiers": ["super", "alt"],
+		"command": "run_emmet_action",
+		"args": { "action": "increment_number_by_1" }},
+	{
+		"button": "scroll_down",
+		"modifiers": ["super", "alt"],
+		"command": "run_emmet_action",
+		"args": { "action": "decrement_number_by_1" }},
+	{
+		"button": "scroll_up",
+		"modifiers": ["super", "alt", "shift"],
+		"command": "run_emmet_action",
+		"args": { "action": "increment_number_by_01" }},
+	{
+		"button": "scroll_down",
+		"modifiers": ["super", "alt", "shift"],
+		"command": "run_emmet_action",
+		"args": { "action": "decrement_number_by_01" }},
+	{
+		"button": "button1",
+		"count": 1,
+		"modifiers": ["alt", "super"],
+		"press_command": "drag_select",
+		"command": "copy_to_selections"
 	}
 ]
