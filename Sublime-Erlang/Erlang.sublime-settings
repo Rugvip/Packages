@@ -1,0 +1,4 @@
+{
+  "word_separators": "/\\\"-:,.;<>~!%^?&*|+=[]{}()`~",
+  "match_brackets_angle": true
+}

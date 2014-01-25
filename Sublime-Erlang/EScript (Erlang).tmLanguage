@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>fileTypes</key>
+	<array>
+		<string>escript</string>
+	</array>
+	<key>firstLineMatch</key>
+	<string>^#!\s*/.*[ /]escript</string>
+	<key>name</key>
+	<string>EScript (Erlang)</string>
+	<key>patterns</key>
+	<array>
+		<dict>
+			<key>begin</key>
+			<string>^(#!\s*/.*[ /]escript)</string>
+			<key>beginCaptures</key>
+			<dict>
+				<key>1</key>
+				<dict>
+					<key>name</key>
+					<string>comment.shebang.escript.erlang</string>
+				</dict>
+			</dict>
+			<key>end</key>
+			<string>(?!)</string>
+			<key>name</key>
+			<string>source.erlang</string>
+			<key>patterns</key>
+			<array>
+				<dict>
+					<key>include</key>
+					<string>source.erlang</string>
+				</dict>
+			</array>
+		</dict>
+	</array>
+	<key>scopeName</key>
+	<string>source.escript.erlang</string>
+</dict>
+</plist>

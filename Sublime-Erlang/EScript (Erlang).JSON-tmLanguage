@@ -1,0 +1,19 @@
+{
+  "name": "EScript (Erlang)",
+  "scopeName": "source.escript.erlang",
+  "fileTypes": ["escript"],
+  "firstLineMatch": "^#!\\s*/.*[ /]escript",
+  "patterns": [
+    {
+      "name": "source.erlang",
+      "begin": "^(#!\\s*/.*[ /]escript)",
+      "beginCaptures": {
+        "1": {"name": "comment.shebang.escript.erlang"}
+      },
+      "end": "(?!)",
+      "patterns": [
+        {"include": "source.erlang"}
+      ]
+    }
+  ]
+}

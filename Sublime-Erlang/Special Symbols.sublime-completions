@@ -1,0 +1,12 @@
+{
+  "scope": "source.erlang.expression, source.erlang meta.type",
+  "completions": [
+    "?MODULE",
+    "?FILE",
+    "?LINE",
+    "true",
+    "false",
+    "undefined",
+    "infinity"
+  ]
+}
