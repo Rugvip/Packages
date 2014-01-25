@@ -81,11 +81,10 @@
     { "keys": ["shift+f1"], "command": "repl_open", "args": {
         "type": "subprocess",
         "encoding": "utf8",
-        "cmd": {"linux": ["node", "${packages}/SublimeREPL/config/NodeJSErrorLog/repl.js"],
-                "osx": ["node", "${packages}/SublimeREPL/config/NodeJSErrorLog/repl.js"],
-                "windows": ["node.exe", "${packages}/SublimeREPL/config/NodeJSErrorLog/repl.js"]},
-        "cwd": "$file_path",
-        "external_id": "pi bash",
+        "cmd": ["erl"],
+        "cwd": "C:\\Dropbox\\Skola\\Erlang",
+        "external_id": "erlang",
+        "syntax": "Packages/Erlang/Erlang.tmLanguage",
         "extend_env": {"NODE_NO_READLINE": 1}
         }
     },
