@@ -71,9 +71,14 @@
     { "keys": ["ctrl+shift+8"], "command": "move_to_group", "args": { "group": 7 } },
     { "keys": ["ctrl+alt+f"], "command": "alignment" },
     { "keys": ["ctrl+shift+f"], "command": "reindent" },
-    { "keys": ["alt+r"], "command": "split_selection" },
     { "keys": ["alt+f"], "command": "java_script_function_snippet" },
+    { "keys": ["alt+f"], "command": "insert_snippet", "args": {"contents": "fun($1) -> $0 end"}, "context": [{
+        "key": "selector", "operator": "equal", "operand": "source.erlang"
+        }] },
     { "keys": ["alt+shift+f"], "command": "insert_snippet", "args": {"contents": "function ($1) {\n$0\n}"} },
+    { "keys": ["alt+shift+f"], "command": "insert_snippet", "args": {"contents": "fun($1) ->\n$0\nend"}, "context": [{
+        "key": "selector", "operator": "equal", "operand": "source.erlang"
+        }] },
     { "keys": ["ctrl+,"], "command": "insert_snippet", "args": {"contents": ";"}},
     { "keys": [";"], "command": "auto_semi_colon_force", "context": [
         { "key": "preceding_text", "operator": "not_regex_contains", "operand": "(for(each)?|if|switch|while)[^\\{]+$", "match_all": true }
@@ -125,7 +130,7 @@
     { "keys": ["ctrl+c"], "command": "plain_tasks_complete", "context": [{ "key": "selector", "operator": "equal", "operand": "text.todo" }] },
     { "keys": ["alt+c"], "command": "plain_tasks_archive", "context": [{"key": "selector", "operator": "equal", "operand": "text.todo" }] },
     { "keys": ["ctrl+alt+e"], "command": "find_all_under" },
-    { "keys": ["ctrl+alt+shift+e"], "command": "singlify_selection", "args": { "all": true } },
+    { "keys": ["ctrl+alt+shift+e"], "command": "find_all_words" },
     { "keys": ["alt+q"], "command": "flip_selection" },
     { "keys": ["ctrl+shift+d"], "command": "plain_tasks_new", "context": [{ "key": "selector", "operator": "equal", "operand": "text.todo" }] },
     { "keys": ["ctrl+a"], "command": "plain_tasks_cancel", "context": [{ "key": "selector", "operator": "equal", "operand": "text.todo" }] },
@@ -180,13 +185,17 @@
     { "keys": ["ctrl+shift+space", "ctrl+shift+d"], "command": "move_to", "args": {"to": "eol", "extend": true} },
     { "keys": ["ctrl+shift+space", "ctrl+shift+t"], "command": "transpose_line_by_line" },
     { "keys": ["alt+e"], "command": "toggle_char_at_end", "args": { "char": ";" } },
+    { "keys": ["alt+r"], "command": "toggle_char_at_end", "args": { "char": "." } },
     { "keys": ["alt+shift+e"], "command": "toggle_char_at_end", "args": { "char": "," } },
     { "keys": ["ctrl+space", "ctrl+i"], "command": "figlet" },
     { "keys": ["ctrl+space", "ctrl+4"], "command": "insert_numbers", "args": { "offset": "0" } },
     { "keys": ["ctrl+space", "ctrl+5"], "command": "eval_python" },
     { "keys": ["ctrl+space", "ctrl+6"], "command": "insert_numbers", "args": { "offset": "1" } },
-    { "keys": ["ctrl+alt+n"], "command": "insert", "args": { "characters": "\\n" } },
-    { "keys": ["alt+n"], "command": "insert", "args": { "characters": "\\n" } },
+    { "keys": ["ctrl+alt+n"], "command": "insert", "args": { "characters": "~n" } },
+    { "keys": ["alt+n"], "command": "insert", "args": { "characters": "\\n" }},
+    { "keys": ["alt+n"], "command": "insert", "args": { "characters": "~n" }, "context": [{
+        "key": "selector", "operator": "equal", "operand": "source.erlang"
+        }] },
     { "keys": ["ctrl+alt+shift+p"], "command": "show_scope_name" },
     { "keys": ["ctrl+space", "ctrl+n"], "command": "clone_file" },
     { "keys": [""], "command": "insert", "args": {"characters": "->"} },
