@@ -472,6 +472,27 @@ class RefactorScope(sublime_plugin.TextCommand):
             if (sel.contains(find)):
                 view.sel().add(find)
 
+
+class FindAllWordsCommand(sublime_plugin.TextCommand):
+    def run(self, edit):
+        view = self.view
+
+        sel = view.sel()[0]
+
+        subs = view.substr(sel)
+        print(subs)
+        if (len(subs) < 1):
+            return
+
+        esc = "".join(map(lambda c: "\\"+str(hex(ord(c)))[1:], subs))
+
+        print(esc)
+
+        finds = view.find_all("\\b" + esc + "\\b")
+
+        for find in finds:
+            view.sel().add(find)
+
 class ConvertCamelCaseCommand(sublime_plugin.TextCommand):
     def run(self, edit):
         view = self.view
