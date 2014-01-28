@@ -43,7 +43,7 @@
 			<key>name</key>
 			<string>Arguments</string>
 			<key>scope</key>
-			<string>variable.parameter</string>
+			<string>variable.parameter, variable.other.erlang</string>
 			<key>settings</key>
 			<dict>
 				<key>fontStyle</key>
@@ -67,7 +67,7 @@
 			<key>name</key>
 			<string>Storage Modifier</string>
 			<key>scope</key>
-			<string>storage.modifier - storage.modifier.import - storage.modifier.package</string>
+			<string>storage.modifier - storage.modifier.import - storage.modifier.package, keyword.other.macro</string>
 			<key>settings</key>
 			<dict>
 				<key>foreground</key>
@@ -91,13 +91,65 @@
 			<key>name</key>
 			<string>Function</string>
 			<key>scope</key>
-			<string>entity.name.tag, meta.function.js, meta.function.json.js, entity.name.function.c</string>
+			<string>entity.name.tag, meta.function.js, meta.function.json.js, entity.name.function.c, entity.name.function</string>
 			<key>settings</key>
 			<dict>
 				<key>fontStyle</key>
 				<string></string>
 				<key>foreground</key>
 				<string>#6BFFD4</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Erlang Atom</string>
+			<key>scope</key>
+			<string>constant.other.symbol.unquoted, constant.other.symbol.quoted.single</string>
+			<key>settings</key>
+			<dict>
+				<key>fontStyle</key>
+				<string></string>
+				<key>foreground</key>
+				<string>#F562DF</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Erlang Tuple</string>
+			<key>scope</key>
+			<string>meta.structure.tuple punctuation.definition.tuple</string>
+			<key>settings</key>
+			<dict>
+				<key>fontStyle</key>
+				<string></string>
+				<key>foreground</key>
+				<string>#26F</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Inner Erlang Tuple</string>
+			<key>scope</key>
+			<string>meta.structure.tuple meta.structure.tuple punctuation.definition.tuple</string>
+			<key>settings</key>
+			<dict>
+				<key>fontStyle</key>
+				<string></string>
+				<key>foreground</key>
+				<string>#4AF</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Inner Inner Erlang Tuple</string>
+			<key>scope</key>
+			<string>meta.structure.tuple meta.structure.tuple meta.structure.tuple punctuation.definition.tuple</string>
+			<key>settings</key>
+			<dict>
+				<key>fontStyle</key>
+				<string></string>
+				<key>foreground</key>
+				<string>#8DF</string>
 			</dict>
 		</dict>
  		<dict>
@@ -139,13 +191,13 @@
 			<key>name</key>
 			<string>Class, Support</string>
 			<key>scope</key>
-			<string>entity.name.class, entity.name.type.class, support.type, support.class.js</string>
+			<string>entity.name.class, entity.name.type.class, support.type, support.class.js, meta.function.module</string>
 			<key>settings</key>
 			<dict>
 				<key>fontStyle</key>
 				<string></string>
 				<key>foreground</key>
-				<string>#F1F2F3</string>
+				<string>#81A2BE</string>
 			</dict>
 		</dict>
 		<dict>
@@ -218,11 +270,24 @@
 			<key>name</key>
 			<string>Dot-access operator</string>
 			<key>scope</key>
-			<string>punctuation.operator.dot-access.c, keyword.operator.dereference</string>
+			<string>punctuation.operator.dot-access.c, keyword.operator.dereference, punctuation.separator.function.head-body, punctuation.separator.clause-head-body</string>
 			<key>settings</key>
 			<dict>
 				<key>foreground</key>
-				<string>#f22</string>
+				<string>#F22</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Erlang expression separator</string>
+			<key>scope</key>
+			<string>punctuation.separator.expressions</string>
+			<key>settings</key>
+			<dict>
+				<key>fontStyle</key>
+				<string>bold</string>
+				<key>foreground</key>
+				<string>#F00</string>
 			</dict>
 		</dict>
 		<dict>
