@@ -104,7 +104,7 @@
 			<key>name</key>
 			<string>Erlang Atom</string>
 			<key>scope</key>
-			<string>constant.other.symbol.unquoted, constant.other.symbol.quoted.single</string>
+			<string>constant.other.symbol.unquoted, constant.other.symbol.quoted.single, storage.type.record.field</string>
 			<key>settings</key>
 			<dict>
 				<key>fontStyle</key>
@@ -117,7 +117,7 @@
 			<key>name</key>
 			<string>Erlang Tuple</string>
 			<key>scope</key>
-			<string>meta.structure.tuple punctuation.definition.tuple</string>
+			<string>meta.structure.tuple punctuation.definition.tuple, punctuation.definition.class</string>
 			<key>settings</key>
 			<dict>
 				<key>fontStyle</key>
@@ -230,7 +230,7 @@
 			<key>name</key>
 			<string>variable</string>
 			<key>scope</key>
-			<string>entity.name.tag.localname, entity.name.type.class</string>
+			<string>entity.name.tag.localname, entity.name.type.class, storage.type.record</string>
 			<key>settings</key>
 			<dict>
 				<key>fontStyle</key>
