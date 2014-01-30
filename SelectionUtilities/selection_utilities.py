@@ -618,3 +618,9 @@ class NullifyCommand(sublime_plugin.TextCommand):
             line = view.full_line(sel);
             whitespace = re.match(r"\s*", view.substr(line)).group()
             view.insert(edit, line.end(), whitespace + str + " = NULL;\n")
+
+class RemoveLastSelectionCommand(sublime_plugin.TextCommand):
+    def run(self, edit):
+        view = self.view
+        sels = view.sel()
+        sels.subtract(sels[-1])
