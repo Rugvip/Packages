@@ -87,7 +87,7 @@
         "type": "subprocess",
         "encoding": "utf8",
         "cmd": ["erl"],
-        "cwd": "C:\\Dropbox\\Skola\\Erlang",
+        "cwd": "$file_path",
         "external_id": "erlang",
         "syntax": "Packages/Erlang/Erlang.tmLanguage",
         "extend_env": {"NODE_NO_READLINE": 1}
