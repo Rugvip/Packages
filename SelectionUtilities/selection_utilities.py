@@ -316,6 +316,22 @@ class ToggleCharAtEndCommand(sublime_plugin.TextCommand):
                 view.insert(edit, line, char)
 
 
+class ToggleCharAtEndExceptLastCommand(sublime_plugin.TextCommand):
+    def run(self, edit, char):
+        view = self.view
+        last = []
+        for sel in self.view.sel():
+            for line in view.lines(sel):
+                last.append(line.b)
+
+        last.reverse()
+        for line in last[1:]:
+            if view.substr(line - 1) == char:
+                view.erase(edit, sublime.Region(line - 1, line))
+            else:
+                view.insert(edit, line, char)
+
+
 class FlipSelectionCommand(sublime_plugin.TextCommand):
     def run(self, edit):
         sels = [s for s in self.view.sel()]
