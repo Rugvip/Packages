@@ -3,11 +3,16 @@
 	"https_proxy": "www-proxy.ericsson.se:8080",
 	"installed_packages":
 	[
+		"AngularJS",
 		"ASCII Decorator",
+		"Better CoffeeScript",
 		"Clipboard Manager",
 		"Emmet",
+		"GL Shader Validator",
 		"Jade",
 		"JavaScript Function Snippet",
+		"Markdown Preview",
+		"OpenGL Shading Language (GLSL)",
 		"PlainTasks",
 		"SideBarEnhancements",
 		"SublimeREPL",
