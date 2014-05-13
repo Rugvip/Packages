@@ -238,7 +238,7 @@ class MoveSelectionCommand(sublime_plugin.TextCommand):
 
 
 class CopyToSelectionsCommand(sublime_plugin.TextCommand):
-    def run_(self, args):
+    def run_(self, edit, args):
         view = self.view
         sels = [r for r in view.sel()]
         view.sel().clear()
@@ -247,17 +247,16 @@ class CopyToSelectionsCommand(sublime_plugin.TextCommand):
         point = new_sel[0].a
         new_sel.clear()
 
-        str = ""
+        strr = ""
         for sel in sels:
+            print("sel" + str(sel))
             if sel.contains(point):
-                str = view.substr(sel)
+                strr = view.substr(sel)
                 sels.remove(sel)
-        edit = view.begin_edit()
         map(new_sel.add, sels)
         sels.reverse()
         for sel in sels:
-            view.replace(edit, sel, str)
-        view.end_edit(edit)
+            view.replace(edit, sel, strr)
 
 
 class TransposeLineByLineCommand(sublime_plugin.TextCommand):
@@ -340,6 +339,32 @@ class FlipSelectionCommand(sublime_plugin.TextCommand):
             self.view.sel().add(sublime.Region(sel.b, sel.a))
 
 
+class AlignBySymbolDoCommand(sublime_plugin.TextCommand):
+    def run(self, edit, str):
+        view = self.view
+        lines = []
+        sels = [sel for sel in view.sel()]
+        for sel in sels:
+            for line in view.lines(sel):
+                if all(l.a != line.a and l.b != line.b for l in lines):
+                    lines.append(line)
+        lines.reverse()
+        # find rightmost str
+        max = 0
+        for line in lines:
+            pos = view.substr(line).find(str)
+            print(pos)
+            if pos > max:
+                max = pos
+        # insert spaces in front of str
+        for line in lines:
+            pos = view.substr(line).find(str)
+            if not pos < 0:
+                view.insert(edit, line.a + pos, " " * (max - pos))
+
+        view.end_edit(edit)
+
+
 class AlignBySymbolCommand(sublime_plugin.TextCommand):
     def run(self, edit):
         view = self.view
@@ -347,28 +372,7 @@ class AlignBySymbolCommand(sublime_plugin.TextCommand):
 
         def response(str):
             # split selection into unique lines
-            edit = view.begin_edit()
-            lines = []
-            sels = [sel for sel in view.sel()]
-            for sel in sels:
-                for line in view.lines(sel):
-                    if all(l.a != line.a and l.b != line.b for l in lines):
-                        lines.append(line)
-            lines.reverse()
-            # find rightmost str
-            max = 0
-            for line in lines:
-                pos = view.substr(line).find(str)
-                print(pos)
-                if pos > max:
-                    max = pos
-            # insert spaces in front of str
-            for line in lines:
-                pos = view.substr(line).find(str)
-                if not pos < 0:
-                    view.insert(edit, line.a + pos, " " * (max - pos))
-
-            view.end_edit(edit)
+            view.run_command("align_by_symbol_do", {'str': str})
 
         view.window().show_input_panel("Enter alignment string:", "", response, None, None)
 
