@@ -7,6 +7,7 @@
 	"caret_extra_width": 1,
 	"caret_style": "smooth",
 	"color_scheme": "Packages/Obsidian Nexus/Obsidian Nexus.tmTheme",
+	"default_erlang_dir": "C:\\Dropbox\\Skola\\Erlang",
 	"detect_slow_plugins": false,
 	"draw_minimap_border": true,
 	"draw_white_space": "all",
