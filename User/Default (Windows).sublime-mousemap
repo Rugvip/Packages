@@ -111,8 +111,8 @@
 	},
 
 	// Switch files with buttons 4 and 5
-	{ "button": "button4", "modifiers": [], "command": "prev_view" },
-	{ "button": "button5", "modifiers": [], "command": "next_view" },
+	{ "button": "button4", "command": "nop" },
+	{ "button": "button5", "command": "nop" },
 
 	// Switch files by holding down button 2, and using the scroll wheel
 	{ "button": "scroll_down", "modifiers": ["button2"], "command": "next_view" },

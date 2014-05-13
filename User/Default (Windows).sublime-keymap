@@ -7,6 +7,10 @@
     { "keys" : ["alt+a"], "command": "move", "args": {"by": "characters", "forward": false} },
     { "keys" : ["alt+s"], "command": "move", "args": {"by": "lines", "forward": true} },
     { "keys" : ["alt+d"], "command": "move", "args": {"by": "characters", "forward": true} },
+    { "keys" : ["ctrl+alt+h"], "command": "move", "args": {"by": "characters", "forward": false} },
+    { "keys" : ["ctrl+alt+j"], "command": "move", "args": {"by": "lines", "forward": true} },
+    { "keys" : ["ctrl+alt+k"], "command": "move", "args": {"by": "lines", "forward": false} },
+    { "keys" : ["ctrl+alt+l"], "command": "move", "args": {"by": "characters", "forward": true} },
     { "keys" : ["alt+ctrl+w"], "command": "swap_line_up" },
     { "keys" : ["alt+ctrl+a"], "command": "unindent" },
     { "keys" : ["alt+ctrl+s"], "command": "swap_line_down" },
@@ -20,7 +24,7 @@
     { "keys" : ["ctrl+r"], "command": "expand_selection", "args": {"to": "scope"} },
     { "keys" : ["ctrl+t"], "command": "expand_selection", "args": {"to": "brackets"} },
     { "keys" : ["ctrl+y"], "command": "expand_selection", "args": {"to": "indentation"} },
-    { "keys" : ["ctrl+shift+r"], "command": "redo_or_repeat" },
+    { "keys" : ["ctrl+alt+shift+r"], "command": "redo_or_repeat" },
     { "keys" : ["ctrl+g"], "command": "show_overlay", "args": {"overlay": "goto"} },
     { "keys" : ["ctrl+shift+g"], "command": "goto_symbol_in_project" },
     { "keys" : ["ctrl+space", "ctrl+g"], "command": "show_overlay", "args": {"overlay": "goto", "text": "@"} },
@@ -76,6 +80,7 @@
         "key": "selector", "operator": "equal", "operand": "source.erlang"
         }] },
     { "keys": ["alt+shift+f"], "command": "insert_snippet", "args": {"contents": "function ($1) {\n$0\n}"} },
+    { "keys": ["ctrl+alt+shift+f"], "command": "insert_snippet", "args": {"contents": "function ($1) {return $0}"} },
     { "keys": ["alt+shift+f"], "command": "insert_snippet", "args": {"contents": "fun($1) ->\n$0\nend"}, "context": [{
         "key": "selector", "operator": "equal", "operand": "source.erlang"
         }] },
@@ -132,6 +137,7 @@
     { "keys": ["ctrl+alt+e"], "command": "find_all_under" },
     { "keys": ["ctrl+alt+shift+e"], "command": "find_all_words" },
     { "keys": ["alt+q"], "command": "flip_selection" },
+    { "keys": ["ctrl+alt+q"], "command": "split_selection" },
     { "keys": ["ctrl+shift+d"], "command": "plain_tasks_new", "context": [{ "key": "selector", "operator": "equal", "operand": "text.todo" }] },
     { "keys": ["ctrl+a"], "command": "plain_tasks_cancel", "context": [{ "key": "selector", "operator": "equal", "operand": "text.todo" }] },
     { "keys": ["ctrl+shift+v"], "command": "clipboard_display" },
