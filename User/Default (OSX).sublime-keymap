@@ -175,6 +175,7 @@
 	{ "keys": ["super+space", "super+space"], "command": "delete_inwards" },
 	{ "keys": ["super+space", "super+f"], "command": "split_and_select_lines" },
 	{ "keys": ["super+space", "super+e"], "command": "select_alpha_num" },
+	{ "keys": ["super+space", "super+space", "super+e"], "command": "remove_alpha_num" },
 	{ "keys": ["super+space", "super+r"], "command": "select_to_delims", "args": {"delims": ["'", "\""]} },
 	{ "keys": ["super+space", "super+t"], "command": "select_to_delims", "args": {"delims": [" ", "\t", "\r", "\n"]} },
 	{ "keys": ["super+space", "super+s"], "command": "select_argument" },

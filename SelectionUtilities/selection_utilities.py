@@ -628,6 +628,24 @@ class RemoveArgumentCommand(sublime_plugin.TextCommand):
             self.view.erase(edit, sublime.Region(begin, end))
 
 
+class RemoveAlphaNumCommand(sublime_plugin.TextCommand):
+    def run(self, edit):
+        sels = []
+        for sel in self.view.sel():
+            begin = sel.a - 1
+            end = sel.b
+            while (self.view.substr(begin).isalnum()):
+                begin -= 1
+            while (self.view.substr(end).isalnum()):
+                end += 1
+            if begin < end:
+                begin += 1
+            sels.insert(0, sublime.Region(begin, end))
+
+        for sel in sels:
+            self.view.erase(edit, sel);
+
+
 class NullifyCommand(sublime_plugin.TextCommand):
     def run(self, edit):
         view = self.view
