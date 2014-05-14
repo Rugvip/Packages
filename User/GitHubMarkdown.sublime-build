@@ -1,0 +1,8 @@
+{
+    "command": "markdown_preview",
+    "args": {
+        "target": "browser",
+        "parser": "markdown"
+    },
+    "selector": "text.html.markdown"
+}
