@@ -646,6 +646,25 @@ class RemoveAlphaNumCommand(sublime_plugin.TextCommand):
             self.view.erase(edit, sel);
 
 
+class RemoveToDelimsCommand(sublime_plugin.TextCommand):
+    def run(self, edit, delims):
+        sels = []
+        end_position = self.view.size()
+        for sel in self.view.sel():
+            begin = sel.a - 1
+            end = sel.b
+            while (self.view.substr(begin) not in delims and begin > 0):
+                begin -= 1
+            while (self.view.substr(end) not in delims and end < end_position):
+                end += 1
+            if (begin < end and begin > 0):
+                begin += 1
+            sels.insert(0, sublime.Region(begin, end))
+
+        for sel in sels:
+            self.view.erase(edit, sel);
+
+
 class NullifyCommand(sublime_plugin.TextCommand):
     def run(self, edit):
         view = self.view

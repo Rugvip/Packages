@@ -178,6 +178,8 @@
 	{ "keys": ["super+space", "super+space", "super+e"], "command": "remove_alpha_num" },
 	{ "keys": ["super+space", "super+r"], "command": "select_to_delims", "args": {"delims": ["'", "\""]} },
 	{ "keys": ["super+space", "super+t"], "command": "select_to_delims", "args": {"delims": [" ", "\t", "\r", "\n"]} },
+	{ "keys": ["super+space", "super+space", "super+r"], "command": "remove_to_delims", "args": {"delims": ["'", "\""]} },
+	{ "keys": ["super+space", "super+space", "super+t"], "command": "remove_to_delims", "args": {"delims": [" ", "\t", "\r", "\n"]} },
 	{ "keys": ["super+space", "super+s"], "command": "select_argument" },
 	{ "keys": ["super+space", "super+space", "super+s"], "command": "remove_argument" },
 	{ "keys": ["super+space", "super+w"], "command": "transpose" },
