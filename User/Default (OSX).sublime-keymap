@@ -96,6 +96,7 @@
 	{ "keys": ["super+alt+f"], "command": "alignment" },
 	{ "keys": ["super+shift+f"], "command": "reindent" },
 	{ "keys": ["alt+f"], "command": "java_script_function_snippet" },
+	{ "keys": ["shift+alt+f"], "command": "insert_snippet", "args": {"contents": "function ($1) {\n\t$0\n}"}},
 	{ "keys": ["super+,"], "command": "insert_snippet", "args": {"contents": ";"}},
 	{ "keys": [";"], "command": "auto_semi_colon_force", "context": [
 		{ "key": "preceding_text", "operator": "not_regex_contains", "operand": "(for(each)?|if|switch|while)[^\\{]+$", "match_all": true }
@@ -177,7 +178,7 @@
 	{ "keys": ["super+space", "super+r"], "command": "select_to_delims", "args": {"delims": ["'", "\""]} },
 	{ "keys": ["super+space", "super+t"], "command": "select_to_delims", "args": {"delims": [" ", "\t", "\r", "\n"]} },
 	{ "keys": ["super+space", "super+s"], "command": "select_argument" },
-	{ "keys": ["super+shift+space", "super+shift+s"], "command": "remove_argument" },
+	{ "keys": ["super+space", "super+space", "super+s"], "command": "remove_argument" },
 	{ "keys": ["super+space", "super+w"], "command": "transpose" },
 	{ "keys": ["super+space", "super+u"], "command": "upper_case" },
 	{ "keys": ["super+space", "super+l"], "command": "lower_case" },
