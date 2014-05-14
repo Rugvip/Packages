@@ -177,7 +177,7 @@ class FigletFont(object):
         Load font file into memory. This can be overriden with
         a superclass to create different font sources.
         """
-        fontPath = '%s\%s.flf' % (self.dir, self.font)
+        fontPath = '%s/%s.flf' % (self.dir, self.font)
 
         if os.path.exists(fontPath) is False:
             raise FontNotFound("%s doesn't exist" % fontPath)
