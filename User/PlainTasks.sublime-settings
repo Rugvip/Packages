@@ -1,3 +1,6 @@
 {
-	"color_scheme": "Packages/PlainTasks/tasks-gray.hidden-tmTheme"
+    "open_tasks_bullet": "❍", // options: - | ❍ | ❑ | ■ | □ | ☐ | ▪ | ▫ | – | — ≡ → › | [ ]
+    "done_tasks_bullet": "✓", // options: + | ✓ | ✔ | √ | [x]
+    "color_scheme": "Packages/PlainTasks/tasks-obsidian.hidden-tmTheme",
+    "draw_white_space": "none",
 }

@@ -138,15 +138,13 @@
 		"extend_env": {"NODE_NO_READLINE": 1}
 		}
 	},
-	{ "keys": ["super+c"], "command": "plain_tasks_complete","context": [{ "key": "selector", "operator": "equal", "operand": "text.todo" }] },
+	{ "keys": ["super+e"], "command": "plain_tasks_complete","context": [{ "key": "selector", "operator": "equal", "operand": "text.todo" }] },
 	{ "keys": ["alt+c"], "command": "plain_tasks_cancel", "context": [{"key": "selector", "operator": "equal", "operand": "text.todo" }] },
-	{ "keys": ["super+shift+d"], "command": "plain_tasks_new","context": [{ "key": "selector", "operator": "equal", "operand": "text.todo" }] },
+	{ "keys": ["super+shift+e"], "command": "plain_tasks_new", "context": [{ "key": "selector", "operator": "equal", "operand": "text.todo" }] },
+	{ "keys": ["super+shift+a"], "command": "plain_tasks_archive","context": [{ "key": "selector", "operator": "equal", "operand": "text.todo" }] },
 	{ "keys": ["super+alt+e"], "command": "find_all_under" },
-	{ "keys": ["super+a"], "command": "plain_tasks_archive","context": [{ "key": "selector", "operator": "equal", "operand": "text.todo" }] },
 	{ "keys": ["alt+shift+e"], "command": "singlify_selection", "args": { "all": true } },
 	{ "keys": ["alt+q"], "command": "flip_selection" },
-	{ "keys": ["super+shift+d"], "command": "plain_tasks_new", "context": [{ "key": "selector", "operator": "equal", "operand": "text.todo" }] },
-	{ "keys": ["super+a"], "command": "plain_tasks_cancel", "context": [{ "key": "selector", "operator": "equal", "operand": "text.todo" }] },
 	{ "keys": ["super+shift+v"], "command": "clipboard_display" },
 	{ "keys": ["super+c"], "command": "clipboard_copy",
 		"context": [{"key": "clipboardcopy_fake", "operator":"equal", "operand":true}]
