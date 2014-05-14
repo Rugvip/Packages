@@ -153,6 +153,12 @@
 	{ "keys": ["super+c"], "command": "clipboard_copy",
 		"context": [{"key": "clipboardcopy_fake", "operator":"equal", "operand":true}]
 	},
+	{ "keys": ["super+b"], "command": "markdown_preview", "args": {
+	        "target": "browser",
+	        "parser": "markdown"
+	    },
+		"context": [{"key": "selector", "operator":"equal", "operand":"text.html.markdown"}]
+	},
 	{ "keys": ["super+alt+v"], "command": "clipboard_clear_history" },
 	{ "keys": ["super+q"], "command": "run_macro_file", "args": {"file": "Packages/Default/Add Line.sublime-macro"} },
 	{ "keys": ["super+shift+q"], "command": "insert", "args": {"characters": "\n"} },
