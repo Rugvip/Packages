@@ -228,5 +228,6 @@
     { "keys": ["≤"], "command": "insert", "args": {"characters": "<-"} },
     { "keys": ["super+shift+space", "super+shift+r"], "command": "refactor" },
     { "keys": ["super+shift+r"], "command": "refactor_scope" },
-    { "keys": ["super+shift+n"], "command": "nullify" }
+    { "keys": ["super+shift+n"], "command": "nullify" },
+    { "keys": ["super+space", "super+v"], "command": "paste_from_history" }
 ]
