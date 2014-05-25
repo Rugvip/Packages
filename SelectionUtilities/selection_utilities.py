@@ -171,14 +171,13 @@ class SelectArgumentCommand(sublime_plugin.TextCommand):
         for sel in sels:
             self.view.sel().add(sel)
 
-
-def getPosOtherLine(self, sel, direction):
+def getPosOtherLine(self, sel, up):
     beginPos = self.view.text_to_layout(sel.a)
     endPos = self.view.text_to_layout(sel.b)
     beginX = beginPos[0]
     endX = endPos[0]
     y = 0
-    if (direction == "up"):
+    if (up):
         y = beginPos[1] - self.view.line_height()
     else:
         y = endPos[1] + self.view.line_height()
@@ -188,16 +187,16 @@ def getPosOtherLine(self, sel, direction):
 
 
 class DeleteLineImprovedCommand(sublime_plugin.TextCommand):
-    def run(self, edit, direction):
+    def run(self, edit, up):
         sels = []
         erase = []
         for sel in self.view.sel():
-            sels.append(getPosOtherLine(self, sel, direction))
-            erase.append(self.view.full_line(sel))
+            removedLine = getPosOtherLine(self, sel, not up)
+            erase.append(self.view.full_line(removedLine))
 
-        self.view.sel().clear()
-        for sel in sels:
-            self.view.sel().add(sel)
+        # self.view.sel().clear()
+        # for sel in sels:
+        #     self.view.sel().add(sel)
 
         erase.reverse()
         for e in erase:
@@ -643,7 +642,16 @@ class RemoveAlphaNumCommand(sublime_plugin.TextCommand):
             sels.insert(0, sublime.Region(begin, end))
 
         for sel in sels:
-            self.view.erase(edit, sel);
+            self.view.erase(edit, sel)
+            right = sel.begin()
+            if (right != 0):
+                left = right - 1
+                a = self.view.substr(left)
+                b = self.view.substr(right)
+
+                if (a == b):
+                    self.view.erase(edit, sublime.Region(left, right))
+
 
 
 class RemoveToDelimsCommand(sublime_plugin.TextCommand):
