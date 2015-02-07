@@ -3,7 +3,6 @@ import sublime
 import re
 from math import *
 
-
 class SplitSelectionCommand(sublime_plugin.TextCommand):
     def run(self, edit):
         sels = []
@@ -194,10 +193,6 @@ class DeleteLineImprovedCommand(sublime_plugin.TextCommand):
             removedLine = getPosOtherLine(self, sel, not up)
             erase.append(self.view.full_line(removedLine))
 
-        # self.view.sel().clear()
-        # for sel in sels:
-        #     self.view.sel().add(sel)
-
         erase.reverse()
         for e in erase:
             self.view.erase(edit, e)
@@ -296,6 +291,19 @@ class SinglifySelectionCommand(sublime_plugin.TextCommand):
         else:
             for sel in sels:
                 self.view.sel().add(sublime.Region(sel))
+
+
+class DeleteEolCommand(sublime_plugin.TextCommand):
+    def run(self, edit):
+        view = self.view
+        last = []
+        for sel in self.view.sel():
+            for line in view.lines(sel):
+                last.append(line.b)
+
+        last.reverse()
+        for line in last:
+            view.erase(edit, sublime.Region(line - 1, line))
 
 
 class ToggleCharAtEndCommand(sublime_plugin.TextCommand):
@@ -651,6 +659,10 @@ class RemoveAlphaNumCommand(sublime_plugin.TextCommand):
 
                 if (a == b):
                     self.view.erase(edit, sublime.Region(left, right))
+                elif a in ('_', '-'):
+                    self.view.erase(edit, sublime.Region(left, left + 1))
+                elif b in ('_', '-'):
+                    self.view.erase(edit, sublime.Region(right, right + 1))
 
 
 
@@ -680,12 +692,45 @@ class NullifyCommand(sublime_plugin.TextCommand):
         sels.reverse()
         for sel in sels:
             str = view.substr(sel)
-            line = view.full_line(sel);
+            line = view.full_line(sel)
             whitespace = re.match(r"\s*", view.substr(line)).group()
             view.insert(edit, line.end(), whitespace + str + " = NULL;\n")
+
 
 class RemoveLastSelectionCommand(sublime_plugin.TextCommand):
     def run(self, edit):
         view = self.view
         sels = view.sel()
         sels.subtract(sels[-1])
+
+
+class DeleteEmptyLinesCommand(sublime_plugin.TextCommand):
+    def run(self, edit):
+        view = self.view
+        sels = view.sel()
+        for sel in reversed(sels):
+            for line in reversed(view.lines(sel)):
+                st = view.substr(line).strip()
+                if not st:
+                    view.erase(edit, view.full_line(line));
+
+
+class ExpandSelectionVerticallyCommand(sublime_plugin.TextCommand):
+    def run(self, edit, up):
+        print("lol")
+        view = self.view
+        sels = view.sel()
+        for sel in sels:
+            pos = self.view.text_to_layout(sel.b)
+            print("pos: " + str(pos))
+            y = pos[1] - self.view.line_height() * (int(up) * 2 - 1)
+            print("y: " + str(y))
+            if sel.xpos == -1:
+                sel.xpos = self.view.text_to_layout(sel.b)[0]
+            print("y: " + str(sel.xpos))
+            end = self.view.layout_to_text((sel.xpos, y))
+            sels.subtract(sel)
+            sel.b = end
+            sels.add(sel)
+
+
