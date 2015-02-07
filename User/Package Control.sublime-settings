@@ -1,22 +1,29 @@
 {
-	"http_proxy": "www-proxy.ericsson.se:8080",
-	"https_proxy": "www-proxy.ericsson.se:8080",
+	"in_process_packages":
+	[
+	],
 	"installed_packages":
 	[
-		"AngularJS",
 		"ASCII Decorator",
 		"Better CoffeeScript",
-		"Clipboard Manager",
+		"Case Conversion",
+		"CMake",
+		"Dart",
 		"Emmet",
+		"GitGutter-Edge",
+		"Github Tools",
 		"GL Shader Validator",
-		"Jade",
+		"GoRazor",
 		"JavaScript Function Snippet",
-		"LaTeXTools",
 		"Markdown Preview",
 		"OpenGL Shading Language (GLSL)",
 		"Package Control",
-		"PlainTasks",
+		"Prolog",
+		"Rust",
+		"RustAutoComplete",
+		"Sass",
 		"SideBarEnhancements",
+		"SublimeGit",
 		"SublimeREPL",
 		"Theme - Soda"
 	]

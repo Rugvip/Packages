@@ -1,10 +1,10 @@
 {
 	"always_show_minimap_viewport": true,
 	"auto_complete_commit_on_tab": true,
-	"bold_folder_labels": true,
-	"caret_extra_bottom": 1,
+	"bold_folder_labels": false,
+	"caret_extra_bottom": 3,
 	"caret_extra_top": 3,
-	"caret_extra_width": 1,
+	"caret_extra_width": 2,
 	"caret_style": "smooth",
 	"color_scheme": "Packages/Obsidian Nexus/Obsidian Nexus.tmTheme",
 	"default_erlang_dir": "C:\\Dropbox\\Skola\\Erlang",
@@ -13,13 +13,14 @@
 	"draw_white_space": "all",
 	"ensure_newline_at_eof_on_save": true,
 	"fade_fold_buttons": false,
-	"font_size": 12,
+	"font_size": 14,
 	"highlight_line": true,
 	"highlight_modified_tabs": true,
 	"ignore_inodes": true,
 	"ignored_packages":
 	[
-		"Vintage"
+		"Vintage",
+		"Soda Dark 3"
 	],
 	"indent_guide_options":
 	[
@@ -29,7 +30,7 @@
 	"mouse_wheel_switches_tabs": false,
 	"open_files_in_new_window": false,
 	"scroll_past_end": true,
-	"scroll_speed": 1.0,
+	"scroll_speed": 100,
 	"show_tab_close_buttons": false,
 	"soda_folder_icons": true,
 	"theme": "Soda Dark 3.sublime-theme",
