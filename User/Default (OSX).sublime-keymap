@@ -164,7 +164,7 @@
 	{ "keys": ["super+shift+a"], "command": "plain_tasks_archive","context": [{ "key": "selector", "operator": "equal", "operand": "text.todo" }] },
 	{ "keys": ["super+alt+e"], "command": "find_all_under" },
 	{ "keys": ["alt+shift+e"], "command": "singlify_selection", "args": { "all": true } },
-	{ "keys": ["alt+q"], "command": "flip_selection" },
+	{ "keys": ["alt+q"], "command": "show_documentation" },
 	{ "keys": ["super+shift+v"], "command": "clipboard_display" },
 	{ "keys": ["super+c"], "command": "clipboard_copy",
 		"context": [{"key": "clipboardcopy_fake", "operator":"equal", "operand":true}]
@@ -255,5 +255,16 @@
 	{ "keys": ["alt+f1"], "command": "unfold" },
 	{ "keys": ["alt+f2"], "command": "fold" },
 	{ "keys": ["alt+f3"], "command": "fold_by_level", "args": {"level": 1} },
-	{ "keys": ["alt+f4"], "command": "unfold_all" }
+	{ "keys": ["alt+f4"], "command": "unfold_all" },
+	{ "keys": ["super+8", "s"], "command": "gs_show_status" },
+	{ "keys": ["super+8", "i"], "command": "gs_inline_diff" },
+	{ "keys": ["super+8", "t", "i"], "command": "gs_inline_diff", "args": { "cached": true } },
+	{ "keys": ["super+8", "d"], "command": "gs_diff" },
+	{ "keys": ["super+8", "t", "d"], "command": "gs_diff", "args": { "in_cached_mode": true } },
+	{ "keys": ["super+8", "c"], "command": "gs_commit" },
+	{ "keys": ["super+8", "a"], "command": "gs_commit", "args": { "amend": true} },
+	{ "keys": ["super+8", "f"], "command": "gs_fetch" },
+	{ "keys": ["super+8", "b"], "command": "gs_blame" },
+	{ "keys": ["super+8", "g"], "command": "gs_log_graph" },
+	{ "keys": ["super+8", "l"], "command": "gs_log" }
 ]

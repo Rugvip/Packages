@@ -1,6 +1,7 @@
 {
 	"always_show_minimap_viewport": true,
 	"auto_complete_commit_on_tab": true,
+	"auto_complete_cycle": true,
 	"bold_folder_labels": false,
 	"caret_extra_bottom": 3,
 	"caret_extra_top": 3,
@@ -13,14 +14,13 @@
 	"draw_white_space": "all",
 	"ensure_newline_at_eof_on_save": true,
 	"fade_fold_buttons": false,
-	"font_size": 14,
+	"font_size": 13,
 	"highlight_line": true,
 	"highlight_modified_tabs": true,
 	"ignore_inodes": true,
 	"ignored_packages":
 	[
-		"Vintage",
-		"Soda Dark 3"
+		"Vintage"
 	],
 	"indent_guide_options":
 	[
@@ -33,6 +33,8 @@
 	"scroll_speed": 100,
 	"show_tab_close_buttons": false,
 	"soda_folder_icons": true,
+	"suppress_explicit_completions": true,
+	"suppress_word_completions": false,
 	"theme": "Soda Dark 3.sublime-theme",
 	"translate_tabs_to_spaces": true,
 	"trim_automatic_white_space": true,

@@ -5,25 +5,17 @@
 	"installed_packages":
 	[
 		"ASCII Decorator",
-		"Better CoffeeScript",
 		"Case Conversion",
-		"CMake",
-		"Dart",
-		"Emmet",
+		"Dockerfile Syntax Highlighting",
 		"GitGutter-Edge",
-		"Github Tools",
+		"GitSavvy",
 		"GL Shader Validator",
-		"GoRazor",
 		"JavaScript Function Snippet",
 		"Markdown Preview",
 		"OpenGL Shading Language (GLSL)",
 		"Package Control",
-		"Prolog",
-		"Rust",
-		"RustAutoComplete",
 		"Sass",
 		"SideBarEnhancements",
-		"SublimeGit",
 		"SublimeREPL",
 		"Theme - Soda"
 	]
