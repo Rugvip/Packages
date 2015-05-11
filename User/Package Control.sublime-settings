@@ -6,11 +6,13 @@
 	[
 		"ASCII Decorator",
 		"Case Conversion",
+		"DocBlockr",
 		"Dockerfile Syntax Highlighting",
 		"GitGutter-Edge",
 		"GitSavvy",
 		"GL Shader Validator",
 		"JavaScript Function Snippet",
+		"JSHint Gutter",
 		"Markdown Preview",
 		"OpenGL Shading Language (GLSL)",
 		"Package Control",
