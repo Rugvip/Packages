@@ -1,3 +1,22 @@
 {
-    "test": "ok"
+    /* directory containing .gir files to be parsed */
+    "gir_folder": "/Users/epatold/cerbero/dist/darwin_x86_64/share/gir-1.0",
+
+    /* included .gir files */
+    "include_files": [
+        "GLib-2.0.gir",
+        "GObject-2.0.gir",
+        "Gst-1.0.gir",
+        "Json-1.0.gir",
+        "Nice-0.1.gir",
+        "Owr-0.1.gir",
+        "Soup-2.4.gir"
+    ],
+
+    /* excluded .gir files */
+    "exclude_files": [
+    ],
+
+    /* true if .gir files should always be parsed when reloading */
+    "ignore_cache": true,
 }

@@ -1,0 +1,30 @@
+
+.constant {
+    color: #D572DF;
+}
+
+.param_ref {
+    color: #B285FF;
+}
+
+.type {
+    color: #93C763;
+}
+
+* {
+    background-color: #303234;
+    color: #F1F2F3;
+}
+
+a {
+    color: #4BF0B4;
+}
+
+.parameter {
+    color: #7AD;
+}
+
+.parameter.selected {
+    color: #8BE;
+    font-weight: bold;
+}
