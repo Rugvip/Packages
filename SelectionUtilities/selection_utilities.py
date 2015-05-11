@@ -734,3 +734,19 @@ class ExpandSelectionVerticallyCommand(sublime_plugin.TextCommand):
             sels.add(sel)
 
 
+import os
+
+class SwitchFileExtendedCommand(sublime_plugin.TextCommand):
+    def run(self, edit, extensions):
+        _, filename = os.path.split(self.view.file_name())
+        if filename.endswith('.js'):
+            if filename.endswith('.spec.js'):
+                filename = filename.replace('.spec.js', '.js')
+            else:
+                filename = filename.replace('.js', '.spec.js')
+            self.view.window().run_command('show_overlay', {'overlay': 'goto', 'text': filename})
+            self.view.window().run_command('move', {'by': 'lines', 'forward': True})
+            self.view.window().run_command('insert', {'characters': '\n'})
+        else:
+            self.view.window().run_command("switch_file", {'extensions': extensions})
+
