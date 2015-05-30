@@ -108,11 +108,13 @@
 	{ "keys": ["ctrl+9"], "command": "select_by_index", "args": { "index": 8 } },
 	{ "keys": ["ctrl+0"], "command": "select_by_index", "args": { "index": 9 } },
 	{ "keys": ["super+f"], "command": "show_panel", "args": {"panel": "find", "reverse": false} },
-	{ "keys": ["super+alt+f"], "command": "delete_eol" },
 	{ "keys": ["super+alt+r"], "command": "remove_last_selection" },
 	{ "keys": ["alt+f"], "command": "java_script_function_snippet" },
+	{ "keys": ["super+alt+f"], "command": "insert_snippet", "args": {"contents": "function ($1) {\n\t$0\n},"}},
 	{ "keys": ["shift+alt+f"], "command": "insert_snippet", "args": {"contents": "function ($1) {\n\t$0\n}"}},
 	{ "keys": ["super+,"], "command": "insert_snippet", "args": {"contents": ";"}},
+	{ "keys": ["alt+,"], "command": "insert_snippet", "args": {"contents": ","}},
+	{ "keys": ["alt+space"], "command": "insert_snippet", "args": {"contents": " "}},
 	{ "keys": [";"], "command": "auto_semi_colon_force", "context": [
 		{ "key": "preceding_text", "operator": "not_regex_contains", "operand": "(for(each)?|if|switch|while)[^\\{]+$", "match_all": true }
 	]},
