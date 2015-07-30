@@ -299,5 +299,6 @@
 	{ "keys": ["super+8", "f"], "command": "gs_fetch" },
 	{ "keys": ["super+8", "b"], "command": "gs_blame" },
 	{ "keys": ["super+8", "g"], "command": "gs_log_graph" },
-	{ "keys": ["super+8", "l"], "command": "gs_log" }
+	{ "keys": ["super+8", "l"], "command": "gs_log" },
+	{ "keys": ["alt+tab"], "command": "gs_show_call_tip", "context": [{ "key": "selector", "operator": "equal", "operand": "source.go" }] }
 ]
