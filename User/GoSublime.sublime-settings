@@ -1,4 +1,14 @@
 {
-    "fmt_tab_indent": false,
-    "fmt_tab_width": 4
+	"env": {
+		"GOPATH": "$HOME/Development/GoCode",
+		"PATH": "/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/go/bin:/Users/epatold/Development/GoCode/bin"
+	},
+	"fmt_tab_indent": true,
+	"fmt_tab_width": 4,
+	"on_save": [{
+		"cmd": "gc_comp_lint"
+	}],
+	"fmt_cmd": ["goimports"],
+	"build_command": ["go", "build"],
+	"autocomplete_builtins": true
 }
