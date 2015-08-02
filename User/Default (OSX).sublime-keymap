@@ -139,9 +139,27 @@
 	{ "keys": ["ctrl+0"], "command": "select_by_index", "args": { "index": 9 } },
 	{ "keys": ["super+f"], "command": "show_panel", "args": {"panel": "find", "reverse": false} },
 	{ "keys": ["super+alt+r"], "command": "remove_last_selection" },
-	{ "keys": ["alt+f"], "command": "java_script_function_snippet" },
-	{ "keys": ["super+alt+f"], "command": "insert_snippet", "args": {"contents": "function ($1) {\n\t$0\n},"}},
-	{ "keys": ["shift+alt+f"], "command": "insert_snippet", "args": {"contents": "function ($1) {\n\t$0\n}"}},
+	{ "keys": ["alt+f"], "command": "java_script_function_snippet",
+		"context": [{"key": "selector", "operator":"equal", "operand":"source.js"}]
+	},
+	{ "keys": ["super+alt+f"], "command": "insert_snippet", "args": {"contents": "function ($1) {\n\t$0\n},"},
+		"context": [{"key": "selector", "operator":"equal", "operand":"source.js"}]
+	},
+	{ "keys": ["shift+alt+f"], "command": "insert_snippet", "args": {"contents": "function ($1) {\n\t$0\n}"},
+		"context": [{"key": "selector", "operator":"equal", "operand":"source.js"}]
+	},
+	{ "keys": ["alt+f"], "command": "insert_snippet", "args": {"contents": "def $1($2):\n\t$0\n"},
+		"context": [{"key": "selector", "operator":"equal", "operand":"source.python"}]
+	},
+	{ "keys": ["alt+f"], "command": "insert_snippet", "args": {"contents": "func $1($2) $3{\n\t$0\n}"},
+		"context": [{"key": "selector", "operator":"equal", "operand":"source.go"}]
+	},
+	{ "keys": ["super+alt+f"], "command": "insert_snippet", "args": {"contents": "func ($1) $0"},
+		"context": [{"key": "selector", "operator":"equal", "operand":"source.go"}]
+	},
+	{ "keys": ["shift+alt+f"], "command": "insert_snippet", "args": {"contents": "func ($1) $2($3) $4{\n\t$0\n}"},
+		"context": [{"key": "selector", "operator":"equal", "operand":"source.go"}]
+	},
 	{ "keys": ["super+,"], "command": "insert_snippet", "args": {"contents": ";"}},
 	{ "keys": ["alt+,"], "command": "insert_snippet", "args": {"contents": ","}},
 	{ "keys": ["alt+space"], "command": "insert_snippet", "args": {"contents": " "}},
@@ -268,6 +286,12 @@
 	{ "keys": ["é"], "command": "toggle_char_at_end", "args": { "char": ";" } },
 	{ "keys": ["®"], "command": "toggle_char_at_end", "args": { "char": "," } },
 	{ "keys": ["†"], "command": "toggle_char_at_end", "args": { "char": ":" } },
+	{ "keys": ["é"], "command": "insert_snippet", "args": {"contents": " err != nil {\n\t$0\n}"},
+		"context": [{"key": "selector", "operator":"equal", "operand":"source.go"}]
+	},
+	{ "keys": ["super+<"], "command": "insert_snippet", "args": {"contents": " := "},
+		"context": [{"key": "selector", "operator":"equal", "operand":"source.go"}]
+	},
 	{ "keys": ["super+space", "super+i"], "command": "figlet_default" },
 	{ "keys": ["super+space", "super+f1"], "command": "fold" },
 	{ "keys": ["super+space", "super+f2"], "command": "unfold" },
