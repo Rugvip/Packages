@@ -91,13 +91,117 @@
 			<key>name</key>
 			<string>Function</string>
 			<key>scope</key>
-			<string>entity.name.tag, meta.function.js, meta.function.json.js, entity.name.function.c, entity.name.function</string>
+			<string>entity.name.tag, meta.function.json.js, entity.name.function.c, entity.name.function, meta.method</string>
 			<key>settings</key>
 			<dict>
 				<key>fontStyle</key>
 				<string></string>
 				<key>foreground</key>
 				<string>#6BFFD4</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>JS Function Call</string>
+			<key>scope</key>
+			<string>meta.function-call entity.name.function</string>
+			<key>settings</key>
+			<dict>
+				<key>fontStyle</key>
+				<string></string>
+				<key>foreground</key>
+				<string>#8DF</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>JS This</string>
+			<key>scope</key>
+			<string>variable.language.this.js</string>
+			<key>settings</key>
+			<dict>
+				<key>fontStyle</key>
+				<string></string>
+				<key>foreground</key>
+				<string>#6AF</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>JS Variable</string>
+			<key>scope</key>
+			<string>variable.other</string>
+			<key>settings</key>
+			<dict>
+				<key>fontStyle</key>
+				<string></string>
+				<key>foreground</key>
+				<string>#F1F2F3</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>JS Object Variable</string>
+			<key>scope</key>
+			<string>variable.other.object</string>
+			<key>settings</key>
+			<dict>
+				<key>fontStyle</key>
+				<string></string>
+				<key>foreground</key>
+				<string>#F892FF</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>JS Class Variable</string>
+			<key>scope</key>
+			<string>variable.other.class</string>
+			<key>settings</key>
+			<dict>
+				<key>fontStyle</key>
+				<string></string>
+				<key>foreground</key>
+				<string>#F5526F</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>JS Constructor invocation</string>
+			<key>scope</key>
+			<string>meta.instance.constructor</string>
+			<key>settings</key>
+			<dict>
+				<key>fontStyle</key>
+				<string></string>
+				<key>foreground</key>
+				<string>#F5526F</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>JS Builtin Class</string>
+			<key>scope</key>
+			<string>support.class.builtin</string>
+			<key>settings</key>
+			<dict>
+				<key>fontStyle</key>
+				<string></string>
+				<key>foreground</key>
+				<string>#F5526F</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>JS Global</string>
+			<key>scope</key>
+			<string>support.type.object</string>
+			<key>settings</key>
+			<dict>
+				<key>fontStyle</key>
+				<string></string>
+				<key>foreground</key>
+				<string>#a73</string>
 			</dict>
 		</dict>
 		<dict>
