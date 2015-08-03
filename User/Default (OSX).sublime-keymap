@@ -318,11 +318,13 @@
 	{ "keys": ["super+8", "t", "i"], "command": "gs_inline_diff", "args": { "cached": true } },
 	{ "keys": ["super+8", "d"], "command": "gs_diff" },
 	{ "keys": ["super+8", "t", "d"], "command": "gs_diff", "args": { "in_cached_mode": true } },
-	{ "keys": ["super+8", "c"], "command": "gs_commit" },
-	{ "keys": ["super+8", "a"], "command": "gs_commit", "args": { "amend": true} },
+	{ "keys": ["super+8", "c"], "command": "gs_quick_commit" },
+	{ "keys": ["super+8", "m"], "command": "gs_commit", "args": { "amend": true} },
 	{ "keys": ["super+8", "f"], "command": "gs_fetch" },
 	{ "keys": ["super+8", "b"], "command": "gs_blame" },
 	{ "keys": ["super+8", "g"], "command": "gs_log_graph" },
 	{ "keys": ["super+8", "l"], "command": "gs_log" },
+	{ "keys": ["super+8", "a"], "command": "gs_quick_stage" },
+	{ "keys": ["super+8", "p"], "command": "gs_push" },
 	{ "keys": ["alt+tab"], "command": "gs_show_call_tip", "context": [{ "key": "selector", "operator": "equal", "operand": "source.go" }] }
 ]
