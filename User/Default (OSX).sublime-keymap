@@ -289,9 +289,6 @@
 	{ "keys": ["é"], "command": "insert_snippet", "args": {"contents": " err != nil {\n\t$0\n}"},
 		"context": [{"key": "selector", "operator":"equal", "operand":"source.go"}]
 	},
-	{ "keys": ["super+<"], "command": "insert_snippet", "args": {"contents": " := "},
-		"context": [{"key": "selector", "operator":"equal", "operand":"source.go"}]
-	},
 	{ "keys": ["super+space", "super+i"], "command": "figlet_default" },
 	{ "keys": ["super+space", "super+f1"], "command": "fold" },
 	{ "keys": ["super+space", "super+f2"], "command": "unfold" },
@@ -302,6 +299,9 @@
 	{ "keys": ["super+alt+shift+p"], "command": "show_scope_name" },
 	{ "keys": ["super+space", "super+n"], "command": "clone_file" },
 	{ "keys": ["super+<"], "command": "insert", "args": {"characters": "->"} },
+	{ "keys": ["super+<"], "command": "insert_snippet", "args": {"contents": " := "},
+		"context": [{"key": "selector", "operator":"equal", "operand":"source.go"}]
+	},
 	{ "keys": ["alt+shift+9"], "command": "insert", "args": {"characters": "}"} },
 	{ "keys": ["≤"], "command": "insert", "args": {"characters": "<-"} },
 	{ "keys": ["super+shift+space", "super+shift+r"], "command": "refactor" },
