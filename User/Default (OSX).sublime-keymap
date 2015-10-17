@@ -286,7 +286,7 @@
 	{ "keys": ["é"], "command": "toggle_char_at_end", "args": { "char": ";" } },
 	{ "keys": ["®"], "command": "toggle_char_at_end", "args": { "char": "," } },
 	{ "keys": ["†"], "command": "toggle_char_at_end", "args": { "char": ":" } },
-	{ "keys": ["é"], "command": "insert", "args": {"characters": " err != nil {\n\t$0\n}"},
+	{ "keys": ["é"], "command": "insert_snippet", "args": {"contents": " err != nil {\n\t$0\n}"},
 		"context": [{"key": "selector", "operator":"equal", "operand":"source.go"}]
 	},
 	{ "keys": ["super+space", "super+i"], "command": "figlet_default" },
