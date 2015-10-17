@@ -1,4 +1,5 @@
 {
+	"bootstrapped": true,
 	"in_process_packages":
 	[
 	],
@@ -20,6 +21,7 @@
 		"JSHint Gutter",
 		"Markdown Extended",
 		"Markdown Preview",
+		"nginx",
 		"OpenGL Shading Language (GLSL)",
 		"Package Control",
 		"Sass",

@@ -35,7 +35,7 @@
 	"soda_folder_icons": true,
 	"suppress_explicit_completions": true,
 	"suppress_word_completions": false,
-	"theme": "amCoder Gray.sublime-theme",
+	"theme": "amCoder.sublime-theme",
 	"translate_tabs_to_spaces": true,
 	"trim_automatic_white_space": true,
 	"trim_trailing_white_space_on_save": true
