@@ -273,6 +273,7 @@
 	{ "keys": ["super+space", "super+f"], "command": "split_and_select_lines" },
 	{ "keys": ["super+space", "super+e"], "command": "select_alpha_num" },
 	{ "keys": ["super+space", "e"], "command": "remove_alpha_num" },
+	{ "keys": ["super+shift+space", "e"], "command": "remove_word" },
 	{ "keys": ["super+space", "super+r"], "command": "select_to_delims", "args": {"delims": ["'", "\""]} },
 	{ "keys": ["super+space", "super+t"], "command": "select_to_delims", "args": {"delims": [" ", "\t", "\r", "\n"]} },
 	{ "keys": ["super+space", "r"], "command": "remove_to_delims", "args": {"delims": ["'", "\""]} },

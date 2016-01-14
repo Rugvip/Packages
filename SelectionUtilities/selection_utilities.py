@@ -665,6 +665,40 @@ class RemoveAlphaNumCommand(sublime_plugin.TextCommand):
                     self.view.erase(edit, sublime.Region(right, right + 1))
 
 
+class RemoveWordCommand(sublime_plugin.TextCommand):
+    def run(self, edit):
+        sels = []
+        for sel in self.view.sel():
+            word = self.view.word(sel.a)
+            begin = sel.begin()
+            end = sel.end()
+            while word.a < begin:
+                chars = self.view.substr(sublime.Region(begin-2, begin))
+                begin -= 1
+                if chars[0].islower() and chars[1].isupper() or chars[0] in ('_', '-'):
+                    break
+            while word.b > end:
+                chars = self.view.substr(sublime.Region(end-1, end+1))
+                if not chars.islower() and not chars.isupper() or chars[1] in ('_', '-'):
+                    break;
+                end += 1
+
+            sels.append(sublime.Region(begin, end))
+
+        sels.reverse()
+
+        for sel in sels:
+            self.view.erase(edit, sel)
+            right = sel.begin()
+            if (right != 0):
+                left = right - 1
+                a = self.view.substr(left)
+                b = self.view.substr(right)
+
+                if (a == b):
+                    self.view.erase(edit, sublime.Region(left, right))
+
+
 
 class RemoveToDelimsCommand(sublime_plugin.TextCommand):
     def run(self, edit, delims):
