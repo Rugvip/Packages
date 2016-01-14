@@ -750,3 +750,16 @@ class SwitchFileExtendedCommand(sublime_plugin.TextCommand):
         else:
             self.view.window().run_command("switch_file", {'extensions': extensions})
 
+
+class RunTextCommandTimesCommand(sublime_plugin.TextCommand):
+    def run(self, edit, n, command, args=None):
+        while n > 0:
+            self.view.run_command(command, args)
+            n -= 1
+
+class RunWindowCommandTimesCommand(sublime_plugin.TextCommand):
+    def run(self, edit, n, command, args=None):
+        while n > 0:
+            self.view.window().run_command(command, args)
+            n -= 1
+
