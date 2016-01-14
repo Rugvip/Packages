@@ -10,6 +10,7 @@
 		"Case Conversion",
 		"DocBlockr",
 		"Dockerfile Syntax Highlighting",
+		"EditorConfig",
 		"Emmet Css Snippets",
 		"GitGutter-Edge",
 		"GitSavvy",
@@ -27,6 +28,7 @@
 		"Sass",
 		"SCSS",
 		"SideBarEnhancements",
+		"SublimeCodeIntel",
 		"SublimeREPL",
 		"Theme - amCoder",
 		"Theme - Soda"
