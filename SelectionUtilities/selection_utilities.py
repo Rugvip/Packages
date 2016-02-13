@@ -688,8 +688,15 @@ class RemoveWordCommand(sublime_plugin.TextCommand):
         sels.reverse()
 
         for sel in sels:
+            just_after = sublime.Region(sel.end(), sel.end() + 2)
+            next_chars = self.view.substr(just_after)
+            first_char = self.view.substr(sel.begin())
+            if first_char.islower() and next_chars[0].isupper() and next_chars[1].islower():
+                self.view.replace(edit, just_after, next_chars.lower())
+
             self.view.erase(edit, sel)
             right = sel.begin()
+
             if (right != 0):
                 left = right - 1
                 a = self.view.substr(left)
