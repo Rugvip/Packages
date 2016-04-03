@@ -29,6 +29,7 @@
 	{ "keys" : ["shift+down"], "command": "select_lines", "args": {"forward": true} },
 	{ "keys" : ["shift+right"], "command": "move", "args": {"by": "characters", "forward": true, "extend": true} },
 	{ "keys" : ["super+shift+tab"], "command": "prev_view_in_stack" },
+	{ "keys":  ["super+shift+t"], "command": "reopen_last_file" },
 	{ "keys" : ["super+e"], "command": "find_under_expand" },
 	{ "keys" : ["super+shift+e"], "command": "find_under_expand_skip" },
 	{ "keys" : ["super+r"], "command": "expand_selection", "args": {"to": "scope"} },
