@@ -266,9 +266,15 @@
 	{ "keys": ["super+c"], "command": "clipboard_copy",
 		"context": [{"key": "clipboardcopy_fake", "operator":"equal", "operand":true}]
 	},
+	{ "keys": ["super+space", "c"], "command": "color_picker",
+		"context": [{"key": "color_highlighter.color_picker"}]
+	},
+	{"keys": ["super+shift+space", "c"], "command": "color_convert",
+		"context": [{"key": "color_highlighter.color_convert"}]
+	},
 	{ "keys": ["super+b"], "command": "markdown_preview", "args": {
 	        "target": "browser",
-	        "parser": "markdown"
+	        "parser": "github"
 	    },
 		"context": [{"key": "selector", "operator":"equal", "operand":"text.html.markdown"}]
 	},
