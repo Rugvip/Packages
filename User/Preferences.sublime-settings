@@ -10,15 +10,14 @@
 	"caret_style": "smooth",
 	"color_scheme": "Packages/Obsidian Nexus/Inactive Obsidian Nexus.tmTheme",
 	"default_erlang_dir": "C:\\Dropbox\\Skola\\Erlang",
-	"detect_slow_plugins": false,
+	"detect_slow_plugins": true,
 	"draw_minimap_border": true,
 	"draw_white_space": "all",
 	"ensure_newline_at_eof_on_save": true,
 	"fade_fold_buttons": false,
 	"folder_exclude_patterns":
 	[
-		".git",
-		"node_modules"
+		".git"
 	],
 	"font_size": 14,
 	"highlight_line": true,
@@ -36,12 +35,14 @@
 	],
 	"mouse_wheel_switches_tabs": false,
 	"open_files_in_new_window": false,
+	"origami_auto_close_empty_panes": true,
 	"scroll_past_end": true,
 	"scroll_speed": 100,
 	"show_tab_close_buttons": false,
 	"soda_folder_icons": true,
 	"suppress_explicit_completions": true,
 	"suppress_word_completions": false,
+	"tab_size": 2,
 	"theme": "amCoder.sublime-theme",
 	"translate_tabs_to_spaces": true,
 	"trim_automatic_white_space": true,
