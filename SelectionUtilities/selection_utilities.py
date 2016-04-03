@@ -804,3 +804,24 @@ class RunWindowCommandTimesCommand(sublime_plugin.TextCommand):
             self.view.window().run_command(command, args)
             n -= 1
 
+
+class ActiveViewThemeListener(sublime_plugin.EventListener):
+    def on_activated(self, view):
+        settings = view.settings()
+
+        active_scheme = settings.get("active_scheme")
+        if active_scheme is None:
+            print("active_scheme not set!")
+            return
+
+        settings.set("color_scheme", active_scheme)
+
+    def on_deactivated(self, view):
+        settings = view.settings()
+
+        inactive_scheme = settings.get('inactive_scheme')
+        if inactive_scheme is None:
+            print("inactive_scheme not set!")
+            return
+
+        settings.set("color_scheme", inactive_scheme)
