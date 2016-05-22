@@ -3,6 +3,7 @@
 	"always_show_minimap_viewport": true,
 	"auto_complete_commit_on_tab": true,
 	"auto_complete_cycle": true,
+	"auto_indent": true,
 	"bold_folder_labels": false,
 	"caret_extra_bottom": 3,
 	"caret_extra_top": 3,
@@ -14,12 +15,14 @@
 	"draw_minimap_border": true,
 	"draw_white_space": "all",
 	"ensure_newline_at_eof_on_save": true,
+	"extract_sublime_package_ask_on_open": true,
 	"fade_fold_buttons": false,
 	"folder_exclude_patterns":
 	[
 		".git"
 	],
-	"font_size": 14,
+	"font_face": "RobotoMono-Medium",
+	"font_size": 13.3,
 	"highlight_line": true,
 	"highlight_modified_tabs": true,
 	"ignore_inodes": true,
@@ -33,6 +36,7 @@
 		"draw_normal",
 		"draw_active"
 	],
+	"material_theme_accent_lime": true,
 	"mouse_wheel_switches_tabs": false,
 	"open_files_in_new_window": false,
 	"origami_auto_close_empty_panes": true,
@@ -43,7 +47,7 @@
 	"suppress_explicit_completions": true,
 	"suppress_word_completions": false,
 	"tab_size": 2,
-	"theme": "amCoder.sublime-theme",
+	"theme": "Material-Theme-Darker.sublime-theme",
 	"translate_tabs_to_spaces": true,
 	"trim_automatic_white_space": true,
 	"trim_trailing_white_space_on_save": true
