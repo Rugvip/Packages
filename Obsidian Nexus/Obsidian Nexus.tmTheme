@@ -167,28 +167,15 @@
 		</dict>
 		<dict>
 			<key>name</key>
-			<string>JS Constructor invocation</string>
-			<key>scope</key>
-			<string>meta.instance.constructor</string>
-			<key>settings</key>
-			<dict>
-				<key>fontStyle</key>
-				<string></string>
-				<key>foreground</key>
-				<string>#F5526F</string>
-			</dict>
-		</dict>
-		<dict>
-			<key>name</key>
 			<string>JS Builtin Class</string>
 			<key>scope</key>
-			<string>support.class.builtin</string>
+			<string>support.class</string>
 			<key>settings</key>
 			<dict>
 				<key>fontStyle</key>
 				<string></string>
 				<key>foreground</key>
-				<string>#F5526F</string>
+				<string>#a73</string>
 			</dict>
 		</dict>
 		<dict>
@@ -202,6 +189,41 @@
 				<string></string>
 				<key>foreground</key>
 				<string>#a73</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>JS Function</string>
+			<key>scope</key>
+			<string>entity.name.function.js</string>
+			<key>settings</key>
+			<dict>
+				<key>fontStyle</key>
+				<string></string>
+				<key>foreground</key>
+				<string>#f57</string>
+			</dict>
+		</dict>
+ 		<dict>
+			<key>name</key>
+			<string>JS Function call</string>
+			<key>scope</key>
+			<string>variable.function.js, variable.function.constructor.js</string>
+			<key>settings</key>
+			<dict>
+				<key>foreground</key>
+				<string>#80D8FF</string>
+			</dict>
+		</dict>
+ 		<dict>
+			<key>name</key>
+			<string>JS new operator</string>
+			<key>scope</key>
+			<string>keyword.operator.new.js</string>
+			<key>settings</key>
+			<dict>
+				<key>foreground</key>
+				<string>#76FF03</string>
 			</dict>
 		</dict>
 		<dict>
