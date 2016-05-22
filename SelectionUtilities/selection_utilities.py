@@ -825,3 +825,94 @@ class ActiveViewThemeListener(sublime_plugin.EventListener):
             return
 
         settings.set("color_scheme", inactive_scheme)
+
+
+class JavaScriptFunctionSnippetCommand(sublime_plugin.TextCommand):
+    def run(self, edit):
+        # for each selection in view
+        firsts = []
+        for sel in self.view.sel():
+            last = last_bracket = first = sel.end()
+            # Find the last bracket
+            while (self.view.substr(last) in [' ', ')', ']']):
+                if (self.view.substr(last) != ' '):
+                    last_bracket = last + 1
+                last += 1
+
+            if (last_bracket < last):
+                last = last_bracket
+
+            self.view.insert(edit, last, ';')
+            firsts.append(first)
+
+        self.view.sel().clear()
+        for first in firsts:
+            self.view.sel().add(sublime.Region(first))
+
+        self.view.run_command("insert_snippet", {"contents": "function ($1) {\n\t$0\n}"})
+
+
+
+class JavaScriptConsoleSnippetCommand(sublime_plugin.TextCommand):
+    def run(self, edit):
+
+        sels = [sel for sel in self.view.sel()]
+        sels.reverse()
+
+        for sel in sels:
+            if sel.begin() == sel.end():
+                sel = self.view.word(sel)
+            text = self.view.substr(sel)
+            line = self.view.line(sel)
+
+            indentation = self.view.substr(self.view.find('\\s*', line.begin()))
+            if self.view.substr(line.end() - 1) == '{':
+                indentation += '\t'
+            snippet = "\n{0}console.log('{1}: ', {1})".format(indentation, text)
+            self.view.insert(edit, line.end(), snippet)
+
+
+class SortAndUniqueCommand(sublime_plugin.TextCommand):
+    def run(self, edit):
+        self.view.run_command("sort_lines", {"case_sensitive": False})
+        self.view.run_command("permute_lines", {"operation": "unique"})
+
+class JavaScriptConstructorSnippetCommand(sublime_plugin.TextCommand):
+    def run(self, edit):
+        class_sels = self.view.find_by_selector('meta.class.js')
+
+        sel = self.view.sel()[0]
+        class_str = None
+
+        for class_sel in class_sels:
+            class_sel = self.view.expand_by_class(class_sel, sublime.CLASS_LINE_START | sublime.CLASS_LINE_END)
+            if class_sel.contains(sel):
+                class_str = self.view.substr(class_sel)
+                break
+        else:
+            return
+
+        sel_first_line = self.view.line(class_sel.begin())
+        sel_line = self.view.line(sel.begin())
+
+        indentation = self.view.substr(self.view.find('\\s*', sel_first_line.begin()))
+        first_line = self.view.substr(sel_first_line)
+
+        has_super = ' extends ' in first_line
+        snippet = None
+
+        self.view.sel().clear()
+        self.view.sel().add(sel_line.end())
+
+        self.view.insert(edit, sel_line.end(), '\n')
+
+        if has_super:
+            snippet = '{0}\tconstructor($1) {{\n\t\tsuper($2)$3\n\t}}'.format(indentation)
+        else:
+            snippet = '{0}\tconstructor($1) {{\n\t\t$2\n\t}}'.format(indentation)
+
+        self.view.run_command('insert_snippet', {
+            'contents': snippet
+        })
+
+
