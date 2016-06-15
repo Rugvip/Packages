@@ -1,4 +1,10 @@
+// > DARKER
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+// The most epic theme for Sublime Text 3
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 [
+//
 
 /* @EMPTY WINDOW
  * Style for empty (no tabs) window
@@ -601,7 +607,7 @@
     "class": "sidebar_label",
     "parents": [{"class": "tree_row", "attributes": ["expandable"]}],
     "settings": ["bold_folder_labels"],
-    "font.bold": true
+    "font.bold": true,
   },
 
   {
@@ -1433,44 +1439,36 @@
       "layer1.opacity": { "target": 0.0, "speed": 6.0, "interpolation": "smoothstep" }
    },
 
-/* @ THEME ACCENTS
 
- * Accents color settings
-=========================================================================
-This specific options define the accents color to be used in the general UI.
-NOTE: This rulers must only override the original definitions */
-
-
-/* LIME ACCENT
- * =================================================================== */
-
+// Lime Accent Color
+// ===========================================================================
 
   {
     "class": "panel_button_control",
     "settings": ["material_theme_accent_lime"],
     "attributes": ["hover"],
-    "layer0.texture": "Material Theme/assets/accent-lime/overflow_menu--hover.png",
+    "layer0.texture": "Material Theme/assets/accent-lime/overflow_menu--hover.png"
   },
 
-  // Tooltip
+  // tooltip
 
   {
     "class": "tool_tip_control",
     "settings": ["material_theme_accent_lime"],
-    "layer0.tint": [139, 195, 74],
+    "layer0.tint": [124, 179, 66],
   },
 
   {
     "class": "progress_gauge_control",
     "settings": ["material_theme_accent_lime"],
-    "layer0.tint": [139, 195, 74],
+    "layer0.tint": [124, 179, 66],
   },
 
   {
     "class": "auto_complete_label",
     "settings": ["material_theme_accent_lime"],
-    "match_fg": [139, 195, 74],
-    "selected_match_fg": [139, 195, 74]
+    "match_fg": [124, 179, 66],
+    "selected_match_fg": [124, 179, 66]
   },
 
   {
@@ -1483,7 +1481,7 @@ NOTE: This rulers must only override the original definitions */
 
   {
     "class": "tree_row",
-    "settings": ["material_theme_accent_lime"],
+    "settings": ["theme_accent_lime"],
     "layer1.texture": "Material Theme/assets/accent-lime/tree_highlight.png",
   },
 
@@ -1525,7 +1523,7 @@ NOTE: This rulers must only override the original definitions */
     "class": "sidebar_label",
     "settings": ["material_theme_accent_lime"],
     "parents": [{"class": "tree_row", "attributes": ["expanded"]}],
-    "color": [139, 195, 74]
+    "color": [124, 179, 66]
   },
 
   {
@@ -1599,10 +1597,10 @@ NOTE: This rulers must only override the original definitions */
     "layer1.texture": "Material Theme/assets/accent-lime/arrow_right--hover.png",
   },
 
+
   {
     "class": "fold_button_control",
     "settings": ["material_theme_accent_lime"],
-    "layer0.texture": "Material Theme/assets/commons/fold_right.png",
     "layer1.texture": "Material Theme/assets/accent-lime/fold_right--hover.png",
   },
 
@@ -1610,18 +1608,17 @@ NOTE: This rulers must only override the original definitions */
     "class": "fold_button_control",
     "attributes": ["expanded"],
     "settings": ["material_theme_accent_lime"],
-    "layer0.texture": "Material Theme/assets/darker/fold_down.png",
     "layer1.texture": "Material Theme/assets/accent-lime/fold_down--hover.png"
   },
 
-  // Panel labels
+    // Panel labels
 
   {
     "class": "quick_panel_label",
     "settings": ["material_theme_accent_lime"],
-    "match_fg": [139, 195, 74],
+    "match_fg": [124, 179, 66],
     "selected_fg": [255, 255, 255, 255],
-    "selected_match_fg": [139, 195, 74]
+    "selected_match_fg": [124, 179, 66]
   },
 
     // Panel labels
@@ -1630,9 +1627,9 @@ NOTE: This rulers must only override the original definitions */
     "class": "quick_panel_label",
     "settings": ["material_theme_accent_lime"],
     "parents": [{"class": "overlay_control"}],
-    "match_fg": [139, 195, 74],
+    "match_fg": [124, 179, 66],
     "selected_fg": [255, 255, 255, 255],
-    "selected_match_fg": [139, 195, 74]
+    "selected_match_fg": [124, 179, 66]
   },
 
     // Panels sublabels
@@ -1640,9 +1637,9 @@ NOTE: This rulers must only override the original definitions */
   {
     "class": "quick_panel_path_label",
     "settings": ["material_theme_accent_lime"],
-    "match_fg": [139, 195, 74],
+    "match_fg": [124, 179, 66],
     "selected_fg": [255, 255, 255, 255],
-    "selected_match_fg": [139, 195, 74]
+    "selected_match_fg": [124, 179, 66]
   },
 
     // Panels data / score
@@ -1650,7 +1647,7 @@ NOTE: This rulers must only override the original definitions */
   {
     "class": "quick_panel_score_label",
     "settings": ["material_theme_accent_lime"],
-    "fg": [139, 195, 74],
+    "fg": [124, 179, 66],
     "selected_fg": [255, 255, 255, 255]
   },
 
@@ -1668,8 +1665,8 @@ NOTE: This rulers must only override the original definitions */
     "layer1.texture": "Material Theme/assets/accent-lime/overflow_menu--hover.png",
   },
 
-  /* Buttons icons settings
-  ===================================================================== */
+  // Buttons icons settings
+  // =====================================================================
 
     // Regex Icon
   {
@@ -1685,6 +1682,7 @@ NOTE: This rulers must only override the original definitions */
     "settings": ["material_theme_accent_lime"],
     "layer0.texture": "Material Theme/assets/accent-lime/find_case--hover.png",
   },
+
     // Wholeword
 
   {
@@ -1750,36 +1748,35 @@ NOTE: This rulers must only override the original definitions */
     "layer0.texture": "Material Theme/assets/accent-lime/find_reverse--hover.png",
   },
 
-/* PURPLE ACCENT
- * =================================================================== */
-
+// Purple Accent Color
+// ===========================================================================
 
   {
     "class": "panel_button_control",
     "settings": ["material_theme_accent_purple"],
     "attributes": ["hover"],
-    "layer0.texture": "Material Theme/assets/accent-purple/overflow_menu--hover.png",
+    "layer0.texture": "Material Theme/assets/accent-purple/overflow_menu--hover.png"
   },
 
-  // Tooltip
+  // tooltip
 
   {
     "class": "tool_tip_control",
     "settings": ["material_theme_accent_purple"],
-    "layer0.tint": [156, 39, 176],
+    "layer0.tint": [171, 71, 188],
   },
 
   {
     "class": "progress_gauge_control",
     "settings": ["material_theme_accent_purple"],
-    "layer0.tint": [156, 39, 176]
+    "layer0.tint": [171, 71, 188],
   },
 
   {
     "class": "auto_complete_label",
     "settings": ["material_theme_accent_purple"],
-    "match_fg": [156, 39, 176],
-    "selected_match_fg": [156, 39, 176]
+    "match_fg": [171, 71, 188],
+    "selected_match_fg": [171, 71, 188]
   },
 
   {
@@ -1792,7 +1789,7 @@ NOTE: This rulers must only override the original definitions */
 
   {
     "class": "tree_row",
-    "settings": ["material_theme_accent_purple"],
+    "settings": ["theme_accent_purple"],
     "layer1.texture": "Material Theme/assets/accent-purple/tree_highlight.png",
   },
 
@@ -1912,7 +1909,6 @@ NOTE: This rulers must only override the original definitions */
   {
     "class": "fold_button_control",
     "settings": ["material_theme_accent_purple"],
-    "layer0.texture": "Material Theme/assets/commons/fold_right.png",
     "layer1.texture": "Material Theme/assets/accent-purple/fold_right--hover.png",
   },
 
@@ -1920,18 +1916,17 @@ NOTE: This rulers must only override the original definitions */
     "class": "fold_button_control",
     "attributes": ["expanded"],
     "settings": ["material_theme_accent_purple"],
-    "layer0.texture": "Material Theme/assets/darker/fold_down.png",
     "layer1.texture": "Material Theme/assets/accent-purple/fold_down--hover.png"
   },
 
-  // Panel labels
+    // Panel labels
 
   {
     "class": "quick_panel_label",
     "settings": ["material_theme_accent_purple"],
-    "match_fg": [156, 39, 176],
+    "match_fg": [171, 71, 188],
     "selected_fg": [255, 255, 255, 255],
-    "selected_match_fg": [156, 39, 176]
+    "selected_match_fg": [171, 71, 188]
   },
 
     // Panel labels
@@ -1940,9 +1935,9 @@ NOTE: This rulers must only override the original definitions */
     "class": "quick_panel_label",
     "settings": ["material_theme_accent_purple"],
     "parents": [{"class": "overlay_control"}],
-    "match_fg": [156, 39, 176],
+    "match_fg": [171, 71, 188],
     "selected_fg": [255, 255, 255, 255],
-    "selected_match_fg": [156, 39, 176]
+    "selected_match_fg": [171, 71, 188]
   },
 
     // Panels sublabels
@@ -1950,9 +1945,9 @@ NOTE: This rulers must only override the original definitions */
   {
     "class": "quick_panel_path_label",
     "settings": ["material_theme_accent_purple"],
-    "match_fg": [156, 39, 176],
+    "match_fg": [171, 71, 188],
     "selected_fg": [255, 255, 255, 255],
-    "selected_match_fg": [156, 39, 176]
+    "selected_match_fg": [171, 71, 188]
   },
 
     // Panels data / score
@@ -1960,7 +1955,7 @@ NOTE: This rulers must only override the original definitions */
   {
     "class": "quick_panel_score_label",
     "settings": ["material_theme_accent_purple"],
-    "fg": [156, 39, 176],
+    "fg": [171, 71, 188],
     "selected_fg": [255, 255, 255, 255]
   },
 
@@ -1978,8 +1973,8 @@ NOTE: This rulers must only override the original definitions */
     "layer1.texture": "Material Theme/assets/accent-purple/overflow_menu--hover.png",
   },
 
-  /* Buttons icons settings
-  ===================================================================== */
+  // Buttons icons settings
+  // =====================================================================
 
     // Regex Icon
   {
@@ -1995,6 +1990,7 @@ NOTE: This rulers must only override the original definitions */
     "settings": ["material_theme_accent_purple"],
     "layer0.texture": "Material Theme/assets/accent-purple/find_case--hover.png",
   },
+
     // Wholeword
 
   {
@@ -2060,17 +2056,17 @@ NOTE: This rulers must only override the original definitions */
     "layer0.texture": "Material Theme/assets/accent-purple/find_reverse--hover.png",
   },
 
-/* RED ACCENT
- * =================================================================== */
+// Red Accent Color
+// ===========================================================================
 
   {
     "class": "panel_button_control",
     "settings": ["material_theme_accent_red"],
     "attributes": ["hover"],
-    "layer0.texture": "Material Theme/assets/accent-red/overflow_menu--hover.png",
+    "layer0.texture": "Material Theme/assets/accent-red/overflow_menu--hover.png"
   },
 
-  // Tooltip
+  // tooltip
 
   {
     "class": "tool_tip_control",
@@ -2081,7 +2077,7 @@ NOTE: This rulers must only override the original definitions */
   {
     "class": "progress_gauge_control",
     "settings": ["material_theme_accent_red"],
-    "layer0.tint": [229, 115, 115]
+    "layer0.tint": [229, 115, 115],
   },
 
   {
@@ -2101,7 +2097,7 @@ NOTE: This rulers must only override the original definitions */
 
   {
     "class": "tree_row",
-    "settings": ["material_theme_accent_red"],
+    "settings": ["theme_accent_red"],
     "layer1.texture": "Material Theme/assets/accent-red/tree_highlight.png",
   },
 
@@ -2221,7 +2217,6 @@ NOTE: This rulers must only override the original definitions */
   {
     "class": "fold_button_control",
     "settings": ["material_theme_accent_red"],
-    "layer0.texture": "Material Theme/assets/commons/fold_right.png",
     "layer1.texture": "Material Theme/assets/accent-red/fold_right--hover.png",
   },
 
@@ -2229,11 +2224,10 @@ NOTE: This rulers must only override the original definitions */
     "class": "fold_button_control",
     "attributes": ["expanded"],
     "settings": ["material_theme_accent_red"],
-    "layer0.texture": "Material Theme/assets/darker/fold_down.png",
     "layer1.texture": "Material Theme/assets/accent-red/fold_down--hover.png"
   },
 
-  // Panel labels
+    // Panel labels
 
   {
     "class": "quick_panel_label",
@@ -2287,8 +2281,8 @@ NOTE: This rulers must only override the original definitions */
     "layer1.texture": "Material Theme/assets/accent-red/overflow_menu--hover.png",
   },
 
-  /* Buttons icons settings
-  ===================================================================== */
+  // Buttons icons settings
+  // =====================================================================
 
     // Regex Icon
   {
@@ -2304,6 +2298,7 @@ NOTE: This rulers must only override the original definitions */
     "settings": ["material_theme_accent_red"],
     "layer0.texture": "Material Theme/assets/accent-red/find_case--hover.png",
   },
+
     // Wholeword
 
   {
@@ -2369,36 +2364,35 @@ NOTE: This rulers must only override the original definitions */
     "layer0.texture": "Material Theme/assets/accent-red/find_reverse--hover.png",
   },
 
-/* ORANGE ACCENT
- * =================================================================== */
-
+// Orange Accent Color
+// ===========================================================================
 
   {
     "class": "panel_button_control",
     "settings": ["material_theme_accent_orange"],
     "attributes": ["hover"],
-    "layer0.texture": "Material Theme/assets/accent-orange/overflow_menu--hover.png",
+    "layer0.texture": "Material Theme/assets/accent-orange/overflow_menu--hover.png"
   },
 
-  // Tooltip
+  // tooltip
 
   {
     "class": "tool_tip_control",
     "settings": ["material_theme_accent_orange"],
-    "layer0.tint": [255, 112, 67],
+    "layer0.tint": [255, 112, 66],
   },
 
   {
     "class": "progress_gauge_control",
     "settings": ["material_theme_accent_orange"],
-    "layer0.tint": [255, 112, 67]
+    "layer0.tint": [255, 112, 66],
   },
 
   {
     "class": "auto_complete_label",
     "settings": ["material_theme_accent_orange"],
-    "match_fg": [255, 112, 67],
-    "selected_match_fg": [255, 112, 67]
+    "match_fg": [255, 112, 66],
+    "selected_match_fg": [255, 112, 66]
   },
 
   {
@@ -2411,7 +2405,7 @@ NOTE: This rulers must only override the original definitions */
 
   {
     "class": "tree_row",
-    "settings": ["material_theme_accent_orange"],
+    "settings": ["theme_accent_orange"],
     "layer1.texture": "Material Theme/assets/accent-orange/tree_highlight.png",
   },
 
@@ -2453,7 +2447,7 @@ NOTE: This rulers must only override the original definitions */
     "class": "sidebar_label",
     "settings": ["material_theme_accent_orange"],
     "parents": [{"class": "tree_row", "attributes": ["expanded"]}],
-    "color": [255, 112, 67]
+    "color": [255, 112, 66]
   },
 
   {
@@ -2531,7 +2525,6 @@ NOTE: This rulers must only override the original definitions */
   {
     "class": "fold_button_control",
     "settings": ["material_theme_accent_orange"],
-    "layer0.texture": "Material Theme/assets/commons/fold_right.png",
     "layer1.texture": "Material Theme/assets/accent-orange/fold_right--hover.png",
   },
 
@@ -2539,18 +2532,17 @@ NOTE: This rulers must only override the original definitions */
     "class": "fold_button_control",
     "attributes": ["expanded"],
     "settings": ["material_theme_accent_orange"],
-    "layer0.texture": "Material Theme/assets/darker/fold_down.png",
     "layer1.texture": "Material Theme/assets/accent-orange/fold_down--hover.png"
   },
 
-  // Panel labels
+    // Panel labels
 
   {
     "class": "quick_panel_label",
     "settings": ["material_theme_accent_orange"],
-    "match_fg": [255, 112, 67],
+    "match_fg": [255, 112, 66],
     "selected_fg": [255, 255, 255, 255],
-    "selected_match_fg": [255, 112, 67]
+    "selected_match_fg": [255, 112, 66]
   },
 
     // Panel labels
@@ -2559,9 +2551,9 @@ NOTE: This rulers must only override the original definitions */
     "class": "quick_panel_label",
     "settings": ["material_theme_accent_orange"],
     "parents": [{"class": "overlay_control"}],
-    "match_fg": [255, 112, 67],
+    "match_fg": [255, 112, 66],
     "selected_fg": [255, 255, 255, 255],
-    "selected_match_fg": [255, 112, 67]
+    "selected_match_fg": [255, 112, 66]
   },
 
     // Panels sublabels
@@ -2569,9 +2561,9 @@ NOTE: This rulers must only override the original definitions */
   {
     "class": "quick_panel_path_label",
     "settings": ["material_theme_accent_orange"],
-    "match_fg": [255, 112, 67],
+    "match_fg": [255, 112, 66],
     "selected_fg": [255, 255, 255, 255],
-    "selected_match_fg": [255, 112, 67]
+    "selected_match_fg": [255, 112, 66]
   },
 
     // Panels data / score
@@ -2579,7 +2571,7 @@ NOTE: This rulers must only override the original definitions */
   {
     "class": "quick_panel_score_label",
     "settings": ["material_theme_accent_orange"],
-    "fg": [255, 112, 67],
+    "fg": [255, 112, 66],
     "selected_fg": [255, 255, 255, 255]
   },
 
@@ -2597,8 +2589,8 @@ NOTE: This rulers must only override the original definitions */
     "layer1.texture": "Material Theme/assets/accent-orange/overflow_menu--hover.png",
   },
 
-  /* Buttons icons settings
-  ===================================================================== */
+  // Buttons icons settings
+  // =====================================================================
 
     // Regex Icon
   {
@@ -2614,6 +2606,7 @@ NOTE: This rulers must only override the original definitions */
     "settings": ["material_theme_accent_orange"],
     "layer0.texture": "Material Theme/assets/accent-orange/find_case--hover.png",
   },
+
     // Wholeword
 
   {
@@ -2679,49 +2672,48 @@ NOTE: This rulers must only override the original definitions */
     "layer0.texture": "Material Theme/assets/accent-orange/find_reverse--hover.png",
   },
 
-/* YELLOW ACCENT
- * =================================================================== */
-
+// Yellow Accent Color
+// ===========================================================================
 
   {
     "class": "panel_button_control",
     "settings": ["material_theme_accent_yellow"],
     "attributes": ["hover"],
-    "layer0.texture": "Material Theme/assets/accent-yellow/overflow_menu--hover.png",
+    "layer0.texture": "Material Theme/assets/accent-yellow/overflow_menu--hover.png"
   },
 
-  // Tooltip
+  // tooltip
 
   {
     "class": "tool_tip_control",
     "settings": ["material_theme_accent_yellow"],
-    "layer0.tint": [255, 162, 26],
+    "layer0.tint": [255, 160, 0],
   },
 
   {
     "class": "progress_gauge_control",
     "settings": ["material_theme_accent_yellow"],
-    "layer0.tint": [255, 162, 26]
+    "layer0.tint": [255, 160, 0],
   },
 
   {
     "class": "auto_complete_label",
     "settings": ["material_theme_accent_yellow"],
-    "match_fg": [255, 162, 26],
-    "selected_match_fg": [255, 162, 26]
+    "match_fg": [255, 160, 0],
+    "selected_match_fg": [255, 160, 0]
   },
 
   {
     "class": "tool_tip_label_control",
     "settings": ["material_theme_accent_yellow"],
-    "color": [0, 0, 0, 150]
+    "color": [255, 255, 255, 255]
   },
 
     // Sidebar tree highlight
 
   {
     "class": "tree_row",
-    "settings": ["material_theme_accent_yellow"],
+    "settings": ["theme_accent_yellow"],
     "layer1.texture": "Material Theme/assets/accent-yellow/tree_highlight.png",
   },
 
@@ -2763,7 +2755,7 @@ NOTE: This rulers must only override the original definitions */
     "class": "sidebar_label",
     "settings": ["material_theme_accent_yellow"],
     "parents": [{"class": "tree_row", "attributes": ["expanded"]}],
-    "color": [255, 162, 26]
+    "color": [255, 160, 0]
   },
 
   {
@@ -2841,7 +2833,6 @@ NOTE: This rulers must only override the original definitions */
   {
     "class": "fold_button_control",
     "settings": ["material_theme_accent_yellow"],
-    "layer0.texture": "Material Theme/assets/commons/fold_right.png",
     "layer1.texture": "Material Theme/assets/accent-yellow/fold_right--hover.png",
   },
 
@@ -2849,18 +2840,17 @@ NOTE: This rulers must only override the original definitions */
     "class": "fold_button_control",
     "attributes": ["expanded"],
     "settings": ["material_theme_accent_yellow"],
-    "layer0.texture": "Material Theme/assets/darker/fold_down.png",
     "layer1.texture": "Material Theme/assets/accent-yellow/fold_down--hover.png"
   },
 
-  // Panel labels
+    // Panel labels
 
   {
     "class": "quick_panel_label",
     "settings": ["material_theme_accent_yellow"],
-    "match_fg": [255, 162, 26],
+    "match_fg": [255, 160, 0],
     "selected_fg": [255, 255, 255, 255],
-    "selected_match_fg": [255, 162, 26]
+    "selected_match_fg": [255, 160, 0]
   },
 
     // Panel labels
@@ -2869,9 +2859,9 @@ NOTE: This rulers must only override the original definitions */
     "class": "quick_panel_label",
     "settings": ["material_theme_accent_yellow"],
     "parents": [{"class": "overlay_control"}],
-    "match_fg": [255, 162, 26],
+    "match_fg": [255, 160, 0],
     "selected_fg": [255, 255, 255, 255],
-    "selected_match_fg": [255, 162, 26]
+    "selected_match_fg": [255, 160, 0]
   },
 
     // Panels sublabels
@@ -2879,9 +2869,9 @@ NOTE: This rulers must only override the original definitions */
   {
     "class": "quick_panel_path_label",
     "settings": ["material_theme_accent_yellow"],
-    "match_fg": [255, 162, 26],
+    "match_fg": [255, 160, 0],
     "selected_fg": [255, 255, 255, 255],
-    "selected_match_fg": [255, 162, 26]
+    "selected_match_fg": [255, 160, 0]
   },
 
     // Panels data / score
@@ -2889,7 +2879,7 @@ NOTE: This rulers must only override the original definitions */
   {
     "class": "quick_panel_score_label",
     "settings": ["material_theme_accent_yellow"],
-    "fg": [255, 162, 26],
+    "fg": [255, 160, 0],
     "selected_fg": [255, 255, 255, 255]
   },
 
@@ -2907,8 +2897,8 @@ NOTE: This rulers must only override the original definitions */
     "layer1.texture": "Material Theme/assets/accent-yellow/overflow_menu--hover.png",
   },
 
-  /* Buttons icons settings
-  ===================================================================== */
+  // Buttons icons settings
+  // =====================================================================
 
     // Regex Icon
   {
@@ -2924,6 +2914,7 @@ NOTE: This rulers must only override the original definitions */
     "settings": ["material_theme_accent_yellow"],
     "layer0.texture": "Material Theme/assets/accent-yellow/find_case--hover.png",
   },
+
     // Wholeword
 
   {
@@ -2989,48 +2980,48 @@ NOTE: This rulers must only override the original definitions */
     "layer0.texture": "Material Theme/assets/accent-yellow/find_reverse--hover.png",
   },
 
-/* INDIGO ACCENT
- * =================================================================== */
+// Indigo Accent Color
+// ===========================================================================
 
   {
     "class": "panel_button_control",
     "settings": ["material_theme_accent_indigo"],
     "attributes": ["hover"],
-    "layer0.texture": "Material Theme/assets/accent-indigo/overflow_menu--hover.png",
+    "layer0.texture": "Material Theme/assets/accent-indigo/overflow_menu--hover.png"
   },
 
-  // Tooltip
+  // tooltip
 
   {
     "class": "tool_tip_control",
     "settings": ["material_theme_accent_indigo"],
-    "layer0.tint": [121, 134, 203]
+    "layer0.tint": [92, 107, 192],
   },
 
   {
     "class": "progress_gauge_control",
     "settings": ["material_theme_accent_indigo"],
-    "layer0.tint": [121, 134, 203]
+    "layer0.tint": [92, 107, 192],
   },
 
   {
     "class": "auto_complete_label",
     "settings": ["material_theme_accent_indigo"],
-    "match_fg": [121, 134, 203],
-    "selected_match_fg": [121, 134, 203]
+    "match_fg": [92, 107, 192],
+    "selected_match_fg": [92, 107, 192]
   },
 
   {
     "class": "tool_tip_label_control",
     "settings": ["material_theme_accent_indigo"],
-    "color": [0, 0, 0, 150]
+    "color": [255, 255, 255, 255]
   },
 
     // Sidebar tree highlight
 
   {
     "class": "tree_row",
-    "settings": ["material_theme_accent_indigo"],
+    "settings": ["theme_accent_indigo"],
     "layer1.texture": "Material Theme/assets/accent-indigo/tree_highlight.png",
   },
 
@@ -3072,7 +3063,7 @@ NOTE: This rulers must only override the original definitions */
     "class": "sidebar_label",
     "settings": ["material_theme_accent_indigo"],
     "parents": [{"class": "tree_row", "attributes": ["expanded"]}],
-    "color": [121, 134, 203]
+    "color": [92, 107, 192]
   },
 
   {
@@ -3150,7 +3141,6 @@ NOTE: This rulers must only override the original definitions */
   {
     "class": "fold_button_control",
     "settings": ["material_theme_accent_indigo"],
-    "layer0.texture": "Material Theme/assets/commons/fold_right.png",
     "layer1.texture": "Material Theme/assets/accent-indigo/fold_right--hover.png",
   },
 
@@ -3158,18 +3148,17 @@ NOTE: This rulers must only override the original definitions */
     "class": "fold_button_control",
     "attributes": ["expanded"],
     "settings": ["material_theme_accent_indigo"],
-    "layer0.texture": "Material Theme/assets/darker/fold_down.png",
     "layer1.texture": "Material Theme/assets/accent-indigo/fold_down--hover.png"
   },
 
-  // Panel labels
+    // Panel labels
 
   {
     "class": "quick_panel_label",
     "settings": ["material_theme_accent_indigo"],
-    "match_fg": [121, 134, 203],
+    "match_fg": [92, 107, 192],
     "selected_fg": [255, 255, 255, 255],
-    "selected_match_fg": [121, 134, 2039]
+    "selected_match_fg": [92, 107, 192]
   },
 
     // Panel labels
@@ -3178,9 +3167,9 @@ NOTE: This rulers must only override the original definitions */
     "class": "quick_panel_label",
     "settings": ["material_theme_accent_indigo"],
     "parents": [{"class": "overlay_control"}],
-    "match_fg": [121, 134, 203],
+    "match_fg": [92, 107, 192],
     "selected_fg": [255, 255, 255, 255],
-    "selected_match_fg": [121, 134, 2039]
+    "selected_match_fg": [92, 107, 192]
   },
 
     // Panels sublabels
@@ -3188,9 +3177,9 @@ NOTE: This rulers must only override the original definitions */
   {
     "class": "quick_panel_path_label",
     "settings": ["material_theme_accent_indigo"],
-    "match_fg": [121, 134, 203],
+    "match_fg": [92, 107, 192],
     "selected_fg": [255, 255, 255, 255],
-    "selected_match_fg": [121, 134, 2039]
+    "selected_match_fg": [92, 107, 192]
   },
 
     // Panels data / score
@@ -3198,7 +3187,7 @@ NOTE: This rulers must only override the original definitions */
   {
     "class": "quick_panel_score_label",
     "settings": ["material_theme_accent_indigo"],
-    "fg": [121, 134, 203],
+    "fg": [92, 107, 192],
     "selected_fg": [255, 255, 255, 255]
   },
 
@@ -3216,8 +3205,8 @@ NOTE: This rulers must only override the original definitions */
     "layer1.texture": "Material Theme/assets/accent-indigo/overflow_menu--hover.png",
   },
 
-  /* Buttons icons settings
-  ===================================================================== */
+  // Buttons icons settings
+  // =====================================================================
 
     // Regex Icon
   {
@@ -3233,6 +3222,7 @@ NOTE: This rulers must only override the original definitions */
     "settings": ["material_theme_accent_indigo"],
     "layer0.texture": "Material Theme/assets/accent-indigo/find_case--hover.png",
   },
+
     // Wholeword
 
   {
@@ -3298,17 +3288,17 @@ NOTE: This rulers must only override the original definitions */
     "layer0.texture": "Material Theme/assets/accent-indigo/find_reverse--hover.png",
   },
 
-/* PINK ACCENT
- * =================================================================== */
+// Pink Accent Color
+// ===========================================================================
 
   {
     "class": "panel_button_control",
     "settings": ["material_theme_accent_pink"],
     "attributes": ["hover"],
-    "layer0.texture": "Material Theme/assets/accent-pink/overflow_menu--hover.png",
+    "layer0.texture": "Material Theme/assets/accent-pink/overflow_menu--hover.png"
   },
 
-  // Tooltip
+  // tooltip
 
   {
     "class": "tool_tip_control",
@@ -3319,7 +3309,7 @@ NOTE: This rulers must only override the original definitions */
   {
     "class": "progress_gauge_control",
     "settings": ["material_theme_accent_pink"],
-    "layer0.tint": [255, 64, 129]
+    "layer0.tint": [255, 64, 129],
   },
 
   {
@@ -3332,14 +3322,14 @@ NOTE: This rulers must only override the original definitions */
   {
     "class": "tool_tip_label_control",
     "settings": ["material_theme_accent_pink"],
-    "color": [0, 0, 0, 150]
+    "color": [255, 255, 255, 255]
   },
 
     // Sidebar tree highlight
 
   {
     "class": "tree_row",
-    "settings": ["material_theme_accent_pink"],
+    "settings": ["theme_accent_pink"],
     "layer1.texture": "Material Theme/assets/accent-pink/tree_highlight.png",
   },
 
@@ -3459,7 +3449,6 @@ NOTE: This rulers must only override the original definitions */
   {
     "class": "fold_button_control",
     "settings": ["material_theme_accent_pink"],
-    "layer0.texture": "Material Theme/assets/commons/fold_right.png",
     "layer1.texture": "Material Theme/assets/accent-pink/fold_right--hover.png",
   },
 
@@ -3467,11 +3456,10 @@ NOTE: This rulers must only override the original definitions */
     "class": "fold_button_control",
     "attributes": ["expanded"],
     "settings": ["material_theme_accent_pink"],
-    "layer0.texture": "Material Theme/assets/darker/fold_down.png",
     "layer1.texture": "Material Theme/assets/accent-pink/fold_down--hover.png"
   },
 
-  // Panel labels
+    // Panel labels
 
   {
     "class": "quick_panel_label",
@@ -3525,8 +3513,8 @@ NOTE: This rulers must only override the original definitions */
     "layer1.texture": "Material Theme/assets/accent-pink/overflow_menu--hover.png",
   },
 
-  /* Buttons icons settings
-  ===================================================================== */
+  // Buttons icons settings
+  // =====================================================================
 
     // Regex Icon
   {
@@ -3542,6 +3530,7 @@ NOTE: This rulers must only override the original definitions */
     "settings": ["material_theme_accent_pink"],
     "layer0.texture": "Material Theme/assets/accent-pink/find_case--hover.png",
   },
+
     // Wholeword
 
   {
@@ -3607,17 +3596,17 @@ NOTE: This rulers must only override the original definitions */
     "layer0.texture": "Material Theme/assets/accent-pink/find_reverse--hover.png",
   },
 
-/* BLUE ACCENT
- * =================================================================== */
+// Blue Accent Color
+// ===========================================================================
 
   {
     "class": "panel_button_control",
     "settings": ["material_theme_accent_blue"],
     "attributes": ["hover"],
-    "layer0.texture": "Material Theme/assets/accent-blue/overflow_menu--hover.png",
+    "layer0.texture": "Material Theme/assets/accent-blue/overflow_menu--hover.png"
   },
 
-  // Tooltip
+  // tooltip
 
   {
     "class": "tool_tip_control",
@@ -3628,7 +3617,7 @@ NOTE: This rulers must only override the original definitions */
   {
     "class": "progress_gauge_control",
     "settings": ["material_theme_accent_blue"],
-    "layer0.tint": [41, 121, 255]
+    "layer0.tint": [41, 121, 255],
   },
 
   {
@@ -3641,14 +3630,14 @@ NOTE: This rulers must only override the original definitions */
   {
     "class": "tool_tip_label_control",
     "settings": ["material_theme_accent_blue"],
-    "color": [0, 0, 0, 150]
+    "color": [255, 255, 255, 255]
   },
 
     // Sidebar tree highlight
 
   {
     "class": "tree_row",
-    "settings": ["material_theme_accent_blue"],
+    "settings": ["theme_accent_blue"],
     "layer1.texture": "Material Theme/assets/accent-blue/tree_highlight.png",
   },
 
@@ -3690,7 +3679,7 @@ NOTE: This rulers must only override the original definitions */
     "class": "sidebar_label",
     "settings": ["material_theme_accent_blue"],
     "parents": [{"class": "tree_row", "attributes": ["expanded"]}],
-    "color": [68, 138, 255]
+    "color": [41, 121, 255]
   },
 
   {
@@ -3768,7 +3757,6 @@ NOTE: This rulers must only override the original definitions */
   {
     "class": "fold_button_control",
     "settings": ["material_theme_accent_blue"],
-    "layer0.texture": "Material Theme/assets/commons/fold_right.png",
     "layer1.texture": "Material Theme/assets/accent-blue/fold_right--hover.png",
   },
 
@@ -3776,18 +3764,17 @@ NOTE: This rulers must only override the original definitions */
     "class": "fold_button_control",
     "attributes": ["expanded"],
     "settings": ["material_theme_accent_blue"],
-    "layer0.texture": "Material Theme/assets/darker/fold_down.png",
     "layer1.texture": "Material Theme/assets/accent-blue/fold_down--hover.png"
   },
 
-  // Panel labels
+    // Panel labels
 
   {
     "class": "quick_panel_label",
     "settings": ["material_theme_accent_blue"],
-    "match_fg": [68, 138, 255],
+    "match_fg": [41, 121, 255],
     "selected_fg": [255, 255, 255, 255],
-    "selected_match_fg": [68, 138, 255]
+    "selected_match_fg": [41, 121, 255]
   },
 
     // Panel labels
@@ -3796,9 +3783,9 @@ NOTE: This rulers must only override the original definitions */
     "class": "quick_panel_label",
     "settings": ["material_theme_accent_blue"],
     "parents": [{"class": "overlay_control"}],
-    "match_fg": [68, 138, 255],
+    "match_fg": [41, 121, 255],
     "selected_fg": [255, 255, 255, 255],
-    "selected_match_fg": [68, 138, 255]
+    "selected_match_fg": [41, 121, 255]
   },
 
     // Panels sublabels
@@ -3806,9 +3793,9 @@ NOTE: This rulers must only override the original definitions */
   {
     "class": "quick_panel_path_label",
     "settings": ["material_theme_accent_blue"],
-    "match_fg": [68, 138, 255],
+    "match_fg": [41, 121, 255],
     "selected_fg": [255, 255, 255, 255],
-    "selected_match_fg": [68, 138, 255]
+    "selected_match_fg": [41, 121, 255]
   },
 
     // Panels data / score
@@ -3816,7 +3803,7 @@ NOTE: This rulers must only override the original definitions */
   {
     "class": "quick_panel_score_label",
     "settings": ["material_theme_accent_blue"],
-    "fg": [68, 138, 255],
+    "fg": [41, 121, 255],
     "selected_fg": [255, 255, 255, 255]
   },
 
@@ -3834,8 +3821,8 @@ NOTE: This rulers must only override the original definitions */
     "layer1.texture": "Material Theme/assets/accent-blue/overflow_menu--hover.png",
   },
 
-  /* Buttons icons settings
-  ===================================================================== */
+  // Buttons icons settings
+  // =====================================================================
 
     // Regex Icon
   {
@@ -3851,6 +3838,7 @@ NOTE: This rulers must only override the original definitions */
     "settings": ["material_theme_accent_blue"],
     "layer0.texture": "Material Theme/assets/accent-blue/find_case--hover.png",
   },
+
     // Wholeword
 
   {
@@ -3916,17 +3904,17 @@ NOTE: This rulers must only override the original definitions */
     "layer0.texture": "Material Theme/assets/accent-blue/find_reverse--hover.png",
   },
 
-/* CYAN ACCENT
- * =================================================================== */
+// Cyan Accent Color
+// ===========================================================================
 
   {
     "class": "panel_button_control",
     "settings": ["material_theme_accent_cyan"],
     "attributes": ["hover"],
-    "layer0.texture": "Material Theme/assets/accent-cyan/overflow_menu--hover.png",
+    "layer0.texture": "Material Theme/assets/accent-cyan/overflow_menu--hover.png"
   },
 
-  // Tooltip
+  // tooltip
 
   {
     "class": "tool_tip_control",
@@ -3937,7 +3925,7 @@ NOTE: This rulers must only override the original definitions */
   {
     "class": "progress_gauge_control",
     "settings": ["material_theme_accent_cyan"],
-    "layer0.tint": [0, 188, 212]
+    "layer0.tint": [0, 188, 212],
   },
 
   {
@@ -3950,14 +3938,14 @@ NOTE: This rulers must only override the original definitions */
   {
     "class": "tool_tip_label_control",
     "settings": ["material_theme_accent_cyan"],
-    "color": [0, 0, 0, 150]
+    "color": [255, 255, 255, 255]
   },
 
     // Sidebar tree highlight
 
   {
     "class": "tree_row",
-    "settings": ["material_theme_accent_cyan"],
+    "settings": ["theme_accent_cyan"],
     "layer1.texture": "Material Theme/assets/accent-cyan/tree_highlight.png",
   },
 
@@ -3999,7 +3987,7 @@ NOTE: This rulers must only override the original definitions */
     "class": "sidebar_label",
     "settings": ["material_theme_accent_cyan"],
     "parents": [{"class": "tree_row", "attributes": ["expanded"]}],
-    "color": [38, 198, 218]
+    "color": [0, 188, 212]
   },
 
   {
@@ -4077,7 +4065,6 @@ NOTE: This rulers must only override the original definitions */
   {
     "class": "fold_button_control",
     "settings": ["material_theme_accent_cyan"],
-    "layer0.texture": "Material Theme/assets/commons/fold_right.png",
     "layer1.texture": "Material Theme/assets/accent-cyan/fold_right--hover.png",
   },
 
@@ -4085,18 +4072,17 @@ NOTE: This rulers must only override the original definitions */
     "class": "fold_button_control",
     "attributes": ["expanded"],
     "settings": ["material_theme_accent_cyan"],
-    "layer0.texture": "Material Theme/assets/darker/fold_down.png",
     "layer1.texture": "Material Theme/assets/accent-cyan/fold_down--hover.png"
   },
 
-  // Panel labels
+    // Panel labels
 
   {
     "class": "quick_panel_label",
     "settings": ["material_theme_accent_cyan"],
-    "match_fg": [38, 198, 218],
+    "match_fg": [0, 188, 212],
     "selected_fg": [255, 255, 255, 255],
-    "selected_match_fg": [38, 198, 218]
+    "selected_match_fg": [0, 188, 212]
   },
 
     // Panel labels
@@ -4105,9 +4091,9 @@ NOTE: This rulers must only override the original definitions */
     "class": "quick_panel_label",
     "settings": ["material_theme_accent_cyan"],
     "parents": [{"class": "overlay_control"}],
-    "match_fg": [38, 198, 218],
+    "match_fg": [0, 188, 212],
     "selected_fg": [255, 255, 255, 255],
-    "selected_match_fg": [38, 198, 218]
+    "selected_match_fg": [0, 188, 212]
   },
 
     // Panels sublabels
@@ -4115,9 +4101,9 @@ NOTE: This rulers must only override the original definitions */
   {
     "class": "quick_panel_path_label",
     "settings": ["material_theme_accent_cyan"],
-    "match_fg": [38, 198, 218],
+    "match_fg": [0, 188, 212],
     "selected_fg": [255, 255, 255, 255],
-    "selected_match_fg": [38, 198, 218]
+    "selected_match_fg": [0, 188, 212]
   },
 
     // Panels data / score
@@ -4125,7 +4111,7 @@ NOTE: This rulers must only override the original definitions */
   {
     "class": "quick_panel_score_label",
     "settings": ["material_theme_accent_cyan"],
-    "fg": [38, 198, 218],
+    "fg": [0, 188, 212],
     "selected_fg": [255, 255, 255, 255]
   },
 
@@ -4143,8 +4129,8 @@ NOTE: This rulers must only override the original definitions */
     "layer1.texture": "Material Theme/assets/accent-cyan/overflow_menu--hover.png",
   },
 
-  /* Buttons icons settings
-  ===================================================================== */
+  // Buttons icons settings
+  // =====================================================================
 
     // Regex Icon
   {
@@ -4160,6 +4146,7 @@ NOTE: This rulers must only override the original definitions */
     "settings": ["material_theme_accent_cyan"],
     "layer0.texture": "Material Theme/assets/accent-cyan/find_case--hover.png",
   },
+
     // Wholeword
 
   {
@@ -4224,6 +4211,7 @@ NOTE: This rulers must only override the original definitions */
     "settings": ["material_theme_accent_cyan"],
     "layer0.texture": "Material Theme/assets/accent-cyan/find_reverse--hover.png",
   },
+
 
 
 /* @ THEME OPTIONS
@@ -4448,5 +4436,5 @@ NOTE: This rulers must only override the original definitions */
   }
 
 
-
+//
 ]
