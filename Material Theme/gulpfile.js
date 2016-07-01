@@ -11,9 +11,11 @@ var gulp                       = require('gulp'),
     path                       = require('path'),
     colors                     = require('colors'),
     sleep                      = require('sleep'),
+    changed                    = require('./changed'),
     runSequence                = require('run-sequence'),
-    conventionalChangelog      = require('conventional-changelog'),
+    conventionalChangelog      = require('gulp-conventional-changelog'),
     conventionalGithubReleaser = require('conventional-github-releaser'),
+    replace                    = require('gulp-replace'),
     argv                       = require('yargs').argv,
     fs                         = require('fs'),
     _                          = require('lodash'),
@@ -49,13 +51,13 @@ gulp.task('clean:widgets', function() {
  * > Generate CHANGELOG
  */
 
-gulp.task('changelog', function() {
-  return conventionalChangelog({
-    preset: 'angular'
-  })
-  .pipe(fs.createWriteStream('CHANGELOG.md'));
+gulp.task('changelog', function () {
+  return gulp.src('CHANGELOG.md')
+    .pipe(conventionalChangelog({
+      preset: 'angular'
+    }))
+    .pipe(gulp.dest('./'));
 });
-
 
 /*
  * > Bump Version
@@ -206,6 +208,7 @@ gulp.task('build:schemes', ['clean:schemes'], function(cb) {
   runSequence(
     'process:schemes',
     'convert:schemes',
+    'escape:schemes',
     function (error) {
       if (error) {
         console.log('[build:schemes]'.bold.magenta + ' There was an issue building schemes:\n'.bold.red + error.message);
@@ -253,6 +256,16 @@ gulp.task('convert:schemes', function() {
         .pipe($.exec.reporter());
     }));
 });
+
+// Escape CDATA characters
+gulp.task('escape:schemes', function(){
+  sleep.sleep(2);
+  return gulp.src('./schemes/*.tmTheme')
+    .pipe(replace('&lt;', '<'))
+    .pipe(replace('&gt;', '>'))
+    .pipe(gulp.dest('./schemes'));
+});
+
 
 
 /* >> Widgets */
@@ -310,6 +323,57 @@ gulp.task('build:widget-settings', function() {
         }))
         .pipe(gulp.dest('./widgets'));
     }));
+});
+
+
+function getCache() {
+  var cache = {};
+
+  try {
+    cache = JSON.parse(fs.readFileSync('./images.cache', 'utf8'));
+  }
+  catch(e) {
+    console.log('No `images.cache` file!');
+  }
+  finally {
+    return cache;
+  }
+}
+
+gulp.task('optimize', function(cb) {
+  runSequence(
+    'optimize:assets',
+    'optimize:icons',
+    function (error) {
+      if (error) {
+        console.log('[optimize]'.bold.magenta + ' There was an issue optimizing images:\n'.bold.red + error.message);
+      } else {
+        console.log('[optimize]'.bold.magenta + ' Finished successfully'.bold.green);
+      }
+
+      cb(error);
+    }
+  );
+});
+
+gulp.task('optimize:assets', function() {
+  return gulp.src('./assets/**/*.png')
+    .pipe(changed({
+      firstPass: true,
+      cache: getCache()
+    }))
+    .pipe($.imagemin([$.imagemin.optipng()], {verbose: true}))
+    .pipe(gulp.dest('./assets'));
+});
+
+gulp.task('optimize:icons', function() {
+  return gulp.src('./icons/**/*.png')
+    .pipe(changed({
+      firstPass: true,
+      cache: getCache()
+    }))
+    .pipe($.imagemin([$.imagemin.optipng()], {verbose: true}))
+    .pipe(gulp.dest('./icons'));
 });
 
 
