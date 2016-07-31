@@ -940,3 +940,23 @@ class SelectClipboardCommand(sublime_plugin.TextCommand):
         self.view.sel().add_all(found)
 
 
+# This needs to be bound to a 'press_command'
+class RemoveSelectionCommand(sublime_plugin.TextCommand):
+    # Need to override run_ instead of run to get access to the mouse event
+    def run_(self, edit, args):
+        sels = self.view.sel()
+
+        # Save old sels, must be extracted into a new list
+        old_sels = [sel for sel in sels]
+        # Clear current sel, drag_select on existing sels doesn't work
+        sels.clear()
+
+        # Ignore args other than the mouse event
+        self.view.run_command('drag_select', {'event': args['event']})
+        click_point = sels[0].a
+
+        # Clear the click point selection and restore old selection except for click_point
+        sels.clear()
+        for old_sel in old_sels:
+            if not old_sel.contains(click_point):
+                sels.add(old_sel)
