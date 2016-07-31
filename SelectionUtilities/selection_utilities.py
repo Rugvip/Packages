@@ -916,3 +916,27 @@ class JavaScriptConstructorSnippetCommand(sublime_plugin.TextCommand):
         })
 
 
+class SelectClipboardCommand(sublime_plugin.TextCommand):
+    def run(self, edit):
+        clipboard = sublime.get_clipboard().split('\n')
+        sels = self.view.sel()
+        sel_size = sum(sel.end() - sel.begin() for sel in sels)
+
+        found = []
+
+        for clipboard_line in clipboard:
+            results = self.view.find_all(clipboard_line, sublime.LITERAL)
+
+            if sel_size > 0:
+                for result in results:
+                    for sel in sels:
+                        if sel.contains(result):
+                            found.append(result)
+                            break
+            else:
+                found += results
+
+        self.view.sel().clear()
+        self.view.sel().add_all(found)
+
+
