@@ -899,6 +899,28 @@ class SortAndUniqueCommand(sublime_plugin.TextCommand):
         self.view.run_command("sort_lines", {"case_sensitive": False})
         self.view.run_command("permute_lines", {"operation": "unique"})
 
+
+class ToggleFirstCase(sublime_plugin.TextCommand):
+    def run(self, edit):
+        sel = self.view.sel()[0]
+
+        sels = []
+        for sel in self.view.sel():
+            pos = sel.a
+            while (self.view.substr(pos - 1).isalnum()):
+                pos -= 1
+            if self.view.substr(pos).isalnum():
+                sels.append(sublime.Region(pos, pos + 1))
+
+        for sel in sels:
+            char = self.view.substr(sel)
+            if char.isupper():
+                char = char.lower()
+            else:
+                char = char.upper()
+            self.view.replace(edit, sel, char)
+
+
 class JavaScriptConstructorSnippetCommand(sublime_plugin.TextCommand):
     def run(self, edit):
         class_sels = self.view.find_by_selector('meta.class.js')
