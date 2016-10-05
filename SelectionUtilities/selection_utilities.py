@@ -1004,3 +1004,15 @@ class RemoveSelectionCommand(sublime_plugin.TextCommand):
         for old_sel in old_sels:
             if not old_sel.contains(click_point):
                 sels.add(old_sel)
+
+
+class ClipboardFlipCommand(sublime_plugin.TextCommand):
+    def run(self, edit):
+        clipboard = sublime.get_clipboard()
+
+        sels = [s for s in self.view.sel()]
+        sels.reverse()
+        for sel in sels:
+            current = self.view.substr(sel)
+            self.view.replace(edit, sel, clipboard)
+            sublime.set_clipboard(current)
