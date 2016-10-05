@@ -873,7 +873,7 @@ class JavaScriptFunctionSnippetCommand(sublime_plugin.TextCommand):
 
 
 class JavaScriptConsoleSnippetCommand(sublime_plugin.TextCommand):
-    def run(self, edit):
+    def run(self, edit, jsonify):
 
         sels = [sel for sel in self.view.sel()]
         sels.reverse()
@@ -887,7 +887,10 @@ class JavaScriptConsoleSnippetCommand(sublime_plugin.TextCommand):
             indentation = self.view.substr(self.view.find('\\s*', line.begin()))
             if self.view.substr(line.end() - 1) == '{':
                 indentation += '\t'
+
             snippet = "\n{0}console.log('{1}: ', {1})".format(indentation, text)
+            if jsonify:
+                snippet = "\n{0}console.log('{1}: ', JSON.stringify({1}))".format(indentation, text)
             self.view.insert(edit, line.end(), snippet)
 
 
