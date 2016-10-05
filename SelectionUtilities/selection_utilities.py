@@ -936,13 +936,14 @@ class JavaScriptConstructorSnippetCommand(sublime_plugin.TextCommand):
         else:
             return
 
-        sel_first_line = self.view.line(class_sel.begin())
+        sel_first_line = self.view.line(class_sel.begin() + 1)
         sel_line = self.view.line(sel.begin())
 
         indentation = self.view.substr(self.view.find('\\s*', sel_first_line.begin()))
         first_line = self.view.substr(sel_first_line)
 
         has_super = ' extends ' in first_line
+        has_component = ' extends Component' in first_line or ' extends React.Component' in first_line
         snippet = None
 
         self.view.sel().clear()
@@ -950,7 +951,9 @@ class JavaScriptConstructorSnippetCommand(sublime_plugin.TextCommand):
 
         self.view.insert(edit, sel_line.end(), '\n')
 
-        if has_super:
+        if has_component:
+            snippet = '{0}\tconstructor(props) {{\n\t\tsuper(props)\n\t\t$0\n\t}}'.format(indentation)
+        elif has_super:
             snippet = '{0}\tconstructor($1) {{\n\t\tsuper($2)$3\n\t}}'.format(indentation)
         else:
             snippet = '{0}\tconstructor($1) {{\n\t\t$2\n\t}}'.format(indentation)
