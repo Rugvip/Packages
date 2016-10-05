@@ -1,7 +1,26 @@
 import sublime_plugin
 import sublime
 import re
+
+# For inline eval
+from fractions import *
 from math import *
+
+import random
+
+def rand(n):
+    return random.randint(1, n)
+
+import hashlib
+
+def md5(s):
+    return hashlib.md5(str(s).encode('utf-8')).hexdigest()
+
+def sha1(s):
+    return hashlib.sha1(str(s).encode('utf-8')).hexdigest()
+
+def sha256(s):
+    return hashlib.sha256(str(s).encode('utf-8')).hexdigest()
 
 class SplitSelectionCommand(sublime_plugin.TextCommand):
     def run(self, edit):
