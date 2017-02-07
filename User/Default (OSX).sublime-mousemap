@@ -15,10 +15,6 @@
 
 	// { "button": "button2", "modifiers": [], "command": "context_menu" },
 
-	{ "button": "scroll_down", "modifiers": ["alt"], "command": "move_selection_inwards" },
-	{ "button": "scroll_up", "modifiers": ["alt"], "command": "move_selection_outwards" },
-	{ "button": "scroll_down", "modifiers": ["ctrl", "alt"], "command": "delete_inwards" },
-	{ "button": "scroll_up", "modifiers": ["ctrl", "alt"], "command": "delete_outwards" },
 	{
 		"button": "button1", "modifiers": ["shift", "super"],
 		"press_command": "copy_to_selections"
@@ -49,5 +45,11 @@
 		"button": "scroll_down",
 		"modifiers": ["super", "alt", "shift"],
 		"command": "run_emmet_action",
-		"args": { "action": "decrement_number_by_01" }}
+		"args": { "action": "decrement_number_by_01" }},
+	{ "button": "scroll_down", "modifiers": ["alt"], "command": "move_selection_inwards" },
+	{ "button": "scroll_up", "modifiers": ["alt"], "command": "move_selection_outwards" },
+	{ "button": "scroll_down", "modifiers": ["ctrl", "alt"], "command": "delete_inwards" },
+	{ "button": "scroll_up", "modifiers": ["ctrl", "alt"], "command": "delete_outwards" },
+	{ "button": "scroll_down", "modifiers": ["alt", "ctrl", "super"], "command": "redo" },
+	{ "button": "scroll_up", "modifiers": ["alt", "ctrl", "super"], "command": "undo" }
 ]
