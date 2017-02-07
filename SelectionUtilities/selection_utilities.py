@@ -1086,3 +1086,20 @@ class ClipboardFlipCommand(sublime_plugin.TextCommand):
             current = self.view.substr(sel)
             self.view.replace(edit, sel, clipboard)
             sublime.set_clipboard(current)
+
+
+class CommaJoinLines(sublime_plugin.TextCommand):
+    def run(self, edit):
+        view = self.view
+        last = []
+        for sel in self.view.sel():
+            for line in view.lines(sel):
+                last.append(line.b)
+
+        last.reverse()
+        for line in last:
+            if view.substr(line - 1) != ',':
+                view.insert(edit, line, ',')
+
+        self.view.run_command('join_lines')
+
