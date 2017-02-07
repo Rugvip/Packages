@@ -765,10 +765,13 @@ class NullifyCommand(sublime_plugin.TextCommand):
         sels = [r for r in view.sel()]
         sels.reverse()
         for sel in sels:
-            str = view.substr(sel)
+            selStr = view.substr(sel)
             line = view.full_line(sel)
             whitespace = re.match(r"\s*", view.substr(line)).group()
-            view.insert(edit, line.end(), whitespace + str + " = NULL;\n")
+            if view.score_selector(sel.begin(), "source.js") > 0:
+                view.insert(edit, line.end(), whitespace + selStr + " = null\n")
+            else:
+                view.insert(edit, line.end(), whitespace + selStr + " = NULL;\n")
 
 
 class RemoveLastSelectionCommand(sublime_plugin.TextCommand):
