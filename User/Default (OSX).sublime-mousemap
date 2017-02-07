@@ -18,6 +18,11 @@
 	{
 		"button": "button1", "modifiers": ["shift", "super"],
 		"press_command": "copy_to_selections"
+	},	{
+		"button": "button1",
+		"modifiers": ["super", "alt"],
+		"count": 1,
+		"press_command": "remove_selection"
 	},
 	{
 		"button": "button1",
