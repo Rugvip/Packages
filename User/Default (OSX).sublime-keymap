@@ -570,12 +570,22 @@
 	{ "keys" : ["shift+down"], "command": "select_lines", "args": {"forward": true} },
 	{ "keys" : ["shift+right"], "command": "move", "args": {"by": "characters", "forward": true, "extend": true} },
 	{ "keys" : ["super+i"], "command": "reindent" },
-	{ "keys" : ["super+shift+tab"], "command": "prev_view_in_stack" },
+	// { "keys" : ["super+shift+tab"], "command": "prev_view_in_stack" },
 	{ "keys":  ["super+shift+t"], "command": "reopen_last_file" },
 	{ "keys" : ["super+e"], "command": "find_under_expand" },
 	{ "keys" : ["super+shift+e"], "command": "find_under_expand_skip" },
 	{ "keys" : ["super+r"], "command": "expand_selection", "args": {"to": "scope"} },
 	{ "keys" : ["super+t"], "command": "expand_selection", "args": {"to": "brackets"} },
+	{ "keys" : ["super+b"], "command": "insert_snippet", "args": {"contents": "return $SELECTION$0"},
+		"context": [
+			{"key": "selector", "operator": "equal", "operand": "source.js" }
+		]
+	},
+	{ "keys" : ["super+b"], "command": "insert_snippet", "args": {"contents": "return $SELECTION$0"},
+		"context": [
+			{"key": "selector", "operator": "equal", "operand": "source.go" }
+		]
+	},
 	{ "keys" : ["super+y"], "command": "expand_selection", "args": {"to": "indentation"} },
 	{ "keys" : ["super+shift+r"], "command": "redo_or_repeat" },
 	{ "keys" : ["super+g"], "command": "show_overlay", "args": {"overlay": "goto"} },
