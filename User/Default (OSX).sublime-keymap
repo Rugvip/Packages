@@ -613,6 +613,10 @@
 			"rows": [0.0, 1.0],
 			"cells": [[0, 0, 1, 1], [1, 0, 2, 1]]
 	}},
+	{ "keys": ["super+alt+ctrl+h"], "command": "expand_tabs", "args": { "set_translate_tabs": true } },
+	{ "keys": ["super+alt+ctrl+j"], "command": "set_setting", "args": { "setting": "tab_size", "value": 2 } },
+	{ "keys": ["super+alt+ctrl+k"], "command": "set_setting", "args": { "setting": "tab_size", "value": 4 } },
+	{ "keys": ["super+alt+ctrl+l"], "command": "unexpand_tabs", "args": { "set_translate_tabs": true } },
 	{ "keys": ["ctrl+1"], "command": "select_by_index", "args": { "index": 0 } },
 	{ "keys": ["ctrl+2"], "command": "select_by_index", "args": { "index": 1 } },
 	{ "keys": ["ctrl+3"], "command": "select_by_index", "args": { "index": 2 } },
