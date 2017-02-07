@@ -811,6 +811,37 @@ class ExpandSelectionVerticallyCommand(sublime_plugin.TextCommand):
             sels.add(sel)
 
 
+class DuplicateBelowCommand(sublime_plugin.TextCommand):
+    def run(self, edit, selection = 'after'):
+
+        # sels = [sel for sel in self.view.sel()]
+        # sels.reverse()
+
+        new_sels = []
+
+        for sel in self.view.sel():
+            if sel.begin() == sel.end():
+                sel = self.view.word(sel)
+            text = self.view.substr(sel)
+            line = self.view.line(sel)
+
+            indentation = self.view.substr(self.view.find('\\s*', line.begin()))
+            if self.view.substr(line.end() - 1) == '{':
+                indentation += '\t'
+
+            snippet = "\n" + indentation + text
+
+            new_sel_point = line.end() + 1 + len(indentation)
+            if selection == 'after':
+                new_sel_point += len(text)
+
+            new_sels.append(sublime.Region(new_sel_point))
+            self.view.insert(edit, line.end(), snippet)
+
+        self.view.sel().clear()
+        self.view.sel().add_all(new_sels)
+
+
 import os
 
 class SwitchFileExtendedCommand(sublime_plugin.TextCommand):
@@ -886,7 +917,6 @@ class JavaScriptFunctionSnippetCommand(sublime_plugin.TextCommand):
             self.view.sel().add(sublime.Region(first))
 
         self.view.run_command("insert_snippet", {"contents": "function ($1) {\n\t$0\n}"})
-
 
 
 class JavaScriptConsoleSnippetCommand(sublime_plugin.TextCommand):
