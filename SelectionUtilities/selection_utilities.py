@@ -140,9 +140,6 @@ class SelectArgumentCommand(sublime_plugin.TextCommand):
             beginPar = 0
             endPar = 0
             while (True):
-                if (self.view.score_selector(begin, "string") > 0):
-                    begin -= 1
-                    continue
                 if begin <= 0:
                     break
                 char = self.view.substr(begin)
@@ -150,18 +147,25 @@ class SelectArgumentCommand(sublime_plugin.TextCommand):
                     break
                 if (char in [",", ";"] and beginPar <= 0):
                     break
-                if (char in ["(", "{", "["]):
+                if (char == "{"):
                     if (beginPar <= 0):
                         break
                     else:
                         beginPar -= 1
-                if (char in [")", "}", "]"]):
+                if (char == "}"):
+                    beginPar += 1
+                if (self.view.score_selector(begin, "string") > 0):
+                    begin -= 1
+                    continue
+                if (char in ["(", "["]):
+                    if (beginPar <= 0):
+                        break
+                    else:
+                        beginPar -= 1
+                if (char in [")", "]"]):
                     beginPar += 1
                 begin -= 1
             while (True):
-                if (self.view.score_selector(end, "string") > 0):
-                    end += 1
-                    continue
                 char = self.view.substr(end)
                 if end >= end_position:
                     break
@@ -169,12 +173,22 @@ class SelectArgumentCommand(sublime_plugin.TextCommand):
                 #     break
                 if (char in [",", ";"] and endPar <= 0):
                     break
-                if (char in [")", "}", "]"]):
+                if (char == "}"):
                     if (endPar <= 0):
                         break
                     else:
                         endPar -= 1
-                if (char in ["(", "{", "["]):
+                if (char == "{"):
+                    endPar += 1
+                if (self.view.score_selector(end, "string") > 0):
+                    end += 1
+                    continue
+                if (char in [")", "]"]):
+                    if (endPar <= 0):
+                        break
+                    else:
+                        endPar -= 1
+                if (char in ["(", "["]):
                     endPar += 1
                 end += 1
             if begin < end:
