@@ -941,6 +941,26 @@ class JavaScriptConsoleSnippetCommand(sublime_plugin.TextCommand):
             self.view.insert(edit, line.end(), snippet)
 
 
+class GoLogSnippetCommand(sublime_plugin.TextCommand):
+    def run(self, edit):
+
+        sels = [sel for sel in self.view.sel()]
+        sels.reverse()
+
+        for sel in sels:
+            if sel.begin() == sel.end():
+                sel = self.view.word(sel)
+            text = self.view.substr(sel)
+            line = self.view.line(sel)
+
+            indentation = self.view.substr(self.view.find('\\s*', line.begin()))
+            if self.view.substr(line.end() - 1) == '{':
+                indentation += '\t'
+
+            snippet = '\n{0}fmt.Printf("{1}: %#v\\n", {1})'.format(indentation, text)
+            self.view.insert(edit, line.end(), snippet)
+
+
 class SortAndUniqueCommand(sublime_plugin.TextCommand):
     def run(self, edit):
         self.view.run_command("sort_lines", {"case_sensitive": False})
