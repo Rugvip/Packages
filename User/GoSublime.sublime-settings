@@ -8,6 +8,7 @@
 	"on_save": [{
 		"cmd": "gc_comp_lint"
 	}],
+	"ipc_timeout": 5,
 	"fmt_cmd": ["goimports"],
 	"build_command": ["go", "build"],
 	"autocomplete_builtins": true
