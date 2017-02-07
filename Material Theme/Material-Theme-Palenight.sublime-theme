@@ -12,7 +12,7 @@
   
     {
       "class": "sheet_container_control",
-      "layer0.tint": [38, 50, 56],
+      "layer0.tint": [41, 45, 62],
       "layer0.opacity": 1.0
     },
   
@@ -23,8 +23,9 @@
     {
       "class": "grid_layout_control",
       "border_size": 1,
-      "border_color": [34, 45, 51]
+      "border_color": [32, 34, 48]
     },
+  
   
   // @ DIALOG POPUP
   // Dialog popup style and progressbar
@@ -39,13 +40,13 @@
   
     {
       "class": "dialog",
-      "layer0.tint": [38, 50, 56],
+      "layer0.tint": [41, 45, 62],
       "layer0.opacity": 1.0
     },
   
     {
       "class": "progress_bar_control",
-      "layer0.tint": [38, 50, 56],
+      "layer0.tint": [41, 45, 62],
       "layer0.opacity": 1.0,
     },
   
@@ -57,7 +58,7 @@
   
     {
       "class": "fold_button_control",
-      "layer0.texture": "Material Theme/assets/default/fold_right.png",
+      "layer0.texture": "Material Theme/assets/palenight/fold_right.png",
       "layer0.opacity": 1.0,
       "layer0.inner_margin": 0,
       "layer1.texture": "Material Theme/assets/commons/fold_right--hover.png",
@@ -76,7 +77,7 @@
     {
       "class": "fold_button_control",
       "attributes": ["expanded"],
-      "layer0.texture": "Material Theme/assets/default/fold_down.png",
+      "layer0.texture": "Material Theme/assets/palenight/fold_down.png",
       "layer1.texture": "Material Theme/assets/commons/fold_down--hover.png"
     },
   
@@ -88,7 +89,7 @@
   
     {
       "class": "popup_control",
-      "layer0.tint": [38, 50, 56, 255],
+      "layer0.tint": [41, 45, 62, 255],
       "layer0.opacity": 1.0,
       "content_margin": [0, 0]
     },
@@ -96,7 +97,7 @@
     {
       "class": "auto_complete",
       "row_padding": [12, 6],
-      "layer0.tint": [38, 50, 56, 255],
+      "layer0.tint": [41, 45, 62, 255],
       "layer0.opacity": 1.0
     },
   
@@ -110,7 +111,7 @@
   
     {
       "class": "table_row",
-      "layer0.tint": [84, 110, 122],
+      "layer0.tint": [103, 110, 149],
       "layer0.opacity": 0.0,
     },
   
@@ -146,7 +147,7 @@
     // Command Panel
      {
         "class": "overlay_control",
-        "layer0.texture": "Material Theme/assets/default/overlay-bg.png",
+        "layer0.texture": "Material Theme/assets/palenight/overlay-bg.png",
         "layer0.inner_margin": [24, 4, 24, 33],
         "layer0.opacity": 1.0,
         "layer1.texture": "Material Theme/assets/commons/quick-panel-background.png",
@@ -159,7 +160,7 @@
   
     {
       "class": "mini_quick_panel_row",
-      "layer0.tint": [38, 50, 56, 0],
+      "layer0.tint": [41, 45, 62, 0],
       "layer0.inner_margin": [2, 2, 2, 2],
       "layer0.opacity": 1.0
     },
@@ -169,7 +170,7 @@
     {
       "class": "mini_quick_panel_row",
       "attributes": ["selected"],
-      "layer0.tint": [84, 110, 122],
+      "layer0.tint": [103, 110, 149],
       "layer0.opacity": 0.3
     },
   
@@ -178,7 +179,7 @@
     {
       "class": "quick_panel",
       "row_padding": [32, 12],
-      "layer0.tint": [38, 50, 56],
+      "layer0.tint": [41, 45, 62],
       "layer0.opacity": 1.0
     },
   
@@ -186,7 +187,7 @@
   
     {
       "class": "quick_panel_row",
-      "layer0.tint": [38, 50, 56, 0],
+      "layer0.tint": [41, 45, 62, 0],
       "layer0.opacity": 1.0
     },
   
@@ -195,7 +196,7 @@
     {
       "class": "quick_panel_row",
       "parents": [{"class": "overlay_control"}],
-      "layer0.tint": [38, 50, 56, 0],
+      "layer0.tint": [41, 45, 62, 0],
       "layer0.opacity": 1.0
     },
   
@@ -205,7 +206,7 @@
       "class": "quick_panel",
       "parents": [{"class": "overlay_control"}],
       "row_padding": [32, 12],
-      "layer0.tint": [38, 50, 56, 0],
+      "layer0.tint": [41, 45, 62, 0],
       "layer0.opacity": 1.0
     },
   
@@ -214,7 +215,7 @@
     {
       "class": "quick_panel_row",
       "attributes": ["selected"],
-      "layer0.tint": [84, 110, 122],
+      "layer0.tint": [103, 110, 149],
       "layer0.opacity": 0.3,
       "layer1.opacity": 0.0
     },
@@ -234,7 +235,7 @@
     {
       "class": "quick_panel_label",
       "parents": [{"class": "overlay_control"}],
-      "fg": [176, 190, 197, 255],
+      "fg": [166, 172, 205],
       "match_fg": [128, 203, 196, 255],
       "selected_fg": [255, 255, 255, 255],
       "selected_match_fg": [128, 203, 196, 255]
@@ -244,7 +245,7 @@
   
     {
       "class": "quick_panel_path_label",
-      "fg": [84, 110, 122, 255],
+      "fg": [103, 110, 149, 255],
       "match_fg": [128, 203, 196, 255],
       "selected_fg": [255, 255, 255, 255],
       "selected_match_fg": [128, 203, 196, 255]
@@ -254,7 +255,7 @@
   
     {
       "class": "quick_panel_score_label",
-      "fg": [176, 190, 197, 255],
+      "fg": [166, 172, 205, 255],
       "selected_fg": [255, 255, 255, 255]
     },
   
@@ -265,8 +266,9 @@
   
     {
       "class": "tabset_control",
+      "attributes": ["file_medium_dark"],
       "layer0.opacity": 1.0,
-      "layer0.tint": [38, 50, 56],
+      "layer0.tint": [41, 45, 62],
       "tint_index": 1,
       "layer0.inner_margin": [2, 6],
       "layer0.opacity": 1.0,
@@ -277,6 +279,7 @@
       "tab_height": 54,
       "mouse_wheel_switch": false
     },
+  
     {
       "class": "tabset_control",
       "settings": ["mouse_wheel_switches_tabs", "!enable_tab_scrolling"],
@@ -288,12 +291,12 @@
     {
       "class": "tab_control",
   
-      "layer0.tint": [38, 50, 56],
+      "layer0.tint": [41, 45, 62],
       "layer0.inner_margin": [24, 0],
       "layer0.opacity": 1.0,
       "tint_index": 0,
   
-      "layer1.texture": "Material Theme/assets/default/tab_current.png",
+      "layer1.texture": "Material Theme/assets/palenight/tab_current.png",
       "layer1.inner_margin": [0, 0],
       "layer1.opacity": 0.0,
   
@@ -306,19 +309,19 @@
       "layer3.texture": {
               "keyframes":
               [
-                "Material Theme/assets/default/tab_animation1.png",
-                "Material Theme/assets/default/tab_animation2.png",
-                "Material Theme/assets/default/tab_animation3.png",
-                "Material Theme/assets/default/tab_animation4.png",
-                "Material Theme/assets/default/tab_animation5.png",
-                "Material Theme/assets/default/tab_animation6.png",
-                "Material Theme/assets/default/tab_animation7.png",
-                "Material Theme/assets/default/tab_animation8.png",
-                "Material Theme/assets/default/tab_animation9.png",
-                "Material Theme/assets/default/tab_animation10.png",
-                "Material Theme/assets/default/tab_animation11.png",
-                "Material Theme/assets/default/tab_animation12.png",
-                "Material Theme/assets/default/tab_animation13.png"
+                "Material Theme/assets/palenight/tab_animation1.png",
+                "Material Theme/assets/palenight/tab_animation2.png",
+                "Material Theme/assets/palenight/tab_animation3.png",
+                "Material Theme/assets/palenight/tab_animation4.png",
+                "Material Theme/assets/palenight/tab_animation5.png",
+                "Material Theme/assets/palenight/tab_animation6.png",
+                "Material Theme/assets/palenight/tab_animation7.png",
+                "Material Theme/assets/palenight/tab_animation8.png",
+                "Material Theme/assets/palenight/tab_animation9.png",
+                "Material Theme/assets/palenight/tab_animation10.png",
+                "Material Theme/assets/palenight/tab_animation11.png",
+                "Material Theme/assets/palenight/tab_animation12.png",
+                "Material Theme/assets/palenight/tab_animation13.png"
               ],
               "loop": false,
               "frame_time": 0.015,
@@ -360,7 +363,7 @@
   
     {
       "class": "tab_label",
-      "fg": [84, 110, 122, 255],
+      "fg": [103, 110, 149, 255],
       "shadow_color": [255, 255, 255, 0],
       "shadow_offset": [0, 0],
       "font.size": 11,
@@ -390,7 +393,7 @@
       "content_margin": [0, 0],
   
        // Close Icon
-      "layer0.texture": "Material Theme/assets/default/close_icon.png",
+      "layer0.texture": "Material Theme/assets/palenight/close_icon.png",
       "layer0.opacity": 1,
       "layer0.inner_margin": 0,
   
@@ -399,7 +402,7 @@
       "layer1.opacity": { "target": 0.0, "speed": 5.0, "interpolation": "smoothstep" },
   
        // Dirty Icon
-      "layer2.texture": "Material Theme/assets/default/dirty_icon.png",
+      "layer2.texture": "Material Theme/assets/palenight/dirty_icon.png",
       "layer2.inner_margin": 0,
   
       // Dirty Icon Hover
@@ -473,7 +476,7 @@
     {
       "class": "scroll_tabs_left_button",
       "content_margin": [14, 7],
-      "layer0.texture": "Material Theme/assets/default/arrow_left.png",
+      "layer0.texture": "Material Theme/assets/palenight/arrow_left.png",
       "layer0.opacity": 1.0,
       "layer0.inner_margin": 0,
       "layer1.texture": "Material Theme/assets/commons/arrow_left--hover.png",
@@ -490,7 +493,7 @@
     {
       "class": "scroll_tabs_right_button",
       "content_margin": [14, 7],
-      "layer0.texture": "Material Theme/assets/default/arrow_right.png",
+      "layer0.texture": "Material Theme/assets/palenight/arrow_right.png",
       "layer0.opacity": 1.0,
       "layer0.inner_margin": 0,
       "layer1.texture": "Material Theme/assets/commons/arrow_right--hover.png",
@@ -507,7 +510,7 @@
     {
       "class": "show_tabs_dropdown_button",
       "content_margin": [12, 12],
-      "layer0.texture": "Material Theme/assets/default/overflow_menu.png",
+      "layer0.texture": "Material Theme/assets/palenight/overflow_menu.png",
       "layer0.opacity": 1.0,
       "layer0.inner_margin": 0,
       "layer1.texture": "Material Theme/assets/commons/overflow_menu--hover.png",
@@ -530,7 +533,7 @@
     {
       "class": "sidebar_container",
       "content_margin": [0, 12, 0, 0],
-      "layer0.tint": [38, 50, 56],
+      "layer0.tint": [41, 45, 62],
       "layer0.opacity": 1.0,
       "layer0.draw_center": false,
       "layer0.inner_margin": [0, 24, 12, 24],
@@ -543,7 +546,7 @@
       "indent": 16,
       "indent_offset": 0,
       "indent_top_level": false,
-      "layer0.tint": [38, 50, 56],
+      "layer0.tint": [41, 45, 62],
       "layer0.opacity": 1.0,
       "layer1.tint": [0,0,0],
       "layer1.opacity": 0.0
@@ -592,7 +595,7 @@
   
     {
       "class": "sidebar_label",
-      "color": [96, 125, 139],
+      "color": [103, 110, 149],
       "font.bold": false,
       "font.italic": false,
       "shadow_color": [255, 255, 255, 0],
@@ -602,7 +605,7 @@
     {
       "class": "sidebar_label",
       "parents": [{"class": "tree_row", "attributes": ["hover"]}],
-      "color": [255,255,255],
+      "color": [255, 255, 255],
       "shadow_color": [255, 255, 255, 0],
       "shadow_offset": [0, 0]
     },
@@ -617,7 +620,7 @@
     {
       "class": "sidebar_label",
       "parents": [{"class": "tree_row", "attributes": ["expandable"]}],
-      "color": [175, 189, 196]
+      "color": [166, 172, 205]
     },
   
     {
@@ -676,8 +679,7 @@
     {
       "class": "icon_file_type",
       "parents": [{"class": "tree_row", "attributes": ["selected"]}],
-      "layer0.opacity": 1,
-      "content_margin": [9, 9]
+      "layer0.opacity": 1.0
     },
   
       // Secondary folder icon (original) used as main folder icon
@@ -685,10 +687,10 @@
     {
       "class": "icon_folder",
       "content_margin": [11, 7],
-      "layer0.tint": [38, 50, 56],
+      "layer0.tint": [41, 45, 62],
       "layer0.opacity": 0,
-      "layer1.texture": "Material Theme/assets/default/folder.png",
-      "layer1.opacity": 1.0,
+      "layer1.texture": "Material Theme/assets/palenight/folder.png",
+      "layer1.opacity": 1,
       "layer2.texture": "Material Theme/assets/commons/folder--hover.png",
       "layer2.opacity": 0.0,
       "layer3.texture": "Material Theme/assets/commons/folder_opened--hover.png",
@@ -700,8 +702,8 @@
       "class": "icon_folder",
       "settings": ["material_theme_arrow_folders"],
       "layer0.opacity": 0,
-      "layer1.texture": "Material Theme/assets/default/arrow_folder.png",
-      "layer1.opacity": 1,
+      "layer1.texture": "Material Theme/assets/palenight/arrow_folder.png",
+      "layer1.opacity": 1.0,
       "layer2.texture": "Material Theme/assets/commons/arrow_folder--hover.png",
       "layer2.opacity": 0.0,
       "layer3.texture": "Material Theme/assets/commons/arrow_folder--opened.png",
@@ -723,11 +725,21 @@
       "class": "icon_folder",
       "parents":
       [
-        { "class": "tree_row", "attributes": ["hover"] }
+        { "class": "tree_row", "attributes": ["hover", "!expanded"] }
       ],
       "layer1.opacity": 0.0,
       "layer2.opacity": 1.0,
       "layer3.opacity": 0.0,
+    },
+  
+    {
+      "class": "icon_folder",
+      "parents":
+      [
+        { "class": "tree_row", "attributes": ["selected"] }
+      ],
+      "layer1.texture": "Material Theme/assets/commons/folder--hover.png",
+      "layer1.opacity": 1.0
     },
   
     {
@@ -771,15 +783,6 @@
       "layer3.texture": "Material Theme/assets/commons/arrow_folder--opened.png",
     },
   
-    {
-      "class": "icon_folder",
-      "parents":
-      [
-        { "class": "tree_row", "attributes": ["selected"] }
-      ],
-      "layer1.texture": "Material Theme/assets/commons/folder--hover.png",
-    },
-  
       // Folder loading
   
     {
@@ -813,7 +816,7 @@
   
     {
       "class": "icon_folder_dup",
-      "layer0.texture": "Material Theme/assets/default/folder_dup.png",
+      "layer0.texture": "Material Theme/assets/palenight/folder_dup.png",
       "layer0.opacity": 1.0,
       "content_margin": [11, 7]
     },
@@ -835,7 +838,7 @@
   
     {
       "class": "disclosure_button_control",
-      "layer0.texture": "Material Theme/assets/default/folder.png",
+      "layer0.texture": "Material Theme/assets/palenight/folder.png",
       "layer0.opacity": 1.0,
       "layer0.inner_margin": 0,
       "layer1.texture": "Material Theme/assets/commons/folder--hover.png",
@@ -862,7 +865,7 @@
   
     {
       "class": "tree_row",
-      "layer0.tint": [38, 50, 56],
+      "layer0.tint": [41, 45, 62],
       "layer0.opacity": 0.0,
       "layer0.inner_margin": [1, 1]
     },
@@ -880,7 +883,7 @@
       "content_margin": [8, 8],
   
       // Default Close icon
-      "layer0.texture": "Material Theme/assets/default/close_icon.png",
+      "layer0.texture": "Material Theme/assets/palenight/close_icon.png",
       "layer0.opacity": { "target": 0.0, "speed": 7.0, "interpolation": "smoothstep" },
       "layer0.inner_margin": [0,0],
   
@@ -899,7 +902,7 @@
         { "class": "tree_row", "attributes": ["hover"] }
       ],
       // Default Close icon
-      "layer0.texture": "Material Theme/assets/default/close_icon.png",
+      "layer0.texture": "Material Theme/assets/palenight/close_icon.png",
       "layer0.opacity": { "target": 1.0, "speed": 7.0, "interpolation": "smoothstep" },
       "layer0.inner_margin": [0,0],
     },
@@ -927,21 +930,21 @@
   
     {
       "class": "scroll_bar_control",
-      "layer0.tint": [38, 50, 56],
+      "layer0.tint": [41, 45, 62],
       "layer0.inner_margin": [0, 6],
       "layer0.opacity": 1.0,
-      "layer1.texture": "Material Theme/assets/default/normal_bar_vertical.png",
+      "layer1.texture": "Material Theme/assets/palenight/normal_bar_vertical.png",
       "layer1.opacity": 1.0,
       "layer1.inner_margin": [0, 6],
       "blur": false
     },
   
-      // Normal Vertical scrollbar track inside overlay panel
+    //   // Normal Vertical scrollbar track inside overlay panel
   
     // {
     //   "class": "scroll_bar_control",
     //   "parents": [{"class": "overlay_control"}],
-    //   "layer0.tint": [38, 50, 56, 0],
+    //   "layer0.tint": [41, 45, 62, 0],
     //   "layer0.opacity": 1.0,
     //   "layer0.inner_margin": [0, 6],
     //   "blur": false
@@ -952,10 +955,10 @@
     {
       "class": "scroll_bar_control",
       "attributes": ["horizontal"],
-      "layer0.tint": [38, 50, 56],
+      "layer0.tint": [41, 45, 62],
       "layer0.inner_margin": [0, 6],
       "layer0.opacity": 1.0,
-      "layer1.texture": "Material Theme/assets/default/normal_bar_horizontal.png",
+      "layer1.texture": "Material Theme/assets/palenight/normal_bar_horizontal.png",
       "layer1.opacity": 1.0,
       "layer1.inner_margin": [6, 0],
       "blur": false
@@ -964,20 +967,20 @@
       // Normal horizontal scrollbar track inside overlay panel
   
     // {
-    //   "class": "scroll_bar_control",
-    //   "attributes": ["horizontal"],
-    //   "parents": [{"class": "overlay_control"}],
-    //   "layer0.tint": [38, 50, 56, 0],
-    //   "layer0.opacity": 0.0,
-    //   "layer0.inner_margin": [0, 2],
-    //   "blur": false
-    // },
+    //     "class": "scroll_bar_control",
+    //     "attributes": ["horizontal"],
+    //     "parents": [{"class": "overlay_control"}],
+    //     "layer0.tint": [41, 45, 62, 0],
+    //     "layer0.opacity": 0.0,
+    //     "layer0.inner_margin": [0, 2],
+    //     "blur": false
+    //  },
   
       // Scrollbars corner
   
     {
       "class": "scroll_corner_control",
-      "layer0.texture": "Material Theme/assets/default/normal_bar_corner.png",
+      "layer0.texture": "Material Theme/assets/palenight/normal_bar_corner.png",
       "layer0.opacity": 1.0,
       "layer0.inner_margin": [1, 1]
     },
@@ -986,10 +989,10 @@
   
     {
       "class": "puck_control",
-      "layer0.tint": [38, 50, 255, 255],
+      "layer0.tint": [41, 45, 62],
       "layer0.opacity": 1.0,
       "layer0.inner_margin": [10, 10],
-      "layer1.texture": "Material Theme/assets/default/thumb_vertical.png",
+      "layer1.texture": "Material Theme/assets/palenight/thumb_vertical.png",
       "layer1.opacity": 1.0,
       "layer1.inner_margin": [8, 8],
       "content_margin": [6, 16],
@@ -1001,9 +1004,12 @@
     {
       "class": "puck_control",
       "attributes": ["horizontal"],
-      "layer0.texture": "Material Theme/assets/default/thumb_horizontal.png",
+      "layer0.tint": [41, 45, 62],
       "layer0.opacity": 1.0,
-      "layer0.inner_margin": [10, 0],
+      "layer0.inner_margin": [10, 10],
+      "layer1.texture": "Material Theme/assets/palenight/thumb_horizontal.png",
+      "layer1.opacity": 1.0,
+      "layer1.inner_margin": [8, 8],
       "content_margin": [16, 6],
       "blur": false
     },
@@ -1038,30 +1044,29 @@
     {
       "class": "scroll_bar_control",
       "settings": ["overlay_scroll_bars"],
-      "layer0.texture": "Material Theme/assets/default/normal_bar_vertical.png",
-      "layer0.inner_margin": [0, 5],
-      "blur": true
+      "layer0.texture": "Material Theme/assets/palenight/normal_bar_vertical.png",
+      "layer0.inner_margin": [0, 6]
     },
   
     {
       "class": "scroll_bar_control",
       "settings": ["overlay_scroll_bars"],
       "attributes": ["horizontal"],
-      "layer0.texture": "Material Theme/assets/default/normal_bar_horizontal.png",
-      "layer0.inner_margin": [5, 0],
+      "layer0.texture": "Material Theme/assets/palenight/normal_bar_horizontal.png",
+      "layer0.inner_margin": [6, 0],
       "layer0.opacity": 0.0,
-      "layer1.texture": "Material Theme/assets/default/normal_bar_horizontal.png",
-      "layer1.inner_margin": [5, 0],
+      "layer1.texture": "Material Theme/assets/palenight/normal_bar_horizontal.png",
+      "layer1.inner_margin": [6, 0],
       "layer1.opacity": 0.0,
       "blur": true
     },
   
     {
       "class": "puck_control",
-      "layer0.tint": [38, 50, 56],
+      "layer0.tint": [41, 45, 62],
       "layer0.opacity": 0.0,
       "layer0.inner_margin": [1, 8, 1, 8],
-      "layer1.texture": "Material Theme/assets/default/thumb_vertical.png",
+      "layer1.texture": "Material Theme/assets/palenight/thumb_vertical.png",
       "layer1.inner_margin": [1, 8, 1, 8],
       "content_margin": [6, 16],
       "blur": true
@@ -1070,10 +1075,10 @@
     {
       "class": "puck_control",
       "attributes": ["horizontal"],
-      "layer0.tint": [38, 50, 56],
+      "layer0.tint": [41, 45, 62],
       "layer0.opacity": 0.0,
       "layer0.inner_margin": [8, 1, 8, 1],
-      "layer1.texture": "Material Theme/assets/default/thumb_horizontal.png",
+      "layer1.texture": "Material Theme/assets/palenight/thumb_horizontal.png",
       "layer1.inner_margin": [8, 1, 8, 1],
       "content_margin": [16, 6],
       "blur": true
@@ -1115,18 +1120,16 @@
   
     {
       "class": "label_control",
-      "color": [176, 190, 197],
+      "color": [103, 110, 149],
       "shadow_color": [24, 24, 24, 0],
       "shadow_offset": [0, 0],
       "font.bold": true
     },
   
-      // Status bar labels
-  
-     {
+    {
         "class": "label_control",
         "parents": [{"class": "status_bar"}],
-        "color": [120, 144, 156],
+        "color": [103, 110, 149],
         "font.bold": false
     },
   
@@ -1137,7 +1140,7 @@
       "content_margin": [0, 0],
   
       // Layer 0 base
-      "layer0.tint": [38, 50, 56],
+      "layer0.tint": [41, 45, 62],
       "layer0.opacity": 1.0,
       "layer0.inner_margin": [2, 2],
   
@@ -1153,7 +1156,7 @@
   
     {
       "class": "status_button",
-      "layer0.tint": [38, 50, 56],
+      "layer0.tint": [41, 45, 62],
       "layer0.opacity": 1.0,
       "layer0.draw_center": false,
       "layer0.inner_margin": [1, 0, 0, 0],
@@ -1163,7 +1166,7 @@
   
     {
       "class": "status_button",
-      "layer0.tint": [38, 50, 56],
+      "layer0.tint": [41, 45, 62],
       "layer0.opacity": 1.0,
       "layer0.draw_center": false,
       "layer0.inner_margin": [1, 0, 0, 0],
@@ -1174,7 +1177,7 @@
     // panel switcher
     {
       "class": "panel_button_control",
-      "layer0.texture": "Material Theme/assets/default/overflow_menu.png",
+      "layer0.texture": "Material Theme/assets/palenight/overflow_menu.png",
       "layer0.opacity": 1.0,
       "content_margin": [10, 10]
     },
@@ -1194,10 +1197,10 @@
     // Status bar panel
     {
       "class": "panel_control",
-      "layer0.tint": [38, 50, 56],
+      "layer0.tint": [41, 45, 62],
       "layer0.inner_margin": [2, 2, 2, 2],
       "layer0.opacity": 1.0,
-      "layer1.tint": [38, 50, 56],
+      "layer1.tint": [41, 45, 62],
       "layer1.inner_margin": [2, 2, 2, 2],
       "layer1.opacity": 1.0,
       "content_margin": [6, 14, 6, 8],
@@ -1207,7 +1210,7 @@
   
     {
       "class": "panel_close_button",
-      "layer0.texture": "Material Theme/assets/default/close_icon.png",
+      "layer0.texture": "Material Theme/assets/palenight/close_icon.png",
       "layer0.opacity": 0.6,
       "layer1.texture": "Material Theme/assets/commons/close_icon--hover.png",
       "layer1.opacity": 0.0,
@@ -1225,7 +1228,7 @@
   
     {
       "class": "text_line_control",
-      "layer0.texture": "Material Theme/assets/default/input_field_border.png",
+      "layer0.texture": "Material Theme/assets/palenight/input_field_border.png",
       "layer0.opacity": 1.0,
       "layer0.inner_margin": [20, 5, 20, 5],
       "tint_index": 1,
@@ -1238,7 +1241,7 @@
     {
       "class": "text_line_control",
       "parents": [{"class": "overlay_control"}],
-      "layer0.texture": "Material Theme/assets/default/input_field_border--short.png",
+      "layer0.texture": "Material Theme/assets/palenight/input_field_border--short.png",
       "layer0.opacity": 1.0,
       "layer0.inner_margin": [32, 0, 32, 2],
       "layer0.draw_center": true,
@@ -1251,7 +1254,7 @@
     {
       "class": "dropdown_button_control",
       "content_margin": [12, 12],
-      "layer0.texture": "Material Theme/assets/default/overflow_menu.png",
+      "layer0.texture": "Material Theme/assets/palenight/overflow_menu.png",
       "layer0.opacity": 1.0,
       "layer0.inner_margin": [0, 0],
       "layer1.texture": "Material Theme/assets/commons/overflow_menu--hover.png",
@@ -1272,30 +1275,30 @@
   
     // Button labels
   
-    {
-       "class": "label_control",
-       "parents": [{"class": "button_control"}],
-       "color": [96, 125, 139],
-       "font.bold": true
-    },
+     {
+        "class": "label_control",
+        "parents": [{"class": "button_control"}],
+        "color": [103, 110, 149],
+        "font.bold": true
+     },
   
-    {
-       "class": "label_control",
-       "parents": [{"class": "button_control", "attributes": ["hover"]}],
-       "color": [255,255,255]
-    },
+     {
+        "class": "label_control",
+        "parents": [{"class": "button_control", "attributes": ["hover"]}],
+        "color": [255,255,255]
+     },
   
-    {
+     {
       "class": "button_control",
       "content_margin": [6, 12, 6, 12],
       "min_size": [75, 0],
-      "layer0.tint": [38, 50, 56],
+      "layer0.tint": [41, 45, 62],
       "layer0.opacity": 0.0,
       "layer0.inner_margin": [6, 6],
       "layer1.texture": "Material Theme/assets/commons/full_button_indented.png",
       "layer1.opacity": 0.0,
       "layer1.inner_margin": [6, 6],
-      "layer2.texture": "Material Theme/assets/default/blue_highlight.png",
+      "layer2.texture": "Material Theme/assets/palenight/blue_highlight.png",
       "layer2.opacity": { "target": 0.0, "speed": 5.0, "interpolation": "smoothstep" },
       "layer2.inner_margin": [6, 6]
     },
@@ -1319,7 +1322,7 @@
     // Small Icon Buttons
     {
       "class": "icon_button_control",
-      "layer0.tint": [38, 50, 56],
+      "layer0.tint": [41, 45, 62],
       "layer0.inner_margin": [6, 6],
       "layer0.opacity": 0.0,
       "layer2.tint": [255, 255, 255],
@@ -1336,7 +1339,7 @@
       "class": "icon_regex",
       "layer0.texture": "Material Theme/assets/commons/find_regex--hover.png",
       "layer0.opacity": { "target": 0.0, "speed": 6.0, "interpolation": "smoothstep" },
-      "layer1.texture": "Material Theme/assets/default/find_regex.png",
+      "layer1.texture": "Material Theme/assets/palenight/find_regex.png",
       "layer1.opacity": { "target": 1.0, "speed": 6.0, "interpolation": "smoothstep" },
       "content_margin": [12, 12]
     },
@@ -1354,7 +1357,7 @@
       "class": "icon_case",
       "layer0.texture": "Material Theme/assets/commons/find_case--hover.png",
       "layer0.opacity": { "target": 0.0, "speed": 6.0, "interpolation": "smoothstep" },
-      "layer1.texture": "Material Theme/assets/default/find_case.png",
+      "layer1.texture": "Material Theme/assets/palenight/find_case.png",
       "layer1.opacity": { "target": 1.0, "speed": 6.0, "interpolation": "smoothstep" },
       "content_margin": [12, 12]
     },
@@ -1372,7 +1375,7 @@
       "class": "icon_whole_word",
       "layer0.texture": "Material Theme/assets/commons/find_word--hover.png",
       "layer0.opacity": { "target": 0.0, "speed": 6.0, "interpolation": "smoothstep" },
-      "layer1.texture": "Material Theme/assets/default/find_word.png",
+      "layer1.texture": "Material Theme/assets/palenight/find_word.png",
       "layer1.opacity": { "target": 1.0, "speed": 6.0, "interpolation": "smoothstep" },
       "content_margin": [12, 12]
     },
@@ -1391,7 +1394,7 @@
       "class": "icon_wrap",
       "layer0.texture": "Material Theme/assets/commons/find_wrap--hover.png",
       "layer0.opacity": { "target": 0.0, "speed": 6.0, "interpolation": "smoothstep" },
-      "layer1.texture": "Material Theme/assets/default/find_wrap.png",
+      "layer1.texture": "Material Theme/assets/palenight/find_wrap.png",
       "layer1.opacity": { "target": 1.0, "speed": 6.0, "interpolation": "smoothstep" },
       "content_margin": [12, 12]
     },
@@ -1409,7 +1412,7 @@
       "class": "icon_in_selection",
       "layer0.texture": "Material Theme/assets/commons/find_inselection--hover.png",
       "layer0.opacity": { "target": 0.0, "speed": 6.0, "interpolation": "smoothstep" },
-      "layer1.texture": "Material Theme/assets/default/find_inselection.png",
+      "layer1.texture": "Material Theme/assets/palenight/find_inselection.png",
       "layer1.opacity": { "target": 1.0, "speed": 6.0, "interpolation": "smoothstep" },
       "content_margin": [12,12]
     },
@@ -1428,7 +1431,7 @@
       "class": "icon_highlight",
       "layer0.texture": "Material Theme/assets/commons/find_highlight--hover.png",
       "layer0.opacity": { "target": 0.0, "speed": 6.0, "interpolation": "smoothstep" },
-      "layer1.texture": "Material Theme/assets/default/find_highlight.png",
+      "layer1.texture": "Material Theme/assets/palenight/find_highlight.png",
       "layer1.opacity": { "target": 1.0, "speed": 6.0, "interpolation": "smoothstep" },
       "content_margin": [12, 12]
     },
@@ -1446,7 +1449,7 @@
       "class": "icon_preserve_case",
       "layer0.texture": "Material Theme/assets/commons/replace_preserve_case--hover.png",
       "layer0.opacity": { "target": 0.0, "speed": 6.0, "interpolation": "smoothstep" },
-      "layer1.texture": "Material Theme/assets/default/replace_preserve_case.png",
+      "layer1.texture": "Material Theme/assets/palenight/replace_preserve_case.png",
       "layer1.opacity": { "target": 1.0, "speed": 6.0, "interpolation": "smoothstep" },
       "content_margin": [12, 12]
     },
@@ -1464,7 +1467,7 @@
       "class": "icon_context",
       "layer0.texture": "Material Theme/assets/commons/find_context--hover.png",
       "layer0.opacity": { "target": 0.0, "speed": 6.0, "interpolation": "smoothstep" },
-      "layer1.texture": "Material Theme/assets/default/find_context.png",
+      "layer1.texture": "Material Theme/assets/palenight/find_context.png",
       "layer1.opacity": { "target": 1.0, "speed": 6.0, "interpolation": "smoothstep" },
       "content_margin": [12, 12]
     },
@@ -1483,7 +1486,7 @@
       "class": "icon_use_buffer",
       "layer0.texture": "Material Theme/assets/commons/use_buffer--hover.png",
       "layer0.opacity": { "target": 0.0, "speed": 6.0, "interpolation": "smoothstep" },
-      "layer1.texture": "Material Theme/assets/default/use_buffer.png",
+      "layer1.texture": "Material Theme/assets/palenight/use_buffer.png",
       "layer1.opacity": { "target": 1.0, "speed": 6.0, "interpolation": "smoothstep" },
       "content_margin": [12, 12]
     },
@@ -1501,7 +1504,7 @@
       "class": "icon_reverse",
       "layer0.texture": "Material Theme/assets/commons/find_reverse--hover.png",
       "layer0.opacity": { "target": 0.0, "speed": 6.0, "interpolation": "smoothstep" },
-      "layer1.texture": "Material Theme/assets/default/find_reverse.png",
+      "layer1.texture": "Material Theme/assets/palenight/find_reverse.png",
       "layer1.opacity": { "target": 1.0, "speed": 6.0, "interpolation": "smoothstep" },
       "content_margin": [12, 12]
     },
