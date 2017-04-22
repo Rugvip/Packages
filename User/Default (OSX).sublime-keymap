@@ -701,7 +701,10 @@
 	{ "keys": ["alt+f"], "command": "insert_snippet", "args": {"contents": "$SELECTION$1 => {\n\t$0\n}"},
 		"context": [{"key": "selector", "operator":"equal", "operand":"source.es6"}]
 	},
-	{ "keys": ["super+alt+b"], "command": "insert_snippet", "args": {"contents": "this.$1 = this.$1.bind(this)\n$0"},
+  { "keys": ["alt+b"], "command": "insert_snippet", "args": {"contents": "this.$1$SELECTION = this.$1$SELECTION.bind(this)$0"},
+    "context": [{"key": "selector", "operator":"equal", "operand":"source.js"}]
+  },
+	{ "keys": ["super+alt+b"], "command": "insert_snippet", "args": {"contents": "this.$1$SELECTION = this.$1$SELECTION.bind(this)$0"},
 		"context": [{"key": "selector", "operator":"equal", "operand":"source.js"}]
 	},
 	{ "keys": ["super+,"], "command": "insert_snippet", "args": {"contents": ";"}},
@@ -899,7 +902,16 @@
 	},
 	{ "keys": ["alt+shift+9"], "command": "insert", "args": {"characters": "}"} },
 	{ "keys": ["≤"], "command": "insert", "args": {"characters": "<-"} },
-	{ "keys": ["≤"], "command": "insert", "args": {"characters": " = "},
+  { "keys": ["≤"], "command": "insert", "args": {"characters": " = "},
+    "context": [{"key": "selector", "operator":"equal", "operand":"source.js"}]
+  },
+  { "keys": ["super+m"], "command": "insert_snippet", "args": {"contents": "this.$SELECTION"},
+    "context": [{"key": "selector", "operator":"equal", "operand":"source.js"}]
+  },
+  { "keys": ["super+shift+m"], "command": "insert_snippet", "args": {"contents": "this._$SELECTION"},
+    "context": [{"key": "selector", "operator":"equal", "operand":"source.js"}]
+  },
+	{ "keys": ["alt+g"], "command": "insert_snippet", "args": {"contents": "get $SELECTION$1() {\n\treturn this._$SELECTION$1$0\n}"},
 		"context": [{"key": "selector", "operator":"equal", "operand":"source.js"}]
 	},
 	{ "keys": ["super+shift+space", "super+shift+r"], "command": "refactor" },
