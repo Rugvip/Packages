@@ -707,7 +707,10 @@
 	{ "keys": ["shift+alt+f"], "command": "insert_snippet", "args": {"contents": "($SELECTION$1) => {\n\t$0\n}"},
 		"context": [{"key": "selector", "operator":"equal", "operand":"source.es6"}]
 	},
-	{ "keys": ["alt+f"], "command": "insert_snippet", "args": {"contents": "$SELECTION$1 => {\n\t$0\n}"},
+  { "keys": ["alt+f"], "command": "insert_snippet", "args": {"contents": "$SELECTION$1 => {\n\t$0\n}"},
+    "context": [{"key": "selector", "operator":"equal", "operand":"source.es6"}]
+  },
+	{ "keys": ["alt+i"], "command": "insert_snippet", "args": {"contents": "let $SELECTION$1 = $0"},
 		"context": [{"key": "selector", "operator":"equal", "operand":"source.es6"}]
 	},
   { "keys": ["alt+b"], "command": "insert_snippet", "args": {"contents": "this.$1$SELECTION = this.$1$SELECTION.bind(this)$0"},
