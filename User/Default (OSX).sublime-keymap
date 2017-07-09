@@ -661,8 +661,11 @@
 		"args": {"jsonify": false},
 		"context": [{"key": "selector", "operator":"equal", "operand":"source.js"}]
 	},
-	{ "keys": ["super+shift+c"], "command": "go_log_snippet",
-		"context": [{"key": "selector", "operator":"equal", "operand":"source.go"}]
+  { "keys": ["super+shift+c"], "command": "go_log_snippet",
+    "context": [{"key": "selector", "operator":"equal", "operand":"source.go"}]
+  },
+	{ "keys": ["super+shift+c"], "command": "bash_echo_snippet",
+		"context": [{"key": "selector", "operator":"equal", "operand":"source.shell"}]
 	},
 	{ "keys": ["super+shift+j"], "command": "insert_snippet", "args": {"contents": "JSON.stringify($SELECTION$0)"},
 		"context": [{"key": "selector", "operator":"equal", "operand":"source.js"}]
