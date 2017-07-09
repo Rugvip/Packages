@@ -41,10 +41,19 @@
 	],
 	"folder_exclude_patterns":
 	[
-		".git"
+		".svn",
+		".git",
+		".hg",
+		"CVS",
+		"node_modules"
 	],
-	"font_face": "RobotoMono-Medium",
-	"font_size": 13.3,
+	"font_face": "Source Code Pro Medium",
+	"font_options":
+	[
+		"no_round"
+	],
+	"font_size": 14,
+	"font_wieght": 300,
 	"highlight_line": true,
 	"highlight_modified_tabs": true,
 	"ignore_inodes": true,
