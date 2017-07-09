@@ -922,6 +922,9 @@
   { "keys": ["super+shift+m"], "command": "insert_snippet", "args": {"contents": "this._$SELECTION"},
     "context": [{"key": "selector", "operator":"equal", "operand":"source.js"}]
   },
+  { "keys": ["super+space", "super+c"], "command": "insert_snippet", "args": {"contents": "console.log($SELECTION$0)"},
+    "context": [{"key": "selector", "operator":"equal", "operand":"source.js"}]
+  },
 	{ "keys": ["alt+g"], "command": "insert_snippet", "args": {"contents": "get $SELECTION$1() {\n\treturn this._$SELECTION$1$0\n}"},
 		"context": [{"key": "selector", "operator":"equal", "operand":"source.js"}]
 	},
