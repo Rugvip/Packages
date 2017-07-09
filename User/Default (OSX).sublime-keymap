@@ -802,7 +802,7 @@
 	{ "keys": ["super+shift+a"], "command": "plain_tasks_archive","context": [{ "key": "selector", "operator": "equal", "operand": "text.todo" }] },
 	{ "keys": ["super+alt+e"], "command": "find_all_under" },
 	{ "keys": ["alt+shift+e"], "command": "singlify_selection", "args": { "all": true } },
-	{ "keys": ["alt+q"], "command": "show_documentation" },
+	// { "keys": ["alt+q"], "command": "show_documentation" },
 	{ "keys": ["super+shift+v"], "command": "clipboard_flip" },
 	{ "keys": ["super+c"], "command": "clipboard_copy",
 		"context": [{"key": "clipboardcopy_fake", "operator":"equal", "operand":true}]
