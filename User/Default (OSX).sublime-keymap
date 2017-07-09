@@ -569,6 +569,12 @@
 	{ "keys" : ["shift+left"], "command": "move", "args": {"by": "characters", "forward": false, "extend": true} },
 	{ "keys" : ["shift+down"], "command": "select_lines", "args": {"forward": true} },
 	{ "keys" : ["shift+right"], "command": "move", "args": {"by": "characters", "forward": true, "extend": true} },
+  // alt+q
+  { "keys" : ["•"], "command": "move", "args": {"by": "subwords", "forward": false} },
+  // alt+e
+  { "keys" : ["é"], "command": "move", "args": {"by": "subword_ends", "forward": true} },
+  { "keys" : ["°"], "command": "move", "args": {"by": "subwords", "forward": false, "extend": true} },
+  { "keys" : ["É"], "command": "move", "args": {"by": "subword_ends", "forward": true, "extend": true} },
 	{ "keys" : ["super+i"], "command": "reindent" },
 	// { "keys" : ["super+shift+tab"], "command": "prev_view_in_stack" },
 	{ "keys":  ["super+shift+t"], "command": "reopen_last_file" },
