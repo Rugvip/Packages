@@ -867,7 +867,7 @@
 	{ "keys": ["super+space", "super+3"], "command": "next_bookmark" },
 	{ "keys": ["super+space", "super+b"], "command": "toggle_side_bar" },
 	{ "keys": ["super+space", "super+z"], "command": "soft_undo" },
-	{ "keys": ["super+space", "super+c"], "command": "show_panel", "args": {"panel": "console", "toggle": true} },
+	{ "keys": ["super+shift+space", "super+shift+c"], "command": "show_panel", "args": {"panel": "console", "toggle": true} },
 	{ "keys": ["super+space", "super+q"], "command": "run_macro_file", "args": {"file": "Packages/Default/Add Line Before.sublime-macro"} },
 	{ "keys": ["super+shift+space", "super+shift+g"], "command": "align_by_symbol" },
 	{ "keys": ["super+shift+f2"], "command": "clear_bookmarks" },
