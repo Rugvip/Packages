@@ -5,6 +5,7 @@ import re
 # For inline eval
 from fractions import *
 from math import *
+from base64 import b64encode, b64decode, urlsafe_b64encode, urlsafe_b64decode
 
 import random
 
