@@ -204,6 +204,91 @@ class SelectArgumentCommand(sublime_plugin.TextCommand):
         for sel in sels:
             self.view.sel().add(sel)
 
+
+class SelectEachArgumentCommand(sublime_plugin.TextCommand):
+    def run(self, edit):
+        sels = []
+        end_position = self.view.size()
+        for sel in self.view.sel():
+            commas = []
+            begin = sel.a - 1
+            end = sel.b
+            beginPar = 0
+            endPar = 0
+            while (True):
+                if begin <= 0:
+                    break
+                char = self.view.substr(begin)
+                if (char in ["\n", "\r"]):
+                    break
+                if (char in [",", ";"] and beginPar <= 0):
+                    commas.append(begin)
+                if (char == "{"):
+                    if (beginPar <= 0):
+                        break
+                    else:
+                        beginPar -= 1
+                if (char == "}"):
+                    beginPar += 1
+                if (self.view.score_selector(begin, "string") > 0):
+                    begin -= 1
+                    continue
+                if (char in ["(", "["]):
+                    if (beginPar <= 0):
+                        break
+                    else:
+                        beginPar -= 1
+                if (char in [")", "]"]):
+                    beginPar += 1
+                begin -= 1
+            while (True):
+                char = self.view.substr(end)
+                if end >= end_position:
+                    break
+                # if (char in ["\n", "\r"]):
+                #     break
+                if (char in [",", ";"] and endPar <= 0):
+                    commas.append(end)
+                if (char == "}"):
+                    if (endPar <= 0):
+                        break
+                    else:
+                        endPar -= 1
+                if (char == "{"):
+                    endPar += 1
+                if (self.view.score_selector(end, "string") > 0):
+                    end += 1
+                    continue
+                if (char in [")", "]"]):
+                    if (endPar <= 0):
+                        break
+                    else:
+                        endPar -= 1
+                if (char in ["(", "["]):
+                    endPar += 1
+                end += 1
+            if begin < end:
+                begin += 1
+                while (self.view.substr(begin) in [" ", "\t"]):
+                    begin += 1
+                while (self.view.substr(end - 1) in [" ", "\t"]):
+                    end -= 1
+            print(begin)
+            print(commas)
+            print(end)
+            for commaPos in commas:
+                sels.append(sublime.Region(begin, commaPos))
+                begin = commaPos
+                while begin < end and (self.view.substr(begin) in [",", " ", "\t", "\n"]):
+                    begin += 1
+
+            sels.append(sublime.Region(begin, end))
+
+        self.view.sel().clear()
+        for sel in sels:
+            self.view.sel().add(sel)
+
+
 def getPosOtherLine(self, sel, up):
     beginPos = self.view.text_to_layout(sel.a)
     endPos = self.view.text_to_layout(sel.b)
