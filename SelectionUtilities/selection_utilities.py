@@ -273,9 +273,6 @@ class SelectEachArgumentCommand(sublime_plugin.TextCommand):
                     begin += 1
                 while (self.view.substr(end - 1) in [" ", "\t"]):
                     end -= 1
-            print(begin)
-            print(commas)
-            print(end)
             for commaPos in commas:
                 sels.append(sublime.Region(begin, commaPos))
                 begin = commaPos
@@ -362,7 +359,6 @@ class CopyToSelectionsCommand(sublime_plugin.TextCommand):
 
         strr = ""
         for sel in sels:
-            print("sel" + str(sel))
             if sel.contains(point):
                 strr = view.substr(sel)
                 sels.remove(sel)
@@ -479,7 +475,6 @@ class AlignBySymbolDoCommand(sublime_plugin.TextCommand):
         max = 0
         for line in lines:
             pos = view.substr(line).find(str)
-            print(pos)
             if pos > max:
                 max = pos
         # insert spaces in front of str
@@ -610,7 +605,6 @@ class RefactorScope(sublime_plugin.TextCommand):
 
         esc = "".join(map(lambda c: "\\"+str(hex(ord(c)))[1:], subs))
 
-        print(esc)
 
         finds = view.find_all("\\b" + esc + "\\b")
 
@@ -626,13 +620,11 @@ class FindAllWordsCommand(sublime_plugin.TextCommand):
         sel = view.sel()[0]
 
         subs = view.substr(sel)
-        print(subs)
         if (len(subs) < 1):
             return
 
         esc = "".join(map(lambda c: "\\"+str(hex(ord(c)))[1:], subs))
 
-        print(esc)
 
         finds = view.find_all("\\b" + esc + "\\b")
 
@@ -880,17 +872,13 @@ class DeleteEmptyLinesCommand(sublime_plugin.TextCommand):
 
 class ExpandSelectionVerticallyCommand(sublime_plugin.TextCommand):
     def run(self, edit, up):
-        print("lol")
         view = self.view
         sels = view.sel()
         for sel in sels:
             pos = self.view.text_to_layout(sel.b)
-            print("pos: " + str(pos))
             y = pos[1] - self.view.line_height() * (int(up) * 2 - 1)
-            print("y: " + str(y))
             if sel.xpos == -1:
                 sel.xpos = self.view.text_to_layout(sel.b)[0]
-            print("y: " + str(sel.xpos))
             end = self.view.layout_to_text((sel.xpos, y))
             sels.subtract(sel)
             sel.b = end
