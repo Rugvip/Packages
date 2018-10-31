@@ -221,24 +221,24 @@ class SelectEachArgumentCommand(sublime_plugin.TextCommand):
                 char = self.view.substr(begin)
                 # if (char in ["\n", "\r"]):
                 #     break
-                if (char in [",", ";"] and beginPar <= 0):
-                    commas.append(begin)
-                if (char == "{"):
-                    if (beginPar <= 0):
-                        break
-                    else:
-                        beginPar -= 1
-                if (char == "}"):
-                    beginPar += 1
-                if (self.view.score_selector(begin, "string") > 0):
+                if self.view.score_selector(begin, "string") > 0:
                     begin -= 1
                     continue
-                if (char in ["(", "["]):
+                if char in [",", ";"] and beginPar <= 0:
+                    commas.append(begin)
+                if char == "{":
                     if (beginPar <= 0):
                         break
                     else:
                         beginPar -= 1
-                if (char in [")", "]"]):
+                if char == "}":
+                    beginPar += 1
+                if char in ["(", "["]:
+                    if (beginPar <= 0):
+                        break
+                    else:
+                        beginPar -= 1
+                if char in [")", "]"]:
                     beginPar += 1
                 begin -= 1
             while (True):
@@ -247,6 +247,9 @@ class SelectEachArgumentCommand(sublime_plugin.TextCommand):
                     break
                 # if (char in ["\n", "\r"]):
                 #     break
+                if (self.view.score_selector(end, "string") > 0):
+                    end += 1
+                    continue
                 if (char in [",", ";"] and endPar <= 0):
                     commas.append(end)
                 if (char == "}"):
@@ -256,9 +259,6 @@ class SelectEachArgumentCommand(sublime_plugin.TextCommand):
                         endPar -= 1
                 if (char == "{"):
                     endPar += 1
-                if (self.view.score_selector(end, "string") > 0):
-                    end += 1
-                    continue
                 if (char in [")", "]"]):
                     if (endPar <= 0):
                         break
@@ -312,6 +312,9 @@ class ToggleMultilineCsvCommand(sublime_plugin.TextCommand):
                 char = self.view.substr(begin)
                 # if (char in ["\n", "\r"]):
                 #     break
+                if (self.view.score_selector(begin, "string") > 0):
+                    begin -= 1
+                    continue
                 if (char in [",", ";"] and beginPar <= 0):
                     commas.append(begin)
                 if (char == "{"):
@@ -321,9 +324,6 @@ class ToggleMultilineCsvCommand(sublime_plugin.TextCommand):
                         beginPar -= 1
                 if (char == "}"):
                     beginPar += 1
-                if (self.view.score_selector(begin, "string") > 0):
-                    begin -= 1
-                    continue
                 if (char in ["(", "["]):
                     if (beginPar <= 0):
                         break
@@ -338,6 +338,9 @@ class ToggleMultilineCsvCommand(sublime_plugin.TextCommand):
                     break
                 # if (char in ["\n", "\r"]):
                 #     break
+                if (self.view.score_selector(end, "string") > 0):
+                    end += 1
+                    continue
                 if (char in [",", ";"] and endPar <= 0):
                     commas.append(end)
                 if (char == "}"):
@@ -347,9 +350,6 @@ class ToggleMultilineCsvCommand(sublime_plugin.TextCommand):
                         endPar -= 1
                 if (char == "{"):
                     endPar += 1
-                if (self.view.score_selector(end, "string") > 0):
-                    end += 1
-                    continue
                 if (char in [")", "]"]):
                     if (endPar <= 0):
                         break
@@ -1177,8 +1177,81 @@ class GoLogSnippetCommand(sublime_plugin.TextCommand):
             if self.view.substr(line.end() - 1) == '{':
                 indentation += '\t'
 
-            snippet = '\n{0}fmt.Printf("{1}: %#v\\n", {1})'.format(indentation, text)
+            snippet = '\n{0}fmt.Printf("{1}: %+v\\n", {1})'.format(indentation, text)
             self.view.insert(edit, line.end(), snippet)
+
+
+class GoMemberSnippetCommand(sublime_plugin.TextCommand):
+    def run(self, edit):
+        sels = [sel for sel in self.view.sel()]
+        sels.reverse()
+
+        count = 0
+        # List of all function declarations in the file
+        func_name_regions = self.view.find_by_selector('entity.name.function.go')
+
+        for sel in sels:
+            # Find the closes function declaration above our point
+            func_name_region = None
+            for region in func_name_regions:
+                if region.end() < sel.begin():
+                    func_name_region = region
+                else:
+                    break
+            if func_name_region is None:
+                continue
+
+            func_to_point = self.view.substr(sublime.Region(func_name_region.end(), sel.begin()))
+            # heh
+            func_to_point = func_to_point.replace('interface{}', '')
+            score = 0
+            left_zero = False
+
+            # Figure out if our point is inside the function
+            for c in func_to_point:
+                if c == '{':
+                    score += 1
+                    if score > 0:
+                        left_zero = True
+                elif c == '}':
+                    score -= 1
+                    if score == 0 and left_zero:
+                        func_name_region = None
+                        break
+            if func_name_region is None:
+                continue
+
+            func_kw_search = func_name_region.begin()
+            func_kw_region = None
+            while True:
+                end = self.view.find_by_class(func_kw_search, False, sublime.CLASS_WORD_END)
+                start = self.view.find_by_class(end, False, sublime.CLASS_WORD_START)
+                func_kw_search = start
+                reg = sublime.Region(start, end)
+                s = self.view.substr(reg)
+                if s == "":
+                    break
+                if s == "func":
+                    func_kw_region = reg
+                    break
+
+            if func_kw_region is None:
+                continue
+
+            func_target = self.view.substr(sublime.Region(func_kw_region.end(), func_name_region.begin())).strip()
+            func_target
+            match = re.match("\\(\\s*(\\w+)[^)]+\\)", func_target)
+
+            if match is None:
+                continue
+
+            target_name = match.group(1)
+
+            self.view.insert(edit, sel.begin(), target_name + ".")
+            count += 1
+
+        if count == 1:
+            self.view.run_command("auto_complete")
 
 
 class LuaPrintSnippetCommand(sublime_plugin.TextCommand):
@@ -1199,6 +1272,26 @@ class LuaPrintSnippetCommand(sublime_plugin.TextCommand):
 
             snippet = "\n{0}print('{1}: '..tostring({1}))".format(indentation, text)
             self.view.insert(edit, line.end(), snippet)
+
+
+class JavaScriptMemberSnippetCommand(sublime_plugin.TextCommand):
+    def run(self, edit):
+        sels = [sel for sel in self.view.sel()]
+        sels.reverse()
+
+        for sel in sels:
+            if sel.begin() == sel.end():
+                sel = self.view.word(sel)
+            text = self.view.substr(sel)
+            line = self.view.line(sel)
+
+            indentation = self.view.substr(self.view.find('\\s*', line.begin()))
+            if self.view.substr(line.end() - 1) == '{':
+                indentation += '\t'
+
+            snippet = "\n{0}this._{1} = {1}".format(indentation, text)
+            self.view.insert(edit, line.end(), snippet)
+
 
 
 class SortAndUniqueCommand(sublime_plugin.TextCommand):
