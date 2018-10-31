@@ -1,1 +1,1 @@
-{"platforms": ["*"], "url": "http://equinusocio.github.io/material-theme", "dependencies": [], "sublime_text": ">=3103", "version": "4.0.9", "description": "Material Theme, the most epic theme for Sublime Text 3 by Mattia Astorino"}
+{"description": "Material Theme, the most epic theme for Sublime Text 3 by Mattia Astorino", "dependencies": [], "url": "http://equinusocio.github.io/material-theme", "platforms": ["*"], "version": "4.1.5", "sublime_text": ">=3103"}

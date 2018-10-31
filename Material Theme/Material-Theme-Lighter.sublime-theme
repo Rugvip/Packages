@@ -26,16 +26,6 @@
       "border_color": [230, 230, 230]
     },
   
-  // @TITLE BAR
-  // App title bar
-  // =========================================================================
-  
-    {
-      "class": "title_bar",
-      "fg": [167, 173, 176],
-      "bg": [250, 250, 250]
-    },
-  
   
   /* @ DIALOG POPUP
    * Dialog popup style and progressbar
@@ -8241,6 +8231,224 @@
       "layer1.texture": "Material Theme/assets/commons/thumb_horizontal.png",
       "layer1.opacity": 0.2
     },
+  
+      // Title bar (OS X 10.10+)
+  
+    {
+      "class": "title_bar",
+      "settings": ["material_theme_titlebar"],
+      "platforms": ["osx"],
+      "fg": [167, 173, 176],
+      "bg": [250, 250, 250]
+    },
+  
+    {
+      "class": "title_bar",
+      "settings": ["material_theme_titlebar", "material_theme_contrast_mode"],
+      "platforms": ["osx"],
+      "fg": [167, 173, 176],
+      "bg":
+        
+          [245, 245, 245]
+        
+    },
+  
+    
+  
+    {
+      "class": "title_bar",
+      "settings": ["material_theme_accent_titlebar", "material_theme_accent_lime", "material_theme_titlebar"],
+      "platforms": ["osx"],
+      "bg": [124, 179, 66],
+      "fg":
+        
+          [255, 255, 255]
+        
+    },
+  
+    
+  
+    {
+      "class": "title_bar",
+      "settings": ["material_theme_accent_titlebar", "material_theme_accent_purple", "material_theme_titlebar"],
+      "platforms": ["osx"],
+      "bg": [171, 71, 188],
+      "fg":
+        
+          [255, 255, 255]
+        
+    },
+  
+    
+  
+    {
+      "class": "title_bar",
+      "settings": ["material_theme_accent_titlebar", "material_theme_accent_red", "material_theme_titlebar"],
+      "platforms": ["osx"],
+      "bg": [229, 115, 115],
+      "fg":
+        
+          [255, 255, 255]
+        
+    },
+  
+    
+  
+    {
+      "class": "title_bar",
+      "settings": ["material_theme_accent_titlebar", "material_theme_accent_orange", "material_theme_titlebar"],
+      "platforms": ["osx"],
+      "bg": [255, 112, 66],
+      "fg":
+        
+          [255, 255, 255]
+        
+    },
+  
+    
+  
+    {
+      "class": "title_bar",
+      "settings": ["material_theme_accent_titlebar", "material_theme_accent_yellow", "material_theme_titlebar"],
+      "platforms": ["osx"],
+      "bg": [255, 160, 0],
+      "fg":
+        
+          [255, 255, 255]
+        
+    },
+  
+    
+  
+    {
+      "class": "title_bar",
+      "settings": ["material_theme_accent_titlebar", "material_theme_accent_indigo", "material_theme_titlebar"],
+      "platforms": ["osx"],
+      "bg": [92, 107, 192],
+      "fg":
+        
+          [255, 255, 255]
+        
+    },
+  
+    
+  
+    {
+      "class": "title_bar",
+      "settings": ["material_theme_accent_titlebar", "material_theme_accent_pink", "material_theme_titlebar"],
+      "platforms": ["osx"],
+      "bg": [255, 64, 129],
+      "fg":
+        
+          [255, 255, 255]
+        
+    },
+  
+    
+  
+    {
+      "class": "title_bar",
+      "settings": ["material_theme_accent_titlebar", "material_theme_accent_blue", "material_theme_titlebar"],
+      "platforms": ["osx"],
+      "bg": [41, 121, 255],
+      "fg":
+        
+          [255, 255, 255]
+        
+    },
+  
+    
+  
+    {
+      "class": "title_bar",
+      "settings": ["material_theme_accent_titlebar", "material_theme_accent_cyan", "material_theme_titlebar"],
+      "platforms": ["osx"],
+      "bg": [0, 188, 212],
+      "fg":
+        
+          [255, 255, 255]
+        
+    },
+  
+    
+  
+    {
+      "class": "title_bar",
+      "settings": ["material_theme_accent_titlebar", "material_theme_accent_bright-teal", "material_theme_titlebar"],
+      "platforms": ["osx"],
+      "bg": [100, 255, 218],
+      "fg":
+        
+          [0, 0, 0]
+        
+    },
+  
+    
+  
+    {
+      "class": "title_bar",
+      "settings": ["material_theme_accent_titlebar", "material_theme_accent_acid-lime", "material_theme_titlebar"],
+      "platforms": ["osx"],
+      "bg": [198, 255, 0],
+      "fg":
+        
+          [0, 0, 0]
+        
+    },
+  
+    
+  
+    {
+      "class": "title_bar",
+      "settings": ["material_theme_accent_titlebar", "material_theme_accent_graphite", "material_theme_titlebar"],
+      "platforms": ["osx"],
+      "bg": [97, 97, 97],
+      "fg":
+        
+          [255, 255, 255]
+        
+    },
+  
+    
+  
+    {
+      "class": "title_bar",
+      "settings": ["material_theme_accent_titlebar", "material_theme_accent_brba", "material_theme_titlebar"],
+      "platforms": ["osx"],
+      "bg": [56, 142, 60],
+      "fg":
+        
+          [255, 255, 255]
+        
+    },
+  
+    
+  
+    {
+      "class": "title_bar",
+      "settings": ["material_theme_accent_titlebar", "material_theme_accent_sky", "material_theme_titlebar"],
+      "platforms": ["osx"],
+      "bg": [132, 255, 255],
+      "fg":
+        
+          [0, 0, 0]
+        
+    },
+  
+    
+  
+    {
+      "class": "title_bar",
+      "settings": ["material_theme_accent_titlebar", "material_theme_accent_tomato", "material_theme_titlebar"],
+      "platforms": ["osx"],
+      "bg": [244, 67, 54],
+      "fg":
+        
+          [255, 255, 255]
+        
+    },
+  
+    
   
   //
 ]
