@@ -1,15 +1,30 @@
 {
 	"env": {
-		"GOPATH": "$HOME/Development/GoCode",
-		"PATH": "/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/go/bin:/Users/epatold/Development/GoCode/bin"
+		"GOPATH": "$HOME/dev/go",
+		"PATH": "/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/go/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Users/epatold/dev/go/bin"
 	},
+  "autocomplete_builtins": true,
+  "autocomplete_closures": true,
+  "autocomplete_filter_name": "^XXX_",
+  "autocomplete_snippets": true,
+  "autocomplete_suggest_imports": true,
+  "autocomplete_tests": false,
+
+  "comp_lint_enabled": true,
 	"fmt_tab_indent": true,
 	"fmt_tab_width": 4,
 	"on_save": [{
-		"cmd": "gc_comp_lint"
+		"cmd": "gs_comp_lint"
+	}, {
+		"cmd": "go install"
 	}],
 	"ipc_timeout": 5,
-	"fmt_cmd": ["goimports"],
+	"fmt_cmd": ["gofmt", "-s"],
 	"build_command": ["go", "build"],
-	"autocomplete_builtins": true
+  "comp_lint_commands": [
+      {"cmd": ["goimports -w $_fn"] , "shell": true},
+      {"cmd": ["golint $_fn"], "shell": true},
+      // go vet crashes things atm
+      // {"cmd": ["go", "vet"]},
+  ]
 }
