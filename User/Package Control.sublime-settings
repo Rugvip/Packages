@@ -21,7 +21,9 @@
 		"FSharp",
 		"GitGutter",
 		"GitSavvy",
-		"GoSublime",
+		"Gomod",
+		"GoOracle",
+		"GoRename",
 		"Haproxy",
 		"Highlight",
 		"JavaImports",
@@ -40,6 +42,7 @@
 		"Package Control",
 		"Pretty JSON",
 		"Protobuf Syntax Hightlighting",
+		"Pug",
 		"rsub",
 		"Sass",
 		"SCSS",
@@ -54,6 +57,7 @@
 		"Terminal",
 		"Terraform",
 		"Theme - amCoder",
-		"Theme - Soda"
+		"Theme - Soda",
+		"TypeScript Syntax"
 	]
 }

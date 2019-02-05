@@ -1,9 +1,4 @@
 [
-	{
-		"button": "button4",
-		"press_command": "drag_select",
-		"press_args": {"by": "columns"}
-	},
 	// Switch files by holding down button 2, and using the scroll wheel
 	{ "button": "scroll_down", "modifiers": ["button2"], "command": "next_view" },
 	{ "button": "scroll_up", "modifiers": ["button2"], "command": "prev_view" },
@@ -56,5 +51,10 @@
 	{ "button": "scroll_down", "modifiers": ["ctrl", "alt"], "command": "delete_inwards" },
 	{ "button": "scroll_up", "modifiers": ["ctrl", "alt"], "command": "delete_outwards" },
 	{ "button": "scroll_down", "modifiers": ["alt", "ctrl", "super"], "command": "redo" },
-	{ "button": "scroll_up", "modifiers": ["alt", "ctrl", "super"], "command": "undo" }
+	{ "button": "scroll_up", "modifiers": ["alt", "ctrl", "super"], "command": "undo" },
+	{
+		"button": "button3",
+		"press_command": "drag_select",
+		"press_args": {"by": "columns"}
+	}
 ]

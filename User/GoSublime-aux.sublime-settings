@@ -1,10 +1,21 @@
 {
+	"9o.hist./Users/epatold/dev/go/src/git.cct.ericsson.net/c3-recording/access-gateway/cmd/access-gateway":
+	[
+		"exit"
+	],
+	"9o.hist./Users/epatold/dev/go/src/git.cct.ericsson.net/c3/recording/common/db":
+	[
+		"help",
+		"GoSublime r18.07.22-1 9o: type `help` for help and command documentation\n\n[ `help` | done ]\n[ ~/dev/go/src/git.cct.ericsson.net/c3/recording/common/db/ ] #",
+		"done",
+		"exit"
+	],
 	"9o.hist./Users/epatold/dev/go/src/git.cct.ericsson.net/cct/nexus/prototypes/go/models":
 	[
 		"wat",
 		"help"
 	],
-	"ann": "a18.07.31-1",
-	"install_version": "r18.07.22-1",
-	"version": "r18.07.22-1"
+	"ann": "a18.11.28-1",
+	"install_version": "r18.11.28-1",
+	"version": "r18.11.28-1"
 }

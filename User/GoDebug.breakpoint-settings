@@ -1,0 +1,13 @@
+{
+	"/Users/epatold/dev/go/src/git.cct.ericsson.net/c3/recording":
+	[
+		{
+			"file": "/Users/epatold/dev/go/src/git.cct.ericsson.net/c3/recording/cmd/registry/registry.go",
+			"line": 26
+		},
+		{
+			"file": "/Users/epatold/dev/go/src/git.cct.ericsson.net/c3/recording/cmd/ztest/ztest.go",
+			"line": 11
+		}
+	]
+}

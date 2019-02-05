@@ -1098,6 +1098,7 @@ class JavaScriptFunctionSnippetCommand(sublime_plugin.TextCommand):
     def run(self, edit):
         # for each selection in view
         firsts = []
+        print('hello')
         for sel in self.view.sel():
             last = last_bracket = first = sel.end()
             # Find the last bracket
@@ -1177,7 +1178,8 @@ class GoLogSnippetCommand(sublime_plugin.TextCommand):
             if self.view.substr(line.end() - 1) == '{':
                 indentation += '\t'
 
-            snippet = '\n{0}fmt.Printf("{1}: %+v\\n", {1})'.format(indentation, text)
+            escapedText = text.replace('"', '\\"').replace('%', '%%')
+            snippet = '\n{0}fmt.Printf("{1}: %+v\\n", {2})'.format(indentation, escapedText, text)
             self.view.insert(edit, line.end(), snippet)
 
 
@@ -1252,6 +1254,52 @@ class GoMemberSnippetCommand(sublime_plugin.TextCommand):
 
         if count == 1:
             self.view.run_command("auto_complete")
+
+
+class GoMethodSnippetCommand(sublime_plugin.TextCommand):
+    def run(self, edit):
+        # List of all function declarations in the file
+        func_name_regions = self.view.find_by_selector('entity.name.function.go')
+
+        sel = self.view.sel()[0]
+        # Find the closes function declaration above our point
+        func_name_region = None
+        for region in func_name_regions:
+            if region.end() < sel.begin():
+                func_name_region = region
+            else:
+                break
+        if func_name_region is None:
+            return
+
+        func_to_point = self.view.substr(sublime.Region(func_name_region.end(), sel.begin()))
+        # heh
+        func_to_point = func_to_point.replace('interface{}', '')
+        score = 0
+        left_zero = False
+
+        func_kw_search = func_name_region.begin()
+        func_kw_region = None
+        while True:
+            end = self.view.find_by_class(func_kw_search, False, sublime.CLASS_WORD_END)
+            start = self.view.find_by_class(end, False, sublime.CLASS_WORD_START)
+            func_kw_search = start
+            reg = sublime.Region(start, end)
+            s = self.view.substr(reg)
+            if s == "":
+                break
+            if s == "func":
+                func_kw_region = reg
+                break
+
+        if func_kw_region is None:
+            return
+
+        func_target = self.view.substr(sublime.Region(func_kw_region.end(), func_name_region.begin())).strip()
+
+        self.view.run_command('insert_snippet', {
+            "contents": 'func ' + func_target + ' $SELECTION$1($2) $3{\n\t$0\n}'
+        })
 
 
 class LuaPrintSnippetCommand(sublime_plugin.TextCommand):
